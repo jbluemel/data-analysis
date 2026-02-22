@@ -1,280 +1,285 @@
 import dspy
+import json
+import os
 from src.database import AuctionDatabase
 from typing import Dict, List, Optional
 
-# DSPy Signatures
 
-class AnalyzeData(dspy.Signature):
-    """Analyze auction data and provide insights."""
-    
-    data = dspy.InputField(desc="Data to analyze (from database query)")
-    context = dspy.InputField(desc="What this data represents and what to look for")
-    insights = dspy.OutputField(desc="Key insights, patterns, and observations")
+class ExplainWeekPerformance(dspy.Signature):
+    """Explain why a week hit, missed, or exceeded the ALV goal based on industry mix, geography, and quality."""
 
-class CompareData(dspy.Signature):
-    """Compare two datasets and identify differences."""
-    
-    dataset1 = dspy.InputField(desc="First dataset with label")
-    dataset2 = dspy.InputField(desc="Second dataset with label")
-    comparison = dspy.OutputField(desc="Key differences and comparative insights")
-
-class InvestigateAnomaly(dspy.Signature):
-    """Investigate why a metric is unusual."""
-    
-    anomaly_description = dspy.InputField(desc="The unusual metric or pattern observed")
-    supporting_data = dspy.InputField(desc="Additional data to help explain the anomaly")
-    explanation = dspy.OutputField(desc="Likely explanations for the anomaly")
-
-class GenerateReport(dspy.Signature):
-    """Generate an executive summary report."""
-    
-    analyses = dspy.InputField(desc="Collection of analyses performed")
-    report = dspy.OutputField(desc="Executive summary with key findings and recommendations")
+    week_data = dspy.InputField(desc="Week metrics including industry, region percentages and ALVs with benchmarks")
+    framework = dspy.InputField(desc="Explanation framework with driver priorities and benchmarks")
+    explanation = dspy.OutputField(desc="5-7 bullet points, each starting with •, explaining key drivers and headwinds")
 
 
 class AuctionAnalyzer(dspy.Module):
-    """Generic auction data analyzer using flexible database queries."""
-    
-    def __init__(self, db: AuctionDatabase):
+    """Auction data analyzer for explaining weekly ALV performance."""
+
+    def __init__(self, db: AuctionDatabase, scorecard_path: str = "ml_scorecard.json"):
         super().__init__()
         self.db = db
+        self.explain = dspy.ChainOfThought(ExplainWeekPerformance)
         
-        # DSPy modules
-        self.analyze = dspy.ChainOfThought(AnalyzeData)
-        self.compare = dspy.ChainOfThought(CompareData)
-        self.investigate = dspy.ChainOfThought(InvestigateAnomaly)
-        self.report = dspy.ChainOfThought(GenerateReport)
-    
-    def get_tables(self) -> List[str]:
-        """Return available tables for analysis."""
-        return self.db.list_tables()
-    
-    def get_schema(self, table_name: str) -> List[Dict]:
-        """Return schema for a table."""
-        return self.db.describe_table(table_name)
-    
+        # Load ML scorecard from JSON
+        self.scorecard = self._load_scorecard(scorecard_path)
+        
+        # Load thresholds from database (HIT vs MISS averages)
+        self.thresholds = self._load_thresholds()
+
+    def _load_scorecard(self, path: str) -> dict:
+        """Load ML scorecard from JSON file."""
+        if os.path.exists(path):
+            with open(path, 'r') as f:
+                return json.load(f)
+        else:
+            print(f"Warning: {path} not found, using defaults")
+            return {
+                "cv_mean_accuracy": 0.911,
+                "features_ranked": [
+                    {"rank": 1, "feature": "region_3_alv", "importance_pct": 21.1},
+                    {"rank": 2, "feature": "pct_items_10k_plus", "importance_pct": 15.9},
+                    {"rank": 3, "feature": "construction_alv", "importance_pct": 13.4},
+                    {"rank": 4, "feature": "region_4_alv", "importance_pct": 8.8},
+                    {"rank": 5, "feature": "passenger_pct", "importance_pct": 7.3},
+                ]
+            }
+
+    def _load_thresholds(self) -> dict:
+        """Query database for HIT vs MISS averages to use as thresholds."""
+        results = self.db.query("""
+            SELECT 
+                goal_status,
+                ROUND(AVG(region_3_alv)::numeric, 0) as avg_region_3_alv,
+                ROUND(AVG(region_4_alv)::numeric, 0) as avg_region_4_alv,
+                ROUND(AVG(construction_alv)::numeric, 0) as avg_construction_alv,
+                ROUND(AVG(construction_pct)::numeric, 1) as avg_construction_pct,
+                ROUND(AVG(pct_items_10k_plus)::numeric, 1) as avg_pct_10k_plus,
+                ROUND(AVG(passenger_pct)::numeric, 1) as avg_passenger_pct
+            FROM weekly_metrics_summary_enrichedv2
+            WHERE goal_status IN ('hit', 'miss')
+            GROUP BY goal_status
+        """)
+        
+        thresholds = {}
+        for row in results:
+            thresholds[row['goal_status']] = row
+        
+        return thresholds
+
+    def _get_top_features(self, n: int = 5) -> List[dict]:
+        """Get top N features from scorecard."""
+        return self.scorecard.get('features_ranked', [])[:n]
+
+    def _get_accuracy(self) -> float:
+        """Get model accuracy from scorecard."""
+        return self.scorecard.get('cv_mean_accuracy', 0.911)
+
+    def _get_importance(self, feature: str) -> float:
+        """Get importance percentage for a specific feature."""
+        for f in self.scorecard.get('features_ranked', []):
+            if f['feature'] == feature:
+                return f['importance_pct']
+        return 0.0
+
     def query(self, sql: str) -> List[Dict]:
         """Execute a query and return results."""
         return self.db.query(sql)
-    
-    def format_results(self, results: List[Dict], max_rows: int = 20) -> str:
-        """Format query results as readable text for LLM."""
+
+    def _fmt_dollar(self, val):
+        if val is None:
+            return "N/A"
+        return f"${val:,.0f}"
+
+    def _fmt_pct(self, val):
+        if val is None:
+            return "N/A"
+        return f"{val:.1f}%"
+
+    def _calc_threshold(self, hit_val, miss_val) -> float:
+        """Calculate threshold as midpoint between HIT and MISS averages."""
+        return (float(hit_val) + float(miss_val)) / 2
+
+    def explain_week(self, fiscal_year: str, fiscal_week: int) -> str:
+        """Explain why a specific week hit, missed, or exceeded the ALV goal."""
+
+        print(f"Explaining {fiscal_year} Week {fiscal_week}...")
+
+        # Query enriched summary
+        results = self.query(f"""
+            SELECT
+                fiscal_year,
+                fiscal_week_number,
+                total_items_sold,
+                avg_lot_value,
+                goal_status,
+                construction_pct,
+                construction_alv,
+                ag_pct,
+                ag_alv,
+                passenger_pct,
+                passenger_alv,
+                trucks_med_heavy_pct,
+                trucks_med_heavy_alv,
+                pct_items_10k_plus,
+                region_3_pct,
+                region_3_alv,
+                region_4_pct,
+                region_4_alv,
+                region_5_pct,
+                region_5_alv,
+                alv_target,
+                alv_variance,
+                alv_variance_pct,
+                top_revenue_industry,
+                top_revenue_pct,
+                top_revenue_alv,
+                anomaly_industry,
+                anomaly_alv,
+                anomaly_pct_above_typical
+            FROM weekly_metrics_summary_enrichedv2
+            WHERE fiscal_year = '{fiscal_year}' AND fiscal_week_number = {fiscal_week}
+        """)
+
         if not results:
-            return "No data returned."
-        
-        # Get column names from first row
-        columns = list(results[0].keys())
-        
-        # Format as text table
-        lines = []
-        lines.append(" | ".join(columns))
-        lines.append("-" * len(lines[0]))
-        
-        for row in results[:max_rows]:
-            values = []
-            for col in columns:
-                val = row[col]
-                if isinstance(val, float):
-                    values.append(f"{val:,.2f}")
-                elif isinstance(val, int):
-                    values.append(f"{val:,}")
-                else:
-                    values.append(str(val))
-            lines.append(" | ".join(values))
-        
-        if len(results) > max_rows:
-            lines.append(f"... ({len(results) - max_rows} more rows)")
-        
-        return "\n".join(lines)
-    
-    # ========== ANALYSIS METHODS ==========
-    
-    def analyze_weekly_summary(self, fiscal_year: int = 2026) -> str:
-        """Analyze overall weekly performance."""
-        
-        print(f"Analyzing weekly summary for FY{fiscal_year}...")
-        
-        results = self.query(f"""
-            SELECT fiscal_week_number, total_items_sold, avg_lot_value, 
-                   total_contract_price, auction_revenue,
-                   pct_items_under_500, pct_items_10k_plus
-            FROM weekly_metrics_summary
-            WHERE fiscal_year = {fiscal_year}
-            ORDER BY fiscal_week_number
-        """)
-        
-        data_text = self.format_results(results)
-        
-        context = f"""
-This is weekly auction performance data for fiscal year {fiscal_year}.
-Key metrics:
-- total_items_sold: Number of items sold that week
-- avg_lot_value: Average sale price per item
-- total_contract_price: Total revenue from sales
-- auction_revenue: Purple Wave's revenue (fees)
-- pct_items_under_500: Percentage of low-value items
-- pct_items_10k_plus: Percentage of high-value items
+            return f"No data found for {fiscal_year} Week {fiscal_week}"
 
-Look for: trends over time, unusual weeks, patterns in high/low value mix.
-"""
-        
-        result = self.analyze(data=data_text, context=context)
-        return result.insights
-    
-    def analyze_by_dimension(self, dimension: str, fiscal_year: int = 2026) -> str:
-        """Analyze performance by a specific dimension (industry, category, region, etc.)."""
-        
-        # Map dimension to table and column
-        dimension_map = {
-            'industry': ('weekly_metrics_by_industry', 'taxonomy_industry'),
-            'category': ('weekly_metrics_by_category', 'taxonomy_category'),
-            'family': ('weekly_metrics_by_family', 'taxonomy_family'),
-            'business_category': ('weekly_metrics_by_business_category', 'business_category'),
-            'region': ('weekly_metrics_by_region', 'item_region_name'),
-            'district': ('weekly_metrics_by_district', 'item_district_id'),
-            'territory': ('weekly_metrics_by_territory', 'item_territory_id'),
-        }
-        
-        if dimension not in dimension_map:
-            return f"Unknown dimension: {dimension}. Available: {list(dimension_map.keys())}"
-        
-        table, column = dimension_map[dimension]
-        
-        print(f"Analyzing by {dimension} for FY{fiscal_year}...")
-        
-        # Aggregate across weeks to see overall performance by dimension
-        results = self.query(f"""
-            SELECT {column}, 
-                   SUM(total_items_sold) as total_items,
-                   ROUND(AVG(avg_lot_value)::numeric, 2) as avg_lot_value,
-                   SUM(total_contract_price) as total_revenue,
-                   SUM(auction_revenue) as pw_revenue
-            FROM {table}
-            WHERE fiscal_year = {fiscal_year}
-            GROUP BY {column}
-            ORDER BY total_items DESC
-        """)
-        
-        data_text = self.format_results(results)
-        
-        context = f"""
-This is auction performance broken down by {dimension} for FY{fiscal_year}.
-Each row represents a different {dimension} with aggregated metrics across all weeks.
+        week = results[0]
+        hit = self.thresholds.get('hit', {})
+        miss = self.thresholds.get('miss', {})
 
-Look for: which {dimension}s drive the most volume, which have highest avg values,
-any surprising patterns in the mix.
-"""
-        
-        result = self.analyze(data=data_text, context=context)
-        return result.insights
-    
-    def investigate_week(self, week_number: int, fiscal_year: int = 2026) -> str:
-        """Deep dive into a specific week to understand what drove its performance."""
-        
-        print(f"Investigating Week {week_number} of FY{fiscal_year}...")
-        
-        # Get the week's summary
-        summary = self.query(f"""
-            SELECT * FROM weekly_metrics_summary
-            WHERE fiscal_year = {fiscal_year} AND fiscal_week_number = {week_number}
-        """)
-        
-        # Get breakdown by industry for that week
-        by_industry = self.query(f"""
-            SELECT taxonomy_industry, total_items_sold, avg_lot_value, total_contract_price
-            FROM weekly_metrics_by_industry
-            WHERE fiscal_year = {fiscal_year} AND fiscal_week_number = {week_number}
-            ORDER BY total_contract_price DESC
-        """)
-        
-        # Get comparison to average week
-        avg_week = self.query(f"""
-            SELECT AVG(total_items_sold) as avg_items,
-                   AVG(avg_lot_value) as avg_lot_value,
-                   AVG(total_contract_price) as avg_revenue
-            FROM weekly_metrics_summary
-            WHERE fiscal_year = {fiscal_year}
-        """)
-        
-        anomaly_desc = f"""
-Week {week_number} Summary:
-{self.format_results(summary)}
+        # Determine outcome category
+        alv = week['avg_lot_value'] or 0
+        if alv >= 12000:
+            outcome = "EXCEEDED"
+        elif alv >= 10000:
+            outcome = "HIT"
+        else:
+            outcome = "MISSED"
 
-Compared to average week:
-{self.format_results(avg_week)}
+        # Get accuracy and top features from loaded scorecard
+        accuracy = self._get_accuracy() * 100
+        region_3_imp = self._get_importance('region_3_alv')
+        items_10k_imp = self._get_importance('pct_items_10k_plus')
+        construction_imp = self._get_importance('construction_alv')
+        region_4_imp = self._get_importance('region_4_alv')
+        passenger_imp = self._get_importance('passenger_pct')
+
+        # Calculate thresholds from HIT/MISS averages
+        region_3_threshold = self._calc_threshold(hit.get('avg_region_3_alv', 10474), miss.get('avg_region_3_alv', 7031))
+        region_4_threshold = self._calc_threshold(hit.get('avg_region_4_alv', 14045), miss.get('avg_region_4_alv', 10018))
+        construction_threshold = self._calc_threshold(hit.get('avg_construction_alv', 19794), miss.get('avg_construction_alv', 12274))
+        items_10k_threshold = self._calc_threshold(hit.get('avg_pct_10k_plus', 28.8), miss.get('avg_pct_10k_plus', 22.2))
+        passenger_threshold = 20  # Lower is better, use fixed threshold
+
+        # Build week data with ML-discovered benchmarks
+        week_data = f"""
+WEEK: {fiscal_year} Week {int(week['fiscal_week_number'])}
+OUTCOME: {outcome} - ALV was {self._fmt_dollar(week['avg_lot_value'])} vs $10,000 target ({self._fmt_dollar(week['alv_variance'])} variance)
+ITEMS SOLD: {int(week['total_items_sold']) if week['total_items_sold'] else 0:,}
+
+TOP REVENUE CONTRIBUTOR:
+  Industry: {week['top_revenue_industry']}
+  Revenue Share: {self._fmt_pct(week['top_revenue_pct'])}
+  ALV: {self._fmt_dollar(week['top_revenue_alv'])}
+
+============================================================
+ML SCORECARD - TOP 5 DRIVERS ({accuracy:.1f}% accuracy)
+============================================================
+
+#1 REGION 3 ALV ({region_3_imp:.1f}% importance)
+  This Week: {self._fmt_dollar(week['region_3_alv'])}
+  HIT Avg: {self._fmt_dollar(hit.get('avg_region_3_alv'))} | MISS Avg: {self._fmt_dollar(miss.get('avg_region_3_alv'))} | Threshold: ~{self._fmt_dollar(region_3_threshold)}
+  Mix: {self._fmt_pct(week['region_3_pct'])}
+
+#2 ITEMS $10K+ PERCENTAGE ({items_10k_imp:.1f}% importance)
+  This Week: {self._fmt_pct(week['pct_items_10k_plus'])}
+  HIT Avg: {hit.get('avg_pct_10k_plus')}% | MISS Avg: {miss.get('avg_pct_10k_plus')}% | Threshold: ~{items_10k_threshold:.0f}%
+
+#3 CONSTRUCTION ALV ({construction_imp:.1f}% importance)
+  This Week: {self._fmt_dollar(week['construction_alv'])}
+  HIT Avg: {self._fmt_dollar(hit.get('avg_construction_alv'))} | MISS Avg: {self._fmt_dollar(miss.get('avg_construction_alv'))} | Threshold: ~{self._fmt_dollar(construction_threshold)}
+  Mix: {self._fmt_pct(week['construction_pct'])} (HIT Avg: {hit.get('avg_construction_pct')}% | MISS Avg: {miss.get('avg_construction_pct')}%)
+
+#4 REGION 4 ALV ({region_4_imp:.1f}% importance)
+  This Week: {self._fmt_dollar(week['region_4_alv'])}
+  HIT Avg: {self._fmt_dollar(hit.get('avg_region_4_alv'))} | MISS Avg: {self._fmt_dollar(miss.get('avg_region_4_alv'))} | Threshold: ~{self._fmt_dollar(region_4_threshold)}
+  Mix: {self._fmt_pct(week['region_4_pct'])}
+
+#5 PASSENGER PERCENTAGE ({passenger_imp:.1f}% importance - DILUTION RISK)
+  This Week: {self._fmt_pct(week['passenger_pct'])}
+  HIT Avg: {hit.get('avg_passenger_pct')}% | MISS Avg: {miss.get('avg_passenger_pct')}% | Threshold: <{passenger_threshold}% (lower is better)
+  ALV: {self._fmt_dollar(week['passenger_alv'])}
+
+============================================================
+OTHER METRICS
+============================================================
+
+TRUCKS, MEDIUM AND HEAVY DUTY
+  ALV: {self._fmt_dollar(week['trucks_med_heavy_alv'])}
+  Mix: {self._fmt_pct(week['trucks_med_heavy_pct'])}
+  Note: Stable base (~15%), not a driver of HIT vs MISS
+
+AG EQUIPMENT
+  ALV: {self._fmt_dollar(week['ag_alv'])}
+  Mix: {self._fmt_pct(week['ag_pct'])}
+
+REGION 5
+  ALV: {self._fmt_dollar(week['region_5_alv'])}
+  Mix: {self._fmt_pct(week['region_5_pct'])}
 """
-        
-        supporting = f"""
-Week {week_number} breakdown by industry:
-{self.format_results(by_industry)}
+
+        # Add anomaly section if present
+        if week['anomaly_industry']:
+            week_data += f"""
+ANOMALY DETECTED:
+  Industry: {week['anomaly_industry']}
+  ALV: {self._fmt_dollar(week['anomaly_alv'])} ({week['anomaly_pct_above_typical']}% above typical)
 """
-        
-        result = self.investigate(
-            anomaly_description=anomaly_desc,
-            supporting_data=supporting
-        )
+
+        # Build framework with loaded scorecard values
+        framework = f"""
+EXPLANATION FRAMEWORK:
+
+You are explaining to leadership WHY this week's ALV turned out the way it did.
+
+ML SCORECARD CONTEXT:
+Random Forest model with {accuracy:.1f}% accuracy identified these top 5 drivers:
+1. Region 3 ALV ({region_3_imp:.1f}%) - #1 predictor
+2. Items $10k+ % ({items_10k_imp:.1f}%) - high-value inventory concentration
+3. Construction ALV ({construction_imp:.1f}%) - quality of construction equipment
+4. Region 4 ALV ({region_4_imp:.1f}%) - secondary regional quality
+5. Passenger % ({passenger_imp:.1f}%) - dilution risk (lower is better)
+
+STRUCTURE YOUR EXPLANATION:
+1. Lead with the TOP driver that explains this week (usually Region 3 ALV)
+2. Mention 2-3 supporting factors from the top 5
+3. Note any anomalies if present
+4. Keep it to 2-3 paragraphs
+
+THRESHOLDS FOR HIT:
+- Region 3 ALV > {self._fmt_dollar(region_3_threshold)}
+- Items $10k+ > {items_10k_threshold:.0f}%
+- Construction ALV > {self._fmt_dollar(construction_threshold)}
+- Region 4 ALV > {self._fmt_dollar(region_4_threshold)}
+- Passenger % < {passenger_threshold}%
+
+HOW TO EXPLAIN:
+
+For HIT/EXCEEDED weeks:
+- Which drivers were above threshold?
+- What combination made it work?
+
+For MISSED weeks:
+- Which drivers were below threshold?
+- What was the primary drag?
+
+TONE:
+- Be direct and specific with numbers
+- Compare actual values to thresholds
+- 2-3 paragraphs maximum
+- Use the driver rankings to prioritize what you mention
+"""
+
+        result = self.explain(week_data=week_data, framework=framework)
         return result.explanation
-    
-    def compare_dimensions(self, dim1_name: str, dim1_value: str, 
-                          dim2_name: str, dim2_value: str,
-                          fiscal_year: int = 2026) -> str:
-        """Compare two specific dimension values (e.g., Construction vs Ag Equipment)."""
-        
-        dimension_map = {
-            'industry': ('weekly_metrics_by_industry', 'taxonomy_industry'),
-            'category': ('weekly_metrics_by_category', 'taxonomy_category'),
-            'region': ('weekly_metrics_by_region', 'item_region_name'),
-        }
-        
-        if dim1_name not in dimension_map:
-            return f"Unknown dimension: {dim1_name}"
-        
-        table, column = dimension_map[dim1_name]
-        
-        print(f"Comparing {dim1_value} vs {dim2_value}...")
-        
-        data1 = self.query(f"""
-            SELECT fiscal_week_number, total_items_sold, avg_lot_value, total_contract_price
-            FROM {table}
-            WHERE fiscal_year = {fiscal_year} AND {column} = '{dim1_value}'
-            ORDER BY fiscal_week_number
-        """)
-        
-        data2 = self.query(f"""
-            SELECT fiscal_week_number, total_items_sold, avg_lot_value, total_contract_price
-            FROM {table}
-            WHERE fiscal_year = {fiscal_year} AND {column} = '{dim2_value}'
-            ORDER BY fiscal_week_number
-        """)
-        
-        result = self.compare(
-            dataset1=f"{dim1_value}:\n{self.format_results(data1)}",
-            dataset2=f"{dim2_value}:\n{self.format_results(data2)}"
-        )
-        return result.comparison
-    
-    def generate_weekly_report(self, fiscal_year: int = 2026) -> str:
-        """Generate comprehensive weekly performance report."""
-        
-        print(f"Generating full report for FY{fiscal_year}...")
-        
-        # Gather multiple analyses
-        summary_analysis = self.analyze_weekly_summary(fiscal_year)
-        industry_analysis = self.analyze_by_dimension('industry', fiscal_year)
-        
-        # Find the unusual week (Week 9 based on data we saw)
-        week9_investigation = self.investigate_week(9, fiscal_year)
-        
-        all_analyses = f"""
-WEEKLY TREND ANALYSIS:
-{summary_analysis}
-
-INDUSTRY BREAKDOWN:
-{industry_analysis}
-
-WEEK 9 INVESTIGATION (lowest avg lot value):
-{week9_investigation}
-"""
-        
-        result = self.report(analyses=all_analyses)
-        return result.report
