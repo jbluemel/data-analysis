@@ -12,8 +12,8 @@ Weeks analyzed:
 """
 
 import dspy
-from src.database import AuctionDatabase
-from src.analyzer import AuctionAnalyzer
+from shared.database import AuctionDatabase
+from analyzers.alv_weekly.analyzer import AuctionAnalyzer
 
 # ============================================================
 # LLM CONFIGURATION
@@ -36,7 +36,7 @@ def main():
     # Connect to database
     db = AuctionDatabase()
     
-    # Create analyzer (uses signature from src/analyzer.py)
+    # Create analyzer (uses signature from analyzers.alv_weekly.analyzer.py)
     analyzer = AuctionAnalyzer(db)
     
     # Weeks to analyze

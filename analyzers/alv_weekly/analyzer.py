@@ -1,7 +1,7 @@
 import dspy
 import json
 import os
-from src.database import AuctionDatabase
+from shared.database import AuctionDatabase
 from typing import Dict, List, Optional
 
 

@@ -14,12 +14,16 @@ class AuctionDatabase:
         'weekly_metrics_by_familyv2',
         'weekly_metrics_by_regionv2',
         'weekly_metrics_by_districtv2',
-        'weekly_metrics_by_territoryv2'
+        'weekly_metrics_by_territoryv2',
+        'nps',
+        'nps_enriched',
+        'nps_bidding_all',
+        'nps_nearest_transactions'
     ]
 
     def __init__(self):
         self.conn = psycopg2.connect(
-            host="172.26.5.215",
+            host="localhost",
             port=5434,
             database="dbt_dev",
             user="dbt_user",
