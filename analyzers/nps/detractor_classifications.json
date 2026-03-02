@@ -1,0 +1,1194 @@
+{
+  "total_detractors": 218,
+  "no_match": 80,
+  "multi_match": 27,
+  "category_counts": {
+    "fees": 50,
+    "item_accuracy": 27,
+    "bidding_issues": 22,
+    "account_problems": 21,
+    "item_condition": 18,
+    "seller_honesty": 16,
+    "payment_settlement": 8,
+    "title_paperwork": 5
+  },
+  "classifications": [
+    {
+      "entity_id": 3176,
+      "categories": []
+    },
+    {
+      "entity_id": 3360,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 10081,
+      "categories": [
+        "seller_honesty",
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 12913,
+      "categories": []
+    },
+    {
+      "entity_id": 15575,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 22541,
+      "categories": [
+        "item_condition",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 24450,
+      "categories": [
+        "item_condition",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 29911,
+      "categories": []
+    },
+    {
+      "entity_id": 37576,
+      "categories": []
+    },
+    {
+      "entity_id": 41580,
+      "categories": []
+    },
+    {
+      "entity_id": 42404,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 42889,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 50190,
+      "categories": [
+        "item_accuracy",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 50477,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 50882,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 55663,
+      "categories": [
+        "item_condition",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 56832,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 57876,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 58015,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 58015,
+      "categories": []
+    },
+    {
+      "entity_id": 61944,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 63709,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 63729,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 66354,
+      "categories": []
+    },
+    {
+      "entity_id": 69892,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 70063,
+      "categories": []
+    },
+    {
+      "entity_id": 71476,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 71959,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 71959,
+      "categories": []
+    },
+    {
+      "entity_id": 73213,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 76136,
+      "categories": [
+        "item_accuracy",
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 79267,
+      "categories": [
+        "item_accuracy",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 81627,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 85345,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 86180,
+      "categories": [
+        "item_accuracy",
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 86405,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 88186,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 88320,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 89118,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 91971,
+      "categories": []
+    },
+    {
+      "entity_id": 92982,
+      "categories": []
+    },
+    {
+      "entity_id": 100920,
+      "categories": []
+    },
+    {
+      "entity_id": 103967,
+      "categories": [
+        "item_accuracy",
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 105573,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 105601,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 107578,
+      "categories": []
+    },
+    {
+      "entity_id": 112833,
+      "categories": []
+    },
+    {
+      "entity_id": 117166,
+      "categories": [
+        "fees",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 118257,
+      "categories": [
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 120485,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 121007,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 125681,
+      "categories": []
+    },
+    {
+      "entity_id": 126124,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 129987,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 130361,
+      "categories": [
+        "seller_honesty",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 132350,
+      "categories": []
+    },
+    {
+      "entity_id": 133300,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 134533,
+      "categories": [
+        "fees",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 134922,
+      "categories": []
+    },
+    {
+      "entity_id": 135944,
+      "categories": [
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 144513,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 144668,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 148214,
+      "categories": []
+    },
+    {
+      "entity_id": 149462,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 155865,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 156450,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 160392,
+      "categories": [
+        "seller_honesty",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 162072,
+      "categories": [
+        "account_problems",
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 163670,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 165855,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 167145,
+      "categories": [
+        "fees",
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 167834,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 170293,
+      "categories": [
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 170803,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 172337,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 174420,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 175405,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 178924,
+      "categories": []
+    },
+    {
+      "entity_id": 181465,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 181465,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 185993,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 186386,
+      "categories": []
+    },
+    {
+      "entity_id": 189883,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 191980,
+      "categories": [
+        "fees",
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 192984,
+      "categories": []
+    },
+    {
+      "entity_id": 195678,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 197486,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 204343,
+      "categories": [
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 205818,
+      "categories": []
+    },
+    {
+      "entity_id": 206477,
+      "categories": []
+    },
+    {
+      "entity_id": 217382,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 218943,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 219636,
+      "categories": [
+        "fees",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 222669,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 224804,
+      "categories": [
+        "seller_honesty",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 239003,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 243343,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 245494,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 251342,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 256217,
+      "categories": []
+    },
+    {
+      "entity_id": 259283,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 259691,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 259691,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 260234,
+      "categories": [
+        "fees",
+        "item_accuracy",
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 264632,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 278211,
+      "categories": []
+    },
+    {
+      "entity_id": 281346,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 286148,
+      "categories": [
+        "title_paperwork"
+      ]
+    },
+    {
+      "entity_id": 288390,
+      "categories": [
+        "item_accuracy",
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 288390,
+      "categories": [
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 288472,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 288623,
+      "categories": []
+    },
+    {
+      "entity_id": 290808,
+      "categories": []
+    },
+    {
+      "entity_id": 295610,
+      "categories": [
+        "title_paperwork"
+      ]
+    },
+    {
+      "entity_id": 298199,
+      "categories": []
+    },
+    {
+      "entity_id": 304694,
+      "categories": [
+        "seller_honesty",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 312613,
+      "categories": []
+    },
+    {
+      "entity_id": 328109,
+      "categories": [
+        "item_condition",
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 333304,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 344715,
+      "categories": []
+    },
+    {
+      "entity_id": 347132,
+      "categories": [
+        "seller_honesty",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 350003,
+      "categories": []
+    },
+    {
+      "entity_id": 351026,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 356228,
+      "categories": []
+    },
+    {
+      "entity_id": 357814,
+      "categories": []
+    },
+    {
+      "entity_id": 363066,
+      "categories": [
+        "item_condition",
+        "item_accuracy",
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 368361,
+      "categories": []
+    },
+    {
+      "entity_id": 368754,
+      "categories": []
+    },
+    {
+      "entity_id": 370574,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 372058,
+      "categories": []
+    },
+    {
+      "entity_id": 374431,
+      "categories": []
+    },
+    {
+      "entity_id": 381861,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 382026,
+      "categories": []
+    },
+    {
+      "entity_id": 385128,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 385358,
+      "categories": []
+    },
+    {
+      "entity_id": 386088,
+      "categories": []
+    },
+    {
+      "entity_id": 392146,
+      "categories": []
+    },
+    {
+      "entity_id": 393337,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 393606,
+      "categories": [
+        "seller_honesty",
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 396468,
+      "categories": [
+        "fees",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 396597,
+      "categories": []
+    },
+    {
+      "entity_id": 396598,
+      "categories": []
+    },
+    {
+      "entity_id": 401383,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 403820,
+      "categories": []
+    },
+    {
+      "entity_id": 408173,
+      "categories": []
+    },
+    {
+      "entity_id": 410796,
+      "categories": []
+    },
+    {
+      "entity_id": 411968,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 412636,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 412879,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 424839,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 444730,
+      "categories": []
+    },
+    {
+      "entity_id": 447290,
+      "categories": []
+    },
+    {
+      "entity_id": 451828,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 458743,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 458743,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 459838,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 461216,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 461751,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 466157,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 467719,
+      "categories": [
+        "title_paperwork"
+      ]
+    },
+    {
+      "entity_id": 468373,
+      "categories": []
+    },
+    {
+      "entity_id": 470643,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 471394,
+      "categories": []
+    },
+    {
+      "entity_id": 472059,
+      "categories": []
+    },
+    {
+      "entity_id": 474232,
+      "categories": []
+    },
+    {
+      "entity_id": 475111,
+      "categories": []
+    },
+    {
+      "entity_id": 475313,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 475883,
+      "categories": []
+    },
+    {
+      "entity_id": 476737,
+      "categories": []
+    },
+    {
+      "entity_id": 477128,
+      "categories": [
+        "title_paperwork"
+      ]
+    },
+    {
+      "entity_id": 477371,
+      "categories": []
+    },
+    {
+      "entity_id": 477970,
+      "categories": []
+    },
+    {
+      "entity_id": 479220,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 482196,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 483465,
+      "categories": []
+    },
+    {
+      "entity_id": 484626,
+      "categories": []
+    },
+    {
+      "entity_id": 485563,
+      "categories": []
+    },
+    {
+      "entity_id": 486220,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 487258,
+      "categories": []
+    },
+    {
+      "entity_id": 491276,
+      "categories": []
+    },
+    {
+      "entity_id": 491327,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 491858,
+      "categories": []
+    },
+    {
+      "entity_id": 494544,
+      "categories": []
+    },
+    {
+      "entity_id": 495342,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 496075,
+      "categories": [
+        "title_paperwork"
+      ]
+    },
+    {
+      "entity_id": 498857,
+      "categories": []
+    },
+    {
+      "entity_id": 499945,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 500911,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 501975,
+      "categories": [
+        "seller_honesty",
+        "item_condition"
+      ]
+    },
+    {
+      "entity_id": 503241,
+      "categories": []
+    },
+    {
+      "entity_id": 503453,
+      "categories": []
+    },
+    {
+      "entity_id": 504814,
+      "categories": []
+    },
+    {
+      "entity_id": 506674,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 507845,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 510029,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 510221,
+      "categories": []
+    },
+    {
+      "entity_id": 510933,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 512228,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 512943,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 514866,
+      "categories": []
+    },
+    {
+      "entity_id": 515036,
+      "categories": []
+    },
+    {
+      "entity_id": 517552,
+      "categories": []
+    },
+    {
+      "entity_id": 517552,
+      "categories": []
+    },
+    {
+      "entity_id": 519129,
+      "categories": []
+    },
+    {
+      "entity_id": 519292,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 519353,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 523730,
+      "categories": []
+    },
+    {
+      "entity_id": 529270,
+      "categories": []
+    },
+    {
+      "entity_id": 530180,
+      "categories": []
+    },
+    {
+      "entity_id": 532566,
+      "categories": [
+        "account_problems"
+      ]
+    },
+    {
+      "entity_id": 539913,
+      "categories": []
+    },
+    {
+      "entity_id": 540292,
+      "categories": [
+        "item_accuracy"
+      ]
+    },
+    {
+      "entity_id": 551182,
+      "categories": [
+        "payment_settlement"
+      ]
+    },
+    {
+      "entity_id": 551657,
+      "categories": [
+        "bidding_issues"
+      ]
+    },
+    {
+      "entity_id": 554656,
+      "categories": [
+        "fees"
+      ]
+    },
+    {
+      "entity_id": 555524,
+      "categories": []
+    },
+    {
+      "entity_id": 556298,
+      "categories": [
+        "seller_honesty"
+      ]
+    },
+    {
+      "entity_id": 556404,
+      "categories": []
+    }
+  ]
+}

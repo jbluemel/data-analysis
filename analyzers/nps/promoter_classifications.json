@@ -1,0 +1,5724 @@
+{
+  "total_promoters": 985,
+  "no_match": 233,
+  "multi_match": 240,
+  "category_counts": {
+    "website_ease": 195,
+    "customer_service": 194,
+    "inventory_selection": 158,
+    "item_information": 119,
+    "trust_reliability": 106,
+    "bidding_experience": 99,
+    "pricing_deals": 83,
+    "selling_experience": 61
+  },
+  "classifications": [
+    {
+      "entity_id": 2475,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 2886,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 4006,
+      "categories": []
+    },
+    {
+      "entity_id": 5289,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 5826,
+      "categories": [
+        "bidding_experience",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 7462,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 11178,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 13389,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 13389,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 15263,
+      "categories": []
+    },
+    {
+      "entity_id": 15478,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 15478,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 16475,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 18509,
+      "categories": []
+    },
+    {
+      "entity_id": 23545,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 23545,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 23576,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 24690,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 26829,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 29680,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 30042,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 32678,
+      "categories": []
+    },
+    {
+      "entity_id": 34101,
+      "categories": []
+    },
+    {
+      "entity_id": 34436,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 35437,
+      "categories": [
+        "selling_experience",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 36071,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 36893,
+      "categories": []
+    },
+    {
+      "entity_id": 37106,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 37401,
+      "categories": []
+    },
+    {
+      "entity_id": 37834,
+      "categories": []
+    },
+    {
+      "entity_id": 37991,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 38539,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 38762,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 41891,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 42650,
+      "categories": [
+        "item_information",
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 43761,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 45083,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 50135,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 51138,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 54286,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 54286,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 54590,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 55249,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 55934,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 56217,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 57077,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 57243,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 58333,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 58333,
+      "categories": []
+    },
+    {
+      "entity_id": 61288,
+      "categories": []
+    },
+    {
+      "entity_id": 62193,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 62409,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 63320,
+      "categories": [
+        "selling_experience",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 64335,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 65128,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 65494,
+      "categories": []
+    },
+    {
+      "entity_id": 66140,
+      "categories": []
+    },
+    {
+      "entity_id": 68779,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 68967,
+      "categories": []
+    },
+    {
+      "entity_id": 69586,
+      "categories": []
+    },
+    {
+      "entity_id": 70955,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 74269,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 75398,
+      "categories": []
+    },
+    {
+      "entity_id": 76412,
+      "categories": []
+    },
+    {
+      "entity_id": 76696,
+      "categories": []
+    },
+    {
+      "entity_id": 76745,
+      "categories": []
+    },
+    {
+      "entity_id": 77990,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 78700,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 78936,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 80768,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 84890,
+      "categories": []
+    },
+    {
+      "entity_id": 84999,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 85373,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 86490,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 88105,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 88968,
+      "categories": []
+    },
+    {
+      "entity_id": 89369,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 89827,
+      "categories": []
+    },
+    {
+      "entity_id": 91606,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 92010,
+      "categories": []
+    },
+    {
+      "entity_id": 92199,
+      "categories": [
+        "bidding_experience",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 92619,
+      "categories": []
+    },
+    {
+      "entity_id": 92619,
+      "categories": []
+    },
+    {
+      "entity_id": 94107,
+      "categories": [
+        "pricing_deals",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 94891,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 95354,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 96564,
+      "categories": [
+        "selling_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 97333,
+      "categories": []
+    },
+    {
+      "entity_id": 98723,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 100667,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 100667,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 102988,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 104549,
+      "categories": []
+    },
+    {
+      "entity_id": 105318,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 105318,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 105521,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 105555,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 105966,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 106689,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 106896,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 107019,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 108215,
+      "categories": [
+        "trust_reliability",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 108651,
+      "categories": [
+        "item_information",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 111969,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 112550,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 113737,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 113935,
+      "categories": []
+    },
+    {
+      "entity_id": 114831,
+      "categories": []
+    },
+    {
+      "entity_id": 115752,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 116506,
+      "categories": []
+    },
+    {
+      "entity_id": 117007,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 117694,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 117926,
+      "categories": []
+    },
+    {
+      "entity_id": 117990,
+      "categories": []
+    },
+    {
+      "entity_id": 118168,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 118168,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 120109,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 120109,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 120194,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 120565,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 121059,
+      "categories": []
+    },
+    {
+      "entity_id": 121866,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 122693,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 123278,
+      "categories": [
+        "customer_service",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 125282,
+      "categories": []
+    },
+    {
+      "entity_id": 126547,
+      "categories": [
+        "customer_service",
+        "pricing_deals",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 126547,
+      "categories": [
+        "customer_service",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 126798,
+      "categories": []
+    },
+    {
+      "entity_id": 126798,
+      "categories": []
+    },
+    {
+      "entity_id": 127026,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 128141,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 128479,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 128623,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 128623,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 128830,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 130023,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 130257,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 130627,
+      "categories": [
+        "item_information",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 132257,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 132546,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 133443,
+      "categories": []
+    },
+    {
+      "entity_id": 134018,
+      "categories": [
+        "trust_reliability",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 134115,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 135005,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 137088,
+      "categories": []
+    },
+    {
+      "entity_id": 141180,
+      "categories": []
+    },
+    {
+      "entity_id": 142025,
+      "categories": []
+    },
+    {
+      "entity_id": 142586,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 142922,
+      "categories": [
+        "item_information",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 143824,
+      "categories": []
+    },
+    {
+      "entity_id": 145194,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 148537,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 148739,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 149208,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 149322,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 150090,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 150426,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 150756,
+      "categories": []
+    },
+    {
+      "entity_id": 151054,
+      "categories": []
+    },
+    {
+      "entity_id": 151164,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 152392,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 152933,
+      "categories": [
+        "selling_experience",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 153386,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 153909,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 155091,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 155635,
+      "categories": []
+    },
+    {
+      "entity_id": 156556,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 156983,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 157754,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 159560,
+      "categories": []
+    },
+    {
+      "entity_id": 159833,
+      "categories": [
+        "pricing_deals",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 159917,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 160019,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 160549,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 164274,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 165093,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 165093,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 166005,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 167501,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 168846,
+      "categories": []
+    },
+    {
+      "entity_id": 170709,
+      "categories": []
+    },
+    {
+      "entity_id": 170750,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 171049,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 171070,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 171580,
+      "categories": []
+    },
+    {
+      "entity_id": 171635,
+      "categories": []
+    },
+    {
+      "entity_id": 171646,
+      "categories": []
+    },
+    {
+      "entity_id": 172800,
+      "categories": []
+    },
+    {
+      "entity_id": 172884,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 173088,
+      "categories": [
+        "item_information",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 173760,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 176192,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 176749,
+      "categories": []
+    },
+    {
+      "entity_id": 176778,
+      "categories": [
+        "pricing_deals",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 178196,
+      "categories": []
+    },
+    {
+      "entity_id": 178196,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 178196,
+      "categories": []
+    },
+    {
+      "entity_id": 178294,
+      "categories": [
+        "customer_service",
+        "selling_experience",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 179695,
+      "categories": []
+    },
+    {
+      "entity_id": 180330,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 181835,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 182835,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 183363,
+      "categories": []
+    },
+    {
+      "entity_id": 184337,
+      "categories": []
+    },
+    {
+      "entity_id": 184622,
+      "categories": []
+    },
+    {
+      "entity_id": 184660,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 184660,
+      "categories": [
+        "bidding_experience",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 185568,
+      "categories": []
+    },
+    {
+      "entity_id": 185768,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 185932,
+      "categories": []
+    },
+    {
+      "entity_id": 187535,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 187647,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 189373,
+      "categories": []
+    },
+    {
+      "entity_id": 190611,
+      "categories": [
+        "item_information",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 191199,
+      "categories": [
+        "bidding_experience",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 191987,
+      "categories": []
+    },
+    {
+      "entity_id": 192361,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 192783,
+      "categories": [
+        "item_information",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 193096,
+      "categories": [
+        "bidding_experience",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 193263,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 193275,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 193940,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 194508,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 194508,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 194784,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 195446,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 195898,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 196033,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 197486,
+      "categories": []
+    },
+    {
+      "entity_id": 198077,
+      "categories": []
+    },
+    {
+      "entity_id": 198084,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 198203,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 199855,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 201216,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 201216,
+      "categories": [
+        "trust_reliability",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 201417,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 202949,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 203123,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 204104,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 204416,
+      "categories": []
+    },
+    {
+      "entity_id": 205104,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 206242,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 206242,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 206242,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 206242,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 206468,
+      "categories": []
+    },
+    {
+      "entity_id": 206684,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 207354,
+      "categories": []
+    },
+    {
+      "entity_id": 208825,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 208825,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 209228,
+      "categories": [
+        "selling_experience",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 209370,
+      "categories": []
+    },
+    {
+      "entity_id": 210113,
+      "categories": [
+        "item_information",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 210655,
+      "categories": []
+    },
+    {
+      "entity_id": 210951,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 211237,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 211860,
+      "categories": []
+    },
+    {
+      "entity_id": 211999,
+      "categories": []
+    },
+    {
+      "entity_id": 212537,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 212540,
+      "categories": []
+    },
+    {
+      "entity_id": 212920,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 212920,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 213366,
+      "categories": [
+        "trust_reliability",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 213718,
+      "categories": []
+    },
+    {
+      "entity_id": 214469,
+      "categories": []
+    },
+    {
+      "entity_id": 214469,
+      "categories": []
+    },
+    {
+      "entity_id": 214469,
+      "categories": []
+    },
+    {
+      "entity_id": 215098,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 216052,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 217016,
+      "categories": [
+        "pricing_deals",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 220291,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 220833,
+      "categories": [
+        "bidding_experience",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 221362,
+      "categories": []
+    },
+    {
+      "entity_id": 221858,
+      "categories": []
+    },
+    {
+      "entity_id": 222025,
+      "categories": []
+    },
+    {
+      "entity_id": 222183,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 223536,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 224163,
+      "categories": []
+    },
+    {
+      "entity_id": 224211,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 226024,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 226400,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 227313,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 227932,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 228224,
+      "categories": []
+    },
+    {
+      "entity_id": 229033,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 230996,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 232345,
+      "categories": []
+    },
+    {
+      "entity_id": 232535,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 232535,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 234067,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 235065,
+      "categories": [
+        "selling_experience",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 235262,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 235970,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 236089,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 236375,
+      "categories": []
+    },
+    {
+      "entity_id": 236642,
+      "categories": []
+    },
+    {
+      "entity_id": 236715,
+      "categories": []
+    },
+    {
+      "entity_id": 239003,
+      "categories": []
+    },
+    {
+      "entity_id": 240156,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 241054,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 241371,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 241811,
+      "categories": []
+    },
+    {
+      "entity_id": 241887,
+      "categories": []
+    },
+    {
+      "entity_id": 241962,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 243511,
+      "categories": [
+        "customer_service",
+        "bidding_experience",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 243928,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 244102,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 245505,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 248399,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 249312,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 250589,
+      "categories": [
+        "customer_service",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 253189,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 253661,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 254565,
+      "categories": [
+        "item_information",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 255185,
+      "categories": [
+        "pricing_deals",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 256217,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 256361,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 256361,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 257585,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 259180,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 259410,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 260677,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 261034,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 262277,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 262581,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 263986,
+      "categories": [
+        "website_ease",
+        "inventory_selection",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 264632,
+      "categories": []
+    },
+    {
+      "entity_id": 265602,
+      "categories": []
+    },
+    {
+      "entity_id": 266357,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 266722,
+      "categories": []
+    },
+    {
+      "entity_id": 266880,
+      "categories": []
+    },
+    {
+      "entity_id": 268709,
+      "categories": [
+        "inventory_selection",
+        "customer_service",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 269166,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 270190,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 270702,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 270785,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 271414,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 271895,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 273086,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 273659,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 273664,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 274769,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 276092,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 277053,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 277053,
+      "categories": []
+    },
+    {
+      "entity_id": 279448,
+      "categories": [
+        "trust_reliability",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 279494,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 279710,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 280572,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 281100,
+      "categories": []
+    },
+    {
+      "entity_id": 281895,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 282900,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 283382,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 283438,
+      "categories": []
+    },
+    {
+      "entity_id": 283967,
+      "categories": []
+    },
+    {
+      "entity_id": 284940,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 286444,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 287214,
+      "categories": []
+    },
+    {
+      "entity_id": 287417,
+      "categories": []
+    },
+    {
+      "entity_id": 287514,
+      "categories": []
+    },
+    {
+      "entity_id": 287572,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 287668,
+      "categories": []
+    },
+    {
+      "entity_id": 290322,
+      "categories": []
+    },
+    {
+      "entity_id": 291222,
+      "categories": []
+    },
+    {
+      "entity_id": 291309,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 292315,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 294694,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 301101,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 301327,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 301615,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 303031,
+      "categories": [
+        "item_information",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 303031,
+      "categories": []
+    },
+    {
+      "entity_id": 303031,
+      "categories": []
+    },
+    {
+      "entity_id": 304701,
+      "categories": []
+    },
+    {
+      "entity_id": 304885,
+      "categories": [
+        "inventory_selection",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 305868,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 306178,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 306844,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 306844,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 307964,
+      "categories": []
+    },
+    {
+      "entity_id": 308570,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 308600,
+      "categories": [
+        "website_ease",
+        "bidding_experience",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 308712,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 308822,
+      "categories": []
+    },
+    {
+      "entity_id": 309229,
+      "categories": []
+    },
+    {
+      "entity_id": 309406,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 309888,
+      "categories": []
+    },
+    {
+      "entity_id": 311346,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 311647,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 311987,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 313577,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 314118,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 314663,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 316008,
+      "categories": []
+    },
+    {
+      "entity_id": 316099,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 316462,
+      "categories": []
+    },
+    {
+      "entity_id": 318863,
+      "categories": []
+    },
+    {
+      "entity_id": 319179,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 320588,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 321699,
+      "categories": []
+    },
+    {
+      "entity_id": 323352,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 323605,
+      "categories": []
+    },
+    {
+      "entity_id": 324854,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 327152,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 328192,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 328247,
+      "categories": [
+        "item_information",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 328247,
+      "categories": [
+        "item_information",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 328707,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 330892,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 331677,
+      "categories": []
+    },
+    {
+      "entity_id": 332049,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 332309,
+      "categories": []
+    },
+    {
+      "entity_id": 333052,
+      "categories": []
+    },
+    {
+      "entity_id": 333648,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 334026,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 334026,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 334089,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 334349,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 334674,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 337022,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 337024,
+      "categories": [
+        "pricing_deals",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 337554,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 337699,
+      "categories": []
+    },
+    {
+      "entity_id": 337742,
+      "categories": []
+    },
+    {
+      "entity_id": 339219,
+      "categories": [
+        "selling_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 339600,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 340873,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 341224,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 342173,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 342948,
+      "categories": [
+        "trust_reliability",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 342948,
+      "categories": [
+        "trust_reliability",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 343170,
+      "categories": [
+        "selling_experience",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 343216,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 344696,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 345701,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 346021,
+      "categories": []
+    },
+    {
+      "entity_id": 346092,
+      "categories": []
+    },
+    {
+      "entity_id": 348214,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 348415,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 348606,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 348704,
+      "categories": [
+        "item_information",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 349587,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 350114,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 350424,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 350728,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 351068,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 351072,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 351382,
+      "categories": []
+    },
+    {
+      "entity_id": 351844,
+      "categories": []
+    },
+    {
+      "entity_id": 351892,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 352217,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 352293,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 352605,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 352642,
+      "categories": []
+    },
+    {
+      "entity_id": 354875,
+      "categories": []
+    },
+    {
+      "entity_id": 354875,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 356234,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 356596,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 356693,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 356897,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 358933,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 359718,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 359884,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 360291,
+      "categories": []
+    },
+    {
+      "entity_id": 360439,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 361865,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 362312,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 362358,
+      "categories": [
+        "inventory_selection",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 362371,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 363442,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 366035,
+      "categories": []
+    },
+    {
+      "entity_id": 366702,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 367585,
+      "categories": []
+    },
+    {
+      "entity_id": 368376,
+      "categories": []
+    },
+    {
+      "entity_id": 368387,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 369595,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 372253,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 373640,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 373957,
+      "categories": [
+        "website_ease",
+        "item_information",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 374989,
+      "categories": [
+        "inventory_selection",
+        "website_ease",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 375143,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 376270,
+      "categories": [
+        "pricing_deals",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 377080,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 377397,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 378132,
+      "categories": []
+    },
+    {
+      "entity_id": 379204,
+      "categories": [
+        "inventory_selection",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 379351,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 380400,
+      "categories": []
+    },
+    {
+      "entity_id": 381142,
+      "categories": []
+    },
+    {
+      "entity_id": 381477,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 381804,
+      "categories": []
+    },
+    {
+      "entity_id": 381804,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 381804,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 382111,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 383541,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 384489,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 385254,
+      "categories": []
+    },
+    {
+      "entity_id": 386809,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 386809,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 387573,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 388418,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 389085,
+      "categories": []
+    },
+    {
+      "entity_id": 389724,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 390287,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 390588,
+      "categories": []
+    },
+    {
+      "entity_id": 390714,
+      "categories": []
+    },
+    {
+      "entity_id": 391312,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 392011,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 392853,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 393122,
+      "categories": []
+    },
+    {
+      "entity_id": 393198,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 393337,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 393870,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 396197,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 396689,
+      "categories": []
+    },
+    {
+      "entity_id": 398751,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 399265,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 399549,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 400280,
+      "categories": [
+        "item_information",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 400280,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 400292,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 401352,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 401362,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 402448,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 402607,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 403525,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 404584,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 404888,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 405463,
+      "categories": [
+        "customer_service",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 406112,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 406952,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 407052,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 408093,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 408809,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 409192,
+      "categories": []
+    },
+    {
+      "entity_id": 409397,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 409699,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 410357,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 412110,
+      "categories": []
+    },
+    {
+      "entity_id": 412491,
+      "categories": [
+        "inventory_selection",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 412579,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 413103,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 413394,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 413394,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 413394,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 413966,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 414009,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 415639,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 416198,
+      "categories": []
+    },
+    {
+      "entity_id": 416361,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 417784,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 418431,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 418451,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 418843,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 419563,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 419570,
+      "categories": [
+        "website_ease",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 420163,
+      "categories": []
+    },
+    {
+      "entity_id": 420920,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 424477,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 424655,
+      "categories": []
+    },
+    {
+      "entity_id": 424661,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 425547,
+      "categories": []
+    },
+    {
+      "entity_id": 425617,
+      "categories": [
+        "customer_service",
+        "bidding_experience",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 425696,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 427054,
+      "categories": []
+    },
+    {
+      "entity_id": 428318,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 428370,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 428481,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 430508,
+      "categories": []
+    },
+    {
+      "entity_id": 431239,
+      "categories": []
+    },
+    {
+      "entity_id": 431588,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 431644,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 431726,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 431779,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 431953,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 432075,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 432270,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 432729,
+      "categories": []
+    },
+    {
+      "entity_id": 433146,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 433481,
+      "categories": [
+        "trust_reliability",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 433496,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 433695,
+      "categories": []
+    },
+    {
+      "entity_id": 433714,
+      "categories": []
+    },
+    {
+      "entity_id": 433941,
+      "categories": [
+        "customer_service",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 434874,
+      "categories": []
+    },
+    {
+      "entity_id": 435048,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 435601,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 437470,
+      "categories": [
+        "pricing_deals",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 439759,
+      "categories": [
+        "pricing_deals",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 441256,
+      "categories": [
+        "trust_reliability",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 442094,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 442433,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 442490,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 444083,
+      "categories": [
+        "pricing_deals",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 444226,
+      "categories": [
+        "inventory_selection",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 444503,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 444730,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 444797,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 446084,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 446137,
+      "categories": []
+    },
+    {
+      "entity_id": 447201,
+      "categories": [
+        "customer_service",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 449076,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 449454,
+      "categories": []
+    },
+    {
+      "entity_id": 449889,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 451277,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 451552,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 452013,
+      "categories": []
+    },
+    {
+      "entity_id": 452038,
+      "categories": [
+        "customer_service",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 452325,
+      "categories": []
+    },
+    {
+      "entity_id": 453130,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 453720,
+      "categories": []
+    },
+    {
+      "entity_id": 454249,
+      "categories": []
+    },
+    {
+      "entity_id": 454578,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 455109,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 455383,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 455443,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 455443,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 455984,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 456046,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 456605,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 457237,
+      "categories": [
+        "pricing_deals",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 457824,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 458339,
+      "categories": []
+    },
+    {
+      "entity_id": 458512,
+      "categories": [
+        "website_ease",
+        "item_information",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 459322,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 460308,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 460430,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 460612,
+      "categories": []
+    },
+    {
+      "entity_id": 461635,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 461635,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 462052,
+      "categories": [
+        "trust_reliability",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 462096,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 462911,
+      "categories": []
+    },
+    {
+      "entity_id": 463385,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 463398,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 463398,
+      "categories": [
+        "item_information",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 463398,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 463398,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 463896,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 464288,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 464472,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 464485,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 464570,
+      "categories": [
+        "pricing_deals",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 465490,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 466240,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 466436,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 466898,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 467146,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 467372,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 467866,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 468180,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 468498,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 468514,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 468878,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 469421,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 469428,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 469523,
+      "categories": [
+        "website_ease",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 470139,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 470276,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 470608,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 470758,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 470890,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 471052,
+      "categories": [
+        "pricing_deals",
+        "bidding_experience",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 471209,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 471332,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 471624,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 472181,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 472609,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 472653,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 472656,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 473033,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 473390,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 473628,
+      "categories": []
+    },
+    {
+      "entity_id": 473634,
+      "categories": [
+        "pricing_deals",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 473878,
+      "categories": [
+        "inventory_selection",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 474306,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 474344,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 474491,
+      "categories": []
+    },
+    {
+      "entity_id": 474709,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 474852,
+      "categories": []
+    },
+    {
+      "entity_id": 475062,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 475795,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 476233,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 476267,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 476366,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 476432,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 476718,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 476745,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 476809,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 476812,
+      "categories": []
+    },
+    {
+      "entity_id": 476873,
+      "categories": []
+    },
+    {
+      "entity_id": 476990,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 477618,
+      "categories": []
+    },
+    {
+      "entity_id": 477636,
+      "categories": []
+    },
+    {
+      "entity_id": 477713,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 478303,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 478575,
+      "categories": [
+        "item_information",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 478835,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 479387,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 479414,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 479621,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 480080,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 480151,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 480595,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 480745,
+      "categories": []
+    },
+    {
+      "entity_id": 481211,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 481273,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 481602,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 481602,
+      "categories": [
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 481706,
+      "categories": [
+        "inventory_selection",
+        "item_information",
+        "customer_service",
+        "website_ease",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 481728,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 481806,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 481821,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 482197,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 482393,
+      "categories": [
+        "website_ease",
+        "item_information",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 482431,
+      "categories": []
+    },
+    {
+      "entity_id": 483048,
+      "categories": []
+    },
+    {
+      "entity_id": 483168,
+      "categories": []
+    },
+    {
+      "entity_id": 483214,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 484545,
+      "categories": []
+    },
+    {
+      "entity_id": 484569,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 484596,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 484955,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 485585,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 485652,
+      "categories": []
+    },
+    {
+      "entity_id": 485823,
+      "categories": [
+        "bidding_experience",
+        "inventory_selection",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 486026,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 486329,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 487014,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 487014,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 487322,
+      "categories": []
+    },
+    {
+      "entity_id": 487782,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 488205,
+      "categories": []
+    },
+    {
+      "entity_id": 489202,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 489438,
+      "categories": []
+    },
+    {
+      "entity_id": 489583,
+      "categories": [
+        "inventory_selection",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 489586,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 489755,
+      "categories": []
+    },
+    {
+      "entity_id": 489908,
+      "categories": []
+    },
+    {
+      "entity_id": 490057,
+      "categories": []
+    },
+    {
+      "entity_id": 490057,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 490087,
+      "categories": [
+        "inventory_selection",
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 490843,
+      "categories": []
+    },
+    {
+      "entity_id": 491089,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 491179,
+      "categories": [
+        "customer_service",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 492198,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 492198,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 492198,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 492684,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 493051,
+      "categories": []
+    },
+    {
+      "entity_id": 493164,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 493247,
+      "categories": []
+    },
+    {
+      "entity_id": 493679,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 493885,
+      "categories": []
+    },
+    {
+      "entity_id": 494007,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 494153,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 494223,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 494331,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 494566,
+      "categories": []
+    },
+    {
+      "entity_id": 494598,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 494673,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 495004,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 495269,
+      "categories": [
+        "bidding_experience",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 495313,
+      "categories": []
+    },
+    {
+      "entity_id": 495456,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 495628,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 496148,
+      "categories": []
+    },
+    {
+      "entity_id": 496297,
+      "categories": []
+    },
+    {
+      "entity_id": 496364,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 496611,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 496671,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 496789,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 497111,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 497208,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 497647,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 498582,
+      "categories": []
+    },
+    {
+      "entity_id": 498655,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 498827,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 499063,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 499063,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 499209,
+      "categories": []
+    },
+    {
+      "entity_id": 499454,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 499535,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 499619,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 499750,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 499926,
+      "categories": []
+    },
+    {
+      "entity_id": 500022,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 500995,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 501149,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 501191,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 501221,
+      "categories": []
+    },
+    {
+      "entity_id": 501746,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 502052,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 502361,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 502738,
+      "categories": []
+    },
+    {
+      "entity_id": 503294,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 503528,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 503590,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 503724,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 503944,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 504121,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 504132,
+      "categories": []
+    },
+    {
+      "entity_id": 504202,
+      "categories": [
+        "trust_reliability",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 504227,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 504443,
+      "categories": []
+    },
+    {
+      "entity_id": 504650,
+      "categories": []
+    },
+    {
+      "entity_id": 504947,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 504951,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 505148,
+      "categories": [
+        "inventory_selection",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 505727,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 505925,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 506517,
+      "categories": []
+    },
+    {
+      "entity_id": 507295,
+      "categories": []
+    },
+    {
+      "entity_id": 507599,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 508249,
+      "categories": [
+        "bidding_experience",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 508432,
+      "categories": []
+    },
+    {
+      "entity_id": 508862,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 509448,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 509539,
+      "categories": [
+        "customer_service",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 509569,
+      "categories": [
+        "customer_service",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 509609,
+      "categories": [
+        "trust_reliability",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 509687,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 510043,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 510044,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 510398,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 511288,
+      "categories": [
+        "bidding_experience",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 511298,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 511543,
+      "categories": []
+    },
+    {
+      "entity_id": 512198,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 512620,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 512876,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 512942,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 513239,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 513446,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 513447,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 513652,
+      "categories": []
+    },
+    {
+      "entity_id": 513711,
+      "categories": []
+    },
+    {
+      "entity_id": 513711,
+      "categories": []
+    },
+    {
+      "entity_id": 513973,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 514316,
+      "categories": []
+    },
+    {
+      "entity_id": 514316,
+      "categories": [
+        "inventory_selection",
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 514367,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 514722,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 515039,
+      "categories": []
+    },
+    {
+      "entity_id": 515204,
+      "categories": []
+    },
+    {
+      "entity_id": 515215,
+      "categories": [
+        "pricing_deals",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 515215,
+      "categories": []
+    },
+    {
+      "entity_id": 515566,
+      "categories": []
+    },
+    {
+      "entity_id": 515848,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 516329,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 516726,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 516978,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 517133,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 517133,
+      "categories": [
+        "pricing_deals",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 517141,
+      "categories": []
+    },
+    {
+      "entity_id": 517308,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 517948,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 517976,
+      "categories": [
+        "bidding_experience",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 518079,
+      "categories": []
+    },
+    {
+      "entity_id": 518407,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 518407,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 518738,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 518786,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 519199,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 519279,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 519292,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 519323,
+      "categories": [
+        "website_ease",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 519585,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 519735,
+      "categories": [
+        "trust_reliability",
+        "item_information",
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 519811,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 519981,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 520075,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 520417,
+      "categories": []
+    },
+    {
+      "entity_id": 520427,
+      "categories": []
+    },
+    {
+      "entity_id": 520492,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 520492,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 520929,
+      "categories": []
+    },
+    {
+      "entity_id": 520929,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 521232,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 521743,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 521743,
+      "categories": []
+    },
+    {
+      "entity_id": 522898,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 522942,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 523067,
+      "categories": []
+    },
+    {
+      "entity_id": 523170,
+      "categories": []
+    },
+    {
+      "entity_id": 523790,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 523797,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 524848,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 524854,
+      "categories": [
+        "customer_service",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 525003,
+      "categories": [
+        "inventory_selection",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 525376,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 525386,
+      "categories": [
+        "inventory_selection",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 525521,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 525627,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 525679,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 526363,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 526474,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 526847,
+      "categories": [
+        "trust_reliability",
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 527007,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 527421,
+      "categories": []
+    },
+    {
+      "entity_id": 528156,
+      "categories": [
+        "bidding_experience",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 528215,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 528691,
+      "categories": []
+    },
+    {
+      "entity_id": 528886,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 529087,
+      "categories": [
+        "bidding_experience",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 529098,
+      "categories": []
+    },
+    {
+      "entity_id": 529466,
+      "categories": []
+    },
+    {
+      "entity_id": 529468,
+      "categories": [
+        "customer_service",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 529671,
+      "categories": [
+        "customer_service",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 529674,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 529944,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 530005,
+      "categories": []
+    },
+    {
+      "entity_id": 530720,
+      "categories": []
+    },
+    {
+      "entity_id": 530955,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 531232,
+      "categories": [
+        "inventory_selection",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 531355,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 531355,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 531821,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 531908,
+      "categories": [
+        "bidding_experience",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 532227,
+      "categories": [
+        "bidding_experience",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 532399,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 533505,
+      "categories": []
+    },
+    {
+      "entity_id": 533752,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 534035,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 534123,
+      "categories": []
+    },
+    {
+      "entity_id": 534210,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 534236,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 534901,
+      "categories": []
+    },
+    {
+      "entity_id": 535089,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 535623,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 536561,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 536730,
+      "categories": [
+        "website_ease",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 536911,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 536922,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 537467,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 537921,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 538222,
+      "categories": [
+        "trust_reliability",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 538407,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 538800,
+      "categories": [
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 539017,
+      "categories": []
+    },
+    {
+      "entity_id": 539044,
+      "categories": [
+        "website_ease",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 539056,
+      "categories": [
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 539424,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 539957,
+      "categories": [
+        "customer_service",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 540010,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 540166,
+      "categories": [
+        "website_ease",
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 540195,
+      "categories": []
+    },
+    {
+      "entity_id": 540549,
+      "categories": [
+        "bidding_experience"
+      ]
+    },
+    {
+      "entity_id": 541292,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 541657,
+      "categories": [
+        "pricing_deals",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 542267,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 542902,
+      "categories": []
+    },
+    {
+      "entity_id": 543555,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 544237,
+      "categories": []
+    },
+    {
+      "entity_id": 544257,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 544297,
+      "categories": [
+        "item_information",
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 544723,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 544758,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 545543,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 545694,
+      "categories": []
+    },
+    {
+      "entity_id": 545923,
+      "categories": [
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 546781,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 547216,
+      "categories": [
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 547371,
+      "categories": []
+    },
+    {
+      "entity_id": 547965,
+      "categories": [
+        "bidding_experience",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 548355,
+      "categories": []
+    },
+    {
+      "entity_id": 548425,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 549573,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 549593,
+      "categories": [
+        "website_ease",
+        "item_information"
+      ]
+    },
+    {
+      "entity_id": 550476,
+      "categories": [
+        "customer_service",
+        "selling_experience"
+      ]
+    },
+    {
+      "entity_id": 550856,
+      "categories": [
+        "website_ease",
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 551490,
+      "categories": []
+    },
+    {
+      "entity_id": 551660,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 552584,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 553119,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 553122,
+      "categories": [
+        "inventory_selection"
+      ]
+    },
+    {
+      "entity_id": 553438,
+      "categories": []
+    },
+    {
+      "entity_id": 553444,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 553997,
+      "categories": [
+        "inventory_selection",
+        "trust_reliability"
+      ]
+    },
+    {
+      "entity_id": 554086,
+      "categories": [
+        "item_information",
+        "pricing_deals"
+      ]
+    },
+    {
+      "entity_id": 555493,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 556015,
+      "categories": [
+        "customer_service"
+      ]
+    },
+    {
+      "entity_id": 556221,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 557703,
+      "categories": [
+        "website_ease"
+      ]
+    },
+    {
+      "entity_id": 559828,
+      "categories": [
+        "item_information",
+        "website_ease"
+      ]
+    }
+  ]
+}

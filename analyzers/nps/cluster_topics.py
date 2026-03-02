@@ -85,7 +85,7 @@ def main():
     topic_model = BERTopic(
         umap_model=umap_model,
         hdbscan_model=hdbscan_model,
-        nr_topics="auto",
+        nr_topics=12,
         top_n_words=10,
         verbose=True,
     )

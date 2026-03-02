@@ -1,50 +1,257 @@
 {
-  "n_topics": 2,
-  "outlier_count": 0,
+  "n_topics": 11,
+  "outlier_count": 414,
   "topics": [
     {
       "topic_id": 0,
-      "count": 1417,
+      "count": 231,
       "keywords": [
-        "to",
-        "the",
-        "and",
-        "of",
-        "have",
         "good",
-        "with",
-        "you"
+        "of",
+        "and",
+        "variety",
+        "equipment",
+        "very",
+        "to",
+        "place"
       ],
-      "detractor": 208,
-      "passive": 235,
-      "promoter": 974,
-      "detractor_pct": 14.7,
+      "detractor": 12,
+      "passive": 28,
+      "promoter": 191,
+      "detractor_pct": 5.2,
       "sample_comments": [
-        "While the auction itself is straight-forward, the information provided to contact the seller once an item is won is lacking major overhaul.  I had to call the corporate office of the sellers company in another state other than the items location.  Have their CSR give me the phone number for the location, then call numerous times over 3 day period with no answer.  While this may seem minuscule, the low cost flight opportunities for me to get to the items location disappeared and I had to spend 200.oo more to get to that location in less than 48 hours.  I clearly see its the sellers providing the information, HOWEVER, a strict guidelines for what the sellers MUST POST to enable bid winners to contact the seller in a timely manner to arrangemnt pick-up of the item.",
-        "I have been pleased with most purchases until the last one that we purchased a 2007 Peterbilt from Collinsville OK.  The auction yard left it out of the because I could not get there  by closing time, which was nice.  However, the truck batteries were completely dead, so dead that 2 sets of jumper cables would not start it, it still had enough air pressure that I was able to have my wife pull me with my pickup to get it started.  Then the clutch was so still that I had to put my foot under the pedal to pull it up to engage it.  I don' mind those things but am very troubled by the fact that it was not disclosed and am disappointed in Purple Wave for that.  Always in past experiences, Purple wave has be very accurate with inspections and reporting flaws.  I know that the batteries did not just die that dead in one day and the clutch did not get that stiff in one day.  I was able to get it home but my wife had to pull me to start it 3 times.",
-        "The buying and paying process is great. When I recommend you to people I warn them to be wary of descriptions. I'm a busy business owner so going hundreds of miles to look at different pieces of equipment each week would be counterproductive. I use descriptions and contact with the seller to make an informed decision about the item. Most of the time, the seller and description do not give whole truths. I could care less if the item has a cracked windshield noted but the bad transmssion or fuel pump isn't noted. I know the listing agents aren't mechanics...but they should be if they are giving any type of mechanical descriptions. I've bought trucks that had completely different engines than the listings showed. I've bought a grader that was listed with engine trouble. It was only mentioned when I arrived to pick up the machine that it had been ran out of oil and the crankshaft was wiped out. \n\nAll this to say...I've learned how to buy and usually what is safe to buy. I love purplewave and know at what pric"
+        "Good place to buy vehicles and equipment.",
+        "Wide variety of very good equipment",
+        "you have a very good variety of equipment and your prices are very reasonable"
       ]
     },
     {
       "topic_id": 1,
+      "count": 219,
+      "keywords": [
+        "have",
+        "wave",
+        "purple",
+        "had",
+        "experience",
+        "and",
+        "the",
+        "with"
+      ],
+      "detractor": 21,
+      "passive": 22,
+      "promoter": 176,
+      "detractor_pct": 9.6,
+      "sample_comments": [
+        "had great experience with purple wave",
+        "Just have had a good experience with purple wave.",
+        "I have had great experience with Purple Wave"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "count": 124,
+      "keywords": [
+        "easy",
+        "use",
+        "to",
+        "website",
+        "navigate",
+        "search",
+        "and",
+        "site"
+      ],
+      "detractor": 13,
+      "passive": 14,
+      "promoter": 97,
+      "detractor_pct": 10.5,
+      "sample_comments": [
+        "Great site. Easy to use.",
+        "Site is easy to use.",
+        "Easy to use website!"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "count": 90,
+      "keywords": [
+        "auction",
+        "site",
+        "the",
+        "company",
+        "deal",
+        "and",
+        "to",
+        "great"
+      ],
+      "detractor": 11,
+      "passive": 14,
+      "promoter": 65,
+      "detractor_pct": 12.2,
+      "sample_comments": [
+        "Great auction company",
+        "Great auction company",
+        "It s a great auction site."
+      ]
+    },
+    {
+      "topic_id": 4,
+      "count": 73,
+      "keywords": [
+        "buyers",
+        "premium",
+        "high",
+        "fee",
+        "10",
+        "the",
+        "on",
+        "is"
+      ],
+      "detractor": 40,
+      "passive": 24,
+      "promoter": 9,
+      "detractor_pct": 54.8,
+      "sample_comments": [
+        "Buyers fee is to high",
+        "Buyers premium is way to high",
+        "10% is too high of buyers fee!"
+      ]
+    },
+    {
+      "topic_id": 5,
+      "count": 68,
+      "keywords": [
+        "service",
+        "customer",
+        "great",
+        "and",
+        "with",
+        "have",
+        "always",
+        "selling"
+      ],
+      "detractor": 3,
+      "passive": 3,
+      "promoter": 62,
+      "detractor_pct": 4.4,
+      "sample_comments": [
+        "Great customer service",
+        "Great customer service.",
+        "Great Customer Service"
+      ]
+    },
+    {
+      "topic_id": 6,
+      "count": 67,
+      "keywords": [
+        "like",
+        "business",
+        "auctions",
+        "the",
+        "reserve",
+        "used",
+        "do",
+        "it"
+      ],
+      "detractor": 7,
+      "passive": 11,
+      "promoter": 49,
+      "detractor_pct": 10.4,
+      "sample_comments": [
+        "easy to do business with",
+        "Good to do business with",
+        "When I think about buying a piece of used equipment, whether it be for our volunteer fire department or for my personal use, Purple Wave comes to mind.  There are probably other companies that do the same as you, but when you find something you like, we stick with it.  I especially like when I see an item I am interested in, the several pictures that you provide.  I am from Colorado so if there were more equipment available from here, I would like to see them.  Thank you."
+      ]
+    },
+    {
+      "topic_id": 7,
+      "count": 59,
+      "keywords": [
+        "people",
+        "stuff",
+        "tell",
+        "dont",
+        "to",
+        "trucks",
+        "looking",
+        "want"
+      ],
+      "detractor": 8,
+      "passive": 15,
+      "promoter": 36,
+      "detractor_pct": 13.6,
+      "sample_comments": [
+        "The more people I tell, the more people I could have to bid against. So, no I tell no one.\u011f\u0178\u02dc\ufffd",
+        "Love it! I tell people all the time",
+        "I tell people about purplewave all the time. People ask where I buy stuff I got and I tell them about purplewave , I go to the site and show them. Most all of them say wow, I need to check this out. I tell them just really look over what you\u00e2\u20ac\u2122re thinking about buying. I don\u00e2\u20ac\u2122t think I bought anything that I have been disappointed with."
+      ]
+    },
+    {
+      "topic_id": 8,
+      "count": 36,
+      "keywords": [
+        "havent",
+        "room",
+        "score",
+        "yet",
+        "give",
+        "10",
+        "much",
+        "always"
+      ],
+      "detractor": 5,
+      "passive": 16,
+      "promoter": 15,
+      "detractor_pct": 13.9,
+      "sample_comments": [
+        "Haven\u2019t used much to give perfect score",
+        "I never give a perfect score as there is always room for improvements.",
+        "There\u2019s always room for improvement, I never give anyone a 10 out of 10"
+      ]
+    },
+    {
+      "topic_id": 9,
+      "count": 36,
+      "keywords": [
+        "title",
+        "phone",
+        "truck",
+        "to",
+        "tax",
+        "friend",
+        "purchase",
+        "the"
+      ],
+      "detractor": 16,
+      "passive": 4,
+      "promoter": 16,
+      "detractor_pct": 44.4,
+      "sample_comments": [
+        "Sales tax division is horrible, tried to collect tax from me on a farm piece of equipment when they didn\u2019t even know the tax laws of that state  I called the tax commission of that state to verify the tax law and had to fight purple wave over it",
+        "Title work is way to slow . Consider letting seller and buyer do title transfer. (others do) I picked up a vehicle Dec 22 and checked on where the title is on Jan 19 and it still wasn't mailed. SOMETHING needs to improve!!!!",
+        "I purchased a bucket truck from a guy on Oklahoma and made arrangements to get the truck when the weather cleared up. He wouldn't answer calls or return calls except for once. When speak I n g with him the second time, I told him I had never received any title to the truck from Purple Wave, that's when he told me he never gave you the title. I went to Oklahoma to get the title and truck and was not able to get in contact with him again. I came home empty! Lost money, again! You are not legally allowed to sell vehicles with out titles!"
+      ]
+    },
+    {
+      "topic_id": 10,
       "count": 23,
       "keywords": [
         "can",
-        "you",
-        "because",
-        "me",
-        "automatic",
-        "bets",
         "accpunr",
-        "apostar"
+        "automatic",
+        "apostar",
+        "bets",
+        "citio",
+        "gustan",
+        "facil"
       ],
       "detractor": 10,
       "passive": 2,
       "promoter": 11,
       "detractor_pct": 43.5,
       "sample_comments": [
+        "hemos hecho varias compras",
         "Me gustan las ofertas presentados",
-        "You can keep your mine busy",
         "exelente Citio wed, facil de usar"
       ]
     }
@@ -53,62 +260,62 @@
     {
       "entity_id": 2255,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 2475,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 2886,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 3176,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 3176,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 3360,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 4006,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 5289,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 5826,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 6523,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 7462,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 10081,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 10149,
@@ -118,87 +325,87 @@
     {
       "entity_id": 11178,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 12913,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 13389,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 13389,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 15263,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 15478,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 15478,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 15575,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 16183,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 16475,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 16644,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 16886,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 18509,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 19295,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 22541,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 23545,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 23545,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 23576,
@@ -208,27 +415,27 @@
     {
       "entity_id": 24450,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 24690,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 26829,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 29680,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 29911,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 30042,
@@ -238,67 +445,67 @@
     {
       "entity_id": 32295,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 32678,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 34101,
-      "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 34101,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
+    },
+    {
+      "entity_id": 34101,
+      "nps_score_label": "passive",
+      "topic_id": -1
     },
     {
       "entity_id": 34436,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 35437,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 36071,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 36893,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 37106,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 37401,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 37576,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 37834,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 37904,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 37991,
@@ -308,7 +515,7 @@
     {
       "entity_id": 38539,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 38762,
@@ -318,167 +525,167 @@
     {
       "entity_id": 39114,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 41580,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 41891,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 42404,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 42650,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 42889,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 43761,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 45083,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 50135,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 50190,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 50477,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 50882,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 51138,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 54237,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 54237,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 54286,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 54286,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 54590,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 55249,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 55663,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 55663,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 55934,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 56217,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 56832,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 57077,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 57243,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 57876,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 58015,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 58015,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 58015,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 58333,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 58333,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 61288,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 61858,
@@ -488,7 +695,7 @@
     {
       "entity_id": 61944,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 62193,
@@ -498,72 +705,72 @@
     {
       "entity_id": 62409,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 62966,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 63320,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 63709,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 63729,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 64335,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 65128,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 65467,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 65494,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 66140,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 66354,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 68779,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 68967,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 69051,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 69586,
@@ -573,22 +780,22 @@
     {
       "entity_id": 69892,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 70063,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 70955,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 71476,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 71889,
@@ -598,22 +805,22 @@
     {
       "entity_id": 71959,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 71959,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 72945,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 73213,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 74269,
@@ -623,82 +830,82 @@
     {
       "entity_id": 75398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 75813,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 76136,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 76412,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 76696,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 76745,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 76888,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 76956,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 77990,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 78235,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 78700,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 78936,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 79038,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 79038,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 79267,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 79321,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 80631,
@@ -708,7 +915,7 @@
     {
       "entity_id": 80768,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 81627,
@@ -718,92 +925,92 @@
     {
       "entity_id": 84890,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 84999,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 85290,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 85345,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 85373,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 86180,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 86405,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 86490,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 88105,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 88186,
-      "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 88186,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 5
+    },
+    {
+      "entity_id": 88186,
+      "nps_score_label": "detractor",
+      "topic_id": 9
     },
     {
       "entity_id": 88320,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 88968,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 89118,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 89369,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 89827,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 90395,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 90492,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 90727,
@@ -818,37 +1025,37 @@
     {
       "entity_id": 91971,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 92010,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 92199,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 92527,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 92619,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 92619,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 92982,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 94107,
@@ -858,47 +1065,47 @@
     {
       "entity_id": 94891,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 95354,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 96564,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 97333,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 98723,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 99312,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 100667,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 100667,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 100920,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 102988,
@@ -908,7 +1115,7 @@
     {
       "entity_id": 103967,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 104549,
@@ -933,17 +1140,17 @@
     {
       "entity_id": 105535,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 105555,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 105573,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 105601,
@@ -953,97 +1160,97 @@
     {
       "entity_id": 105966,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 106689,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 106896,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 107019,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 107578,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 108215,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 108651,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 110949,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 111969,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 112550,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 112833,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 113737,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 113935,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 114077,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 114831,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 115752,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 116506,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 117007,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 117166,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 117694,
@@ -1053,72 +1260,72 @@
     {
       "entity_id": 117926,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 117990,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 118168,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 118168,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 118257,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 120109,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 120109,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 120194,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 120485,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 120565,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 120745,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 121007,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 121059,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 121866,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 122340,
@@ -1133,32 +1340,32 @@
     {
       "entity_id": 123183,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 123278,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 124322,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 124565,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 125282,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 125595,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 125603,
@@ -1168,77 +1375,77 @@
     {
       "entity_id": 125681,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 126124,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 126547,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 126547,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 126798,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 126798,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 127026,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 128141,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 128479,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 128623,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 128623,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 128830,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 129987,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 130023,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 130257,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 130257,
@@ -1248,7 +1455,7 @@
     {
       "entity_id": 130361,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 130627,
@@ -1258,12 +1465,12 @@
     {
       "entity_id": 132257,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 132350,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 132546,
@@ -1273,17 +1480,17 @@
     {
       "entity_id": 132847,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 133300,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 133443,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 134018,
@@ -1293,62 +1500,62 @@
     {
       "entity_id": 134115,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 134533,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 134751,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 134922,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 135005,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 135005,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 135944,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 137088,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 138649,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 141180,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 142025,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 142586,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 142922,
@@ -1358,67 +1565,67 @@
     {
       "entity_id": 143824,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 144513,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 144513,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 144668,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 145194,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 148214,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 148248,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 148537,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 148739,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 149208,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 149322,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 149462,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 149818,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 150090,
@@ -1428,97 +1635,97 @@
     {
       "entity_id": 150426,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 150625,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 150756,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 151054,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 151164,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 152392,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 152933,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 153181,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 153386,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 153733,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 153909,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 155091,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 155635,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 155865,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 155865,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 156111,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 156450,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 156556,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 156937,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 156983,
@@ -1528,12 +1735,12 @@
     {
       "entity_id": 157754,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 159560,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 159833,
@@ -1543,112 +1750,112 @@
     {
       "entity_id": 159917,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 160019,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 160392,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 160392,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 160549,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 162072,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 163211,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 163670,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 164274,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 165093,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 165093,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 165855,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 166005,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 167145,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 167501,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 167834,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 168846,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 170243,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 170293,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 170709,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 170750,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 170803,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 171049,
@@ -1658,22 +1865,22 @@
     {
       "entity_id": 171070,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 171580,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 171635,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 171646,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 171790,
@@ -1683,22 +1890,22 @@
     {
       "entity_id": 172337,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 172800,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 172884,
-      "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 172884,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
+    },
+    {
+      "entity_id": 172884,
+      "nps_score_label": "passive",
+      "topic_id": -1
     },
     {
       "entity_id": 173088,
@@ -1708,7 +1915,7 @@
     {
       "entity_id": 173760,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 174244,
@@ -1723,22 +1930,22 @@
     {
       "entity_id": 175405,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 176192,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 176287,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 176749,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 176778,
@@ -1748,42 +1955,42 @@
     {
       "entity_id": 177957,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 178196,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 178196,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 178196,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 178294,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 178924,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 179431,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 179695,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 180071,
@@ -1793,52 +2000,52 @@
     {
       "entity_id": 180330,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 180553,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 181465,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 181465,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 181835,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 182835,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 183363,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 183618,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 184337,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 184622,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 184660,
@@ -1848,82 +2055,82 @@
     {
       "entity_id": 184660,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 185568,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 185768,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 185932,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 185993,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 186386,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 186818,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 187535,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 187647,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 188909,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 189373,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 189392,
       "nps_score_label": "passive",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 189624,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 189701,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 189883,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 190324,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 190611,
@@ -1933,12 +2140,12 @@
     {
       "entity_id": 191199,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 191980,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 191987,
@@ -1958,17 +2165,17 @@
     {
       "entity_id": 192984,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 193096,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 193263,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 193275,
@@ -1978,37 +2185,37 @@
     {
       "entity_id": 193940,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 194484,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 194508,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 194508,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 194784,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 195446,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 195678,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 195898,
@@ -2018,102 +2225,102 @@
     {
       "entity_id": 196033,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 197486,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 197486,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 198077,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 198084,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 198203,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 198462,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 199855,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 201216,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 201216,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 201417,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 202949,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 202952,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 203123,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 204104,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 204343,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 204416,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 205104,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 205509,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 205818,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 206242,
@@ -2123,22 +2330,22 @@
     {
       "entity_id": 206242,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 206242,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 206242,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 206468,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 206477,
@@ -2148,7 +2355,7 @@
     {
       "entity_id": 206684,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 207354,
@@ -2168,12 +2375,12 @@
     {
       "entity_id": 209228,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 209370,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 209793,
@@ -2183,77 +2390,77 @@
     {
       "entity_id": 210113,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 210655,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 210951,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 211237,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 211860,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 211999,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 212537,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 212540,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 212920,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 212920,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 213366,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 213718,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 214469,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 214469,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 214469,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 215098,
@@ -2263,32 +2470,32 @@
     {
       "entity_id": 216052,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 217016,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 217382,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 218943,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 219601,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 219636,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 219638,
@@ -2298,57 +2505,57 @@
     {
       "entity_id": 220291,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 220477,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 220833,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 221362,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 221858,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 222025,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 222183,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 222669,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 223536,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 224141,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 224163,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 224211,
@@ -2358,12 +2565,12 @@
     {
       "entity_id": 224804,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 225027,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 226024,
@@ -2373,52 +2580,52 @@
     {
       "entity_id": 226400,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 227313,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 227932,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 228224,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 229033,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 230996,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 232345,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 232535,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 232535,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 232981,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 234067,
@@ -2428,12 +2635,12 @@
     {
       "entity_id": 235065,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 235262,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 235970,
@@ -2443,37 +2650,37 @@
     {
       "entity_id": 236089,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 236375,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 236642,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 236715,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 238626,
       "nps_score_label": "passive",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 239003,
-      "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 6
     },
     {
       "entity_id": 239003,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
+    },
+    {
+      "entity_id": 239003,
+      "nps_score_label": "detractor",
+      "topic_id": 10
     },
     {
       "entity_id": 239263,
@@ -2483,42 +2690,42 @@
     {
       "entity_id": 240156,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 241054,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 241371,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 241811,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 241887,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 241962,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 243343,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 243511,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 243928,
@@ -2528,142 +2735,142 @@
     {
       "entity_id": 244102,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 245494,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 245505,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 246817,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 248399,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 249227,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 249312,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 250589,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 251342,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 253189,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 253661,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 254565,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 255185,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 256217,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 256217,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 256361,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 256361,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 257585,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 258878,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 259101,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 259180,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 259283,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 259410,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 259691,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 259691,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 260234,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 260677,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 261034,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 262277,
@@ -2673,27 +2880,27 @@
     {
       "entity_id": 262581,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 263986,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 264632,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 264632,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 265602,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 266357,
@@ -2703,37 +2910,37 @@
     {
       "entity_id": 266722,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 266880,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 268709,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 269166,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 270190,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 270702,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 270785,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 271414,
@@ -2743,27 +2950,27 @@
     {
       "entity_id": 271895,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 273086,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 273659,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 273664,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 274769,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 276092,
@@ -2773,22 +2980,22 @@
     {
       "entity_id": 277053,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 277053,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 278211,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 279333,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 279448,
@@ -2798,22 +3005,22 @@
     {
       "entity_id": 279494,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 279710,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 280572,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 281100,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 281346,
@@ -2823,12 +3030,12 @@
     {
       "entity_id": 281895,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 282900,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 283382,
@@ -2843,17 +3050,17 @@
     {
       "entity_id": 283967,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 284940,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 286148,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 286444,
@@ -2868,7 +3075,7 @@
     {
       "entity_id": 287417,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 287514,
@@ -2883,52 +3090,52 @@
     {
       "entity_id": 287668,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 288390,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 288390,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 288472,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 288623,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 290173,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 290322,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 290808,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 291222,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 291309,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 292315,
@@ -2938,17 +3145,17 @@
     {
       "entity_id": 294694,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 295610,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 298199,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 299180,
@@ -2958,27 +3165,27 @@
     {
       "entity_id": 299384,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 299429,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 301101,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 301327,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 301615,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 303031,
@@ -2988,22 +3195,22 @@
     {
       "entity_id": 303031,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 303031,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 304694,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 304701,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 304885,
@@ -3013,72 +3220,72 @@
     {
       "entity_id": 305868,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 306178,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 306844,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 306844,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 307964,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 307987,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 308570,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 308600,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 308712,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 308822,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 309229,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 309406,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 309840,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 309888,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 311346,
@@ -3088,17 +3295,17 @@
     {
       "entity_id": 311647,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 311987,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 312613,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 313577,
@@ -3113,42 +3320,42 @@
     {
       "entity_id": 314663,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 315966,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 316008,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 316099,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 316462,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 317259,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 318863,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 319179,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 320588,
@@ -3158,22 +3365,22 @@
     {
       "entity_id": 321699,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 323352,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 323605,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 324854,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 327152,
@@ -3183,17 +3390,17 @@
     {
       "entity_id": 328075,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 328109,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 328192,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 328247,
@@ -3213,22 +3420,22 @@
     {
       "entity_id": 330892,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 331677,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 332049,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 332309,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 332871,
@@ -3238,22 +3445,22 @@
     {
       "entity_id": 333052,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 333304,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 333514,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 333648,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 334026,
@@ -3263,22 +3470,22 @@
     {
       "entity_id": 334026,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 334089,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 334349,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 334674,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 337022,
@@ -3288,42 +3495,42 @@
     {
       "entity_id": 337024,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 337554,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 337699,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 337742,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 338279,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 339219,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 339600,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 340373,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 340842,
@@ -3333,47 +3540,47 @@
     {
       "entity_id": 340873,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 340947,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 341224,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 342173,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 342217,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 342948,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 342948,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 343170,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 343216,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 344358,
@@ -3383,22 +3590,22 @@
     {
       "entity_id": 344640,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 344696,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 344715,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 345701,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 346021,
@@ -3408,12 +3615,12 @@
     {
       "entity_id": 346092,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 346465,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 347132,
@@ -3428,7 +3635,7 @@
     {
       "entity_id": 348415,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 348606,
@@ -3438,17 +3645,17 @@
     {
       "entity_id": 348704,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 349587,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 350003,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 350114,
@@ -3458,77 +3665,77 @@
     {
       "entity_id": 350424,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 350678,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 350728,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 351026,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 351068,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 351072,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 351382,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 351844,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 351892,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 352217,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 352293,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 352605,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 352642,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 352726,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 353051,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 354875,
@@ -3543,17 +3750,17 @@
     {
       "entity_id": 355132,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 356228,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 356234,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 356596,
@@ -3563,7 +3770,7 @@
     {
       "entity_id": 356693,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 356693,
@@ -3573,47 +3780,47 @@
     {
       "entity_id": 356897,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 357814,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 358933,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 359718,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 359884,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 360291,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 360439,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 361865,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 362312,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 362358,
@@ -3623,47 +3830,47 @@
     {
       "entity_id": 362371,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 363066,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 363442,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 364059,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 366035,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 366702,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 367585,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 368152,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 368361,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 368376,
@@ -3673,12 +3880,12 @@
     {
       "entity_id": 368387,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 368754,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 368929,
@@ -3688,7 +3895,7 @@
     {
       "entity_id": 369345,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 369595,
@@ -3698,12 +3905,12 @@
     {
       "entity_id": 370238,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 370574,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 372058,
@@ -3713,27 +3920,27 @@
     {
       "entity_id": 372253,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 373640,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 373957,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 374431,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 374989,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 375143,
@@ -3743,17 +3950,17 @@
     {
       "entity_id": 376114,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 376270,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 377080,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 377397,
@@ -3763,22 +3970,22 @@
     {
       "entity_id": 378132,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 378332,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 379204,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 379351,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 380400,
@@ -3788,12 +3995,17 @@
     {
       "entity_id": 381142,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 381477,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
+    },
+    {
+      "entity_id": 381804,
+      "nps_score_label": "promoter",
+      "topic_id": 6
     },
     {
       "entity_id": 381804,
@@ -3803,27 +4015,22 @@
     {
       "entity_id": 381804,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 381804,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 381861,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 382026,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 382026,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 382111,
@@ -3833,17 +4040,17 @@
     {
       "entity_id": 383541,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 383757,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 384002,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 384489,
@@ -3853,42 +4060,42 @@
     {
       "entity_id": 384680,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 385128,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 385254,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 385358,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 386088,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 386809,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 386809,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 387573,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 388418,
@@ -3898,62 +4105,62 @@
     {
       "entity_id": 389085,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 389724,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 390287,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 390588,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 390714,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 391312,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 391345,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 392011,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 392146,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 392853,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 392906,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 393122,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 393198,
@@ -3962,28 +4169,28 @@
     },
     {
       "entity_id": 393337,
-      "nps_score_label": "detractor",
-      "topic_id": 0
+      "nps_score_label": "promoter",
+      "topic_id": 1
     },
     {
       "entity_id": 393337,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "nps_score_label": "detractor",
+      "topic_id": 4
     },
     {
       "entity_id": 393606,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 393870,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 395678,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 396197,
@@ -3998,32 +4205,32 @@
     {
       "entity_id": 396575,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 396597,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 396598,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 396689,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 398751,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 399265,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 399549,
@@ -4033,7 +4240,7 @@
     {
       "entity_id": 400280,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 400280,
@@ -4043,17 +4250,17 @@
     {
       "entity_id": 400292,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 401352,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 401362,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 401383,
@@ -4063,72 +4270,72 @@
     {
       "entity_id": 402224,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 402448,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 402607,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 403525,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 403820,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 404584,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 404888,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 405463,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 406112,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 406126,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 406126,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 406952,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 407052,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 407934,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 408093,
@@ -4138,42 +4345,42 @@
     {
       "entity_id": 408173,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 408642,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 408809,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 409192,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 409397,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 409699,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 409775,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 410357,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 410796,
@@ -4183,17 +4390,17 @@
     {
       "entity_id": 410873,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 411968,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 412110,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 412491,
@@ -4203,22 +4410,22 @@
     {
       "entity_id": 412579,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 412636,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 412879,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 413103,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 413394,
@@ -4238,17 +4445,17 @@
     {
       "entity_id": 413966,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 414009,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 415639,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 416198,
@@ -4258,17 +4465,17 @@
     {
       "entity_id": 416361,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 417766,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 417784,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 418431,
@@ -4278,7 +4485,7 @@
     {
       "entity_id": 418451,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 418843,
@@ -4288,7 +4495,7 @@
     {
       "entity_id": 419563,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 419570,
@@ -4298,62 +4505,62 @@
     {
       "entity_id": 420163,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 420764,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 420920,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 424477,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 424655,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 424661,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 424839,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 425547,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 425617,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 425696,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 427054,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 428318,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 428370,
@@ -4363,7 +4570,7 @@
     {
       "entity_id": 428481,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 428729,
@@ -4373,27 +4580,27 @@
     {
       "entity_id": 429680,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 430005,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 430508,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 431239,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 431402,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 431588,
@@ -4403,37 +4610,37 @@
     {
       "entity_id": 431644,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 431726,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 431779,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 431953,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 432075,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 432270,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 432729,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 432787,
@@ -4443,47 +4650,47 @@
     {
       "entity_id": 433146,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 433481,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 433496,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 433695,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 433714,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 433875,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 433941,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 434874,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 435048,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 435601,
@@ -4493,22 +4700,22 @@
     {
       "entity_id": 436691,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 436973,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 437470,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 439759,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 441256,
@@ -4518,12 +4725,12 @@
     {
       "entity_id": 442094,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 442433,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 442490,
@@ -4533,20 +4740,25 @@
     {
       "entity_id": 442563,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 444083,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 444226,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 444503,
+      "nps_score_label": "promoter",
+      "topic_id": -1
+    },
+    {
+      "entity_id": 444730,
       "nps_score_label": "promoter",
       "topic_id": 0
     },
@@ -4556,24 +4768,19 @@
       "topic_id": 0
     },
     {
-      "entity_id": 444730,
-      "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
       "entity_id": 444797,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 444917,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 445614,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 445835,
@@ -4583,37 +4790,37 @@
     {
       "entity_id": 446084,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 446093,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 446110,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 446137,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 447201,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 447290,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 449076,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 449454,
@@ -4623,42 +4830,42 @@
     {
       "entity_id": 449712,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 449889,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 451277,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 451552,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 451828,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 452013,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 452038,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 452325,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 453130,
@@ -4668,37 +4875,37 @@
     {
       "entity_id": 453720,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 453781,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 454249,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 454578,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 455109,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 455383,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 455443,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 455443,
@@ -4708,7 +4915,7 @@
     {
       "entity_id": 455984,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 456046,
@@ -4718,7 +4925,7 @@
     {
       "entity_id": 456495,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 456605,
@@ -4733,27 +4940,27 @@
     {
       "entity_id": 457824,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 458339,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 458512,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 458743,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 458743,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 459156,
@@ -4763,17 +4970,17 @@
     {
       "entity_id": 459322,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 459838,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 460308,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 460430,
@@ -4783,42 +4990,42 @@
     {
       "entity_id": 460612,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 461216,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 461258,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 461430,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 461635,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 461635,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 461751,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 461901,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 462052,
@@ -4828,42 +5035,42 @@
     {
       "entity_id": 462096,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 462911,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 463385,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 463398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 463398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 463398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 463398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 463896,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 464288,
@@ -4873,12 +5080,12 @@
     {
       "entity_id": 464472,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 464485,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 464570,
@@ -4893,22 +5100,22 @@
     {
       "entity_id": 465490,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 466025,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 466148,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 466157,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 466240,
@@ -4918,12 +5125,12 @@
     {
       "entity_id": 466436,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 466580,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 466898,
@@ -4933,7 +5140,7 @@
     {
       "entity_id": 467146,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 467372,
@@ -4943,7 +5150,7 @@
     {
       "entity_id": 467719,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 467866,
@@ -4953,12 +5160,12 @@
     {
       "entity_id": 468180,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 468373,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 468498,
@@ -4968,42 +5175,42 @@
     {
       "entity_id": 468514,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 468878,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 469421,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 469428,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 469523,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 470139,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 470276,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 470349,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 470608,
@@ -5013,22 +5220,22 @@
     {
       "entity_id": 470643,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 470758,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 470795,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 470803,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 470890,
@@ -5038,7 +5245,7 @@
     {
       "entity_id": 471050,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 471052,
@@ -5053,72 +5260,72 @@
     {
       "entity_id": 471332,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 471394,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 471624,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 472059,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 472181,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 472609,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 472653,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 472656,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 473033,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 473155,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 473390,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 473628,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 473634,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 473634,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
+    },
+    {
+      "entity_id": 473634,
+      "nps_score_label": "promoter",
+      "topic_id": 2
     },
     {
       "entity_id": 473878,
@@ -5127,13 +5334,13 @@
     },
     {
       "entity_id": 474232,
-      "nps_score_label": "detractor",
-      "topic_id": 0
+      "nps_score_label": "passive",
+      "topic_id": 4
     },
     {
       "entity_id": 474232,
-      "nps_score_label": "passive",
-      "topic_id": 0
+      "nps_score_label": "detractor",
+      "topic_id": -1
     },
     {
       "entity_id": 474306,
@@ -5143,7 +5350,7 @@
     {
       "entity_id": 474344,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 474491,
@@ -5153,77 +5360,77 @@
     {
       "entity_id": 474709,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 474852,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 475062,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 475111,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 475313,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 475795,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 475883,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 476100,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 476233,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 476267,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 476366,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 476432,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 476718,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 476737,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 476745,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 476809,
@@ -5233,12 +5440,12 @@
     {
       "entity_id": 476812,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 476873,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 476990,
@@ -5248,47 +5455,47 @@
     {
       "entity_id": 477128,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 477371,
       "nps_score_label": "detractor",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 477618,
-      "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 477618,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 477618,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
+    },
+    {
+      "entity_id": 477618,
+      "nps_score_label": "passive",
+      "topic_id": 2
     },
     {
       "entity_id": 477636,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 477713,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 477721,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 477970,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 478303,
@@ -5303,42 +5510,42 @@
     {
       "entity_id": 478835,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 478860,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 479220,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 479387,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 479414,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 479610,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 479621,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 479950,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 480080,
@@ -5348,17 +5555,17 @@
     {
       "entity_id": 480151,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 480595,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 480745,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 481211,
@@ -5368,102 +5575,102 @@
     {
       "entity_id": 481273,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 481477,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 481602,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 481602,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 481706,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 481728,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 481806,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 481821,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 481912,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 481921,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 482196,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 482197,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 482393,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 482431,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 483048,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 483128,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 483168,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 483214,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 483465,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 484545,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 484569,
@@ -5473,22 +5680,22 @@
     {
       "entity_id": 484596,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 484626,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 484955,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 485563,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 485585,
@@ -5498,57 +5705,57 @@
     {
       "entity_id": 485652,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 485823,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 486026,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 486220,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 486329,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 487014,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 487014,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 487118,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 487258,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 487322,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 487447,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 487782,
@@ -5558,17 +5765,17 @@
     {
       "entity_id": 488184,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 488205,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 488221,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 489202,
@@ -5578,62 +5785,62 @@
     {
       "entity_id": 489438,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 489447,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 489583,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 489586,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 489755,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 489908,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 490057,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 490057,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 490087,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 490592,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 490843,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 491089,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 491179,
@@ -5643,22 +5850,22 @@
     {
       "entity_id": 491276,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 491327,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 491858,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 491939,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 492198,
@@ -5678,17 +5885,17 @@
     {
       "entity_id": 492608,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 492684,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 492697,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 492786,
@@ -5698,42 +5905,42 @@
     {
       "entity_id": 493051,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 493164,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 493247,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 493679,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 493885,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 494007,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 494153,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 494223,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 494331,
@@ -5743,7 +5950,7 @@
     {
       "entity_id": 494544,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 494566,
@@ -5753,12 +5960,12 @@
     {
       "entity_id": 494598,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 494673,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 495004,
@@ -5768,42 +5975,42 @@
     {
       "entity_id": 495269,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 495313,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 495342,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 495456,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 495628,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 496048,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 496075,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 496148,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 496224,
@@ -5813,37 +6020,37 @@
     {
       "entity_id": 496297,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 496364,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 496611,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 496671,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 496789,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 497111,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 497208,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 497647,
@@ -5853,12 +6060,12 @@
     {
       "entity_id": 497944,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 498582,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 498655,
@@ -5868,32 +6075,32 @@
     {
       "entity_id": 498827,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 498857,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 499063,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 499063,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 499209,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 499454,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 499535,
@@ -5908,62 +6115,62 @@
     {
       "entity_id": 499750,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 499926,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 499945,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 500022,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 500911,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 500995,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 501149,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 501191,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 501221,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 501238,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 501510,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 501746,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 501975,
@@ -5973,22 +6180,22 @@
     {
       "entity_id": 502052,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 502361,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 502738,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 503241,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 503294,
@@ -5998,22 +6205,22 @@
     {
       "entity_id": 503417,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 503453,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 503528,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 503590,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 503724,
@@ -6023,42 +6230,42 @@
     {
       "entity_id": 503944,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 504121,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 504132,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 504202,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 504227,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 504443,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 504650,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 504814,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 504947,
@@ -6078,22 +6285,22 @@
     {
       "entity_id": 505727,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 505925,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 506517,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 506674,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 507295,
@@ -6103,7 +6310,7 @@
     {
       "entity_id": 507500,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 507599,
@@ -6113,12 +6320,12 @@
     {
       "entity_id": 507845,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 508249,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 508432,
@@ -6128,12 +6335,12 @@
     {
       "entity_id": 508862,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 509448,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 509539,
@@ -6143,57 +6350,57 @@
     {
       "entity_id": 509569,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 509609,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 509687,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 510029,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 510043,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 510044,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 510221,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 510398,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 510933,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 511288,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 511298,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 511543,
@@ -6203,57 +6410,57 @@
     {
       "entity_id": 512198,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 512228,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 512620,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 512732,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 512876,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 512942,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 512943,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 513239,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 513446,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 513447,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 513559,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 513652,
@@ -6263,32 +6470,32 @@
     {
       "entity_id": 513711,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 513711,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 513973,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 514316,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 514316,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 514367,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 514722,
@@ -6298,52 +6505,52 @@
     {
       "entity_id": 514866,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 515036,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 515039,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 515204,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 515215,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 515215,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 515566,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 515848,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 516329,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 516726,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 516978,
@@ -6353,12 +6560,12 @@
     {
       "entity_id": 517133,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 517133,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 517141,
@@ -6373,17 +6580,17 @@
     {
       "entity_id": 517552,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 517552,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 517948,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 517976,
@@ -6392,13 +6599,13 @@
     },
     {
       "entity_id": 518079,
-      "nps_score_label": "passive",
-      "topic_id": 0
+      "nps_score_label": "promoter",
+      "topic_id": 1
     },
     {
       "entity_id": 518079,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "nps_score_label": "passive",
+      "topic_id": 3
     },
     {
       "entity_id": 518407,
@@ -6408,47 +6615,47 @@
     {
       "entity_id": 518407,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 518738,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 518786,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 518916,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 519129,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 519199,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 519279,
+      "nps_score_label": "promoter",
+      "topic_id": 2
+    },
+    {
+      "entity_id": 519292,
       "nps_score_label": "promoter",
       "topic_id": 0
     },
     {
       "entity_id": 519292,
       "nps_score_label": "detractor",
-      "topic_id": 1
-    },
-    {
-      "entity_id": 519292,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 10
     },
     {
       "entity_id": 519323,
@@ -6458,87 +6665,87 @@
     {
       "entity_id": 519353,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 519585,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 519735,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 519811,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 519981,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 520075,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 520417,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 520427,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 520492,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 520492,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 520712,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 520929,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 520929,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 521232,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
+    },
+    {
+      "entity_id": 521743,
+      "nps_score_label": "promoter",
+      "topic_id": 8
     },
     {
       "entity_id": 521743,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 521743,
       "nps_score_label": "promoter",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 521743,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 522898,
@@ -6548,22 +6755,22 @@
     {
       "entity_id": 522942,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 523067,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 523170,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 523730,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 523790,
@@ -6578,12 +6785,12 @@
     {
       "entity_id": 523820,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 524089,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 524848,
@@ -6593,7 +6800,7 @@
     {
       "entity_id": 524854,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 525003,
@@ -6603,22 +6810,22 @@
     {
       "entity_id": 525376,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 525386,
+      "nps_score_label": "promoter",
+      "topic_id": 2
+    },
+    {
+      "entity_id": 525521,
       "nps_score_label": "promoter",
       "topic_id": 0
     },
     {
       "entity_id": 525521,
       "nps_score_label": "passive",
-      "topic_id": 0
-    },
-    {
-      "entity_id": 525521,
-      "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 525627,
@@ -6628,7 +6835,7 @@
     {
       "entity_id": 525679,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 526363,
@@ -6653,32 +6860,32 @@
     {
       "entity_id": 527421,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 528083,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 528156,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 528215,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 528691,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 528886,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 529087,
@@ -6688,12 +6895,12 @@
     {
       "entity_id": 529098,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 529270,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 529466,
@@ -6703,12 +6910,12 @@
     {
       "entity_id": 529468,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 529671,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 529674,
@@ -6718,7 +6925,7 @@
     {
       "entity_id": 529944,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 530005,
@@ -6728,77 +6935,77 @@
     {
       "entity_id": 530180,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 530720,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 530955,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 531206,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 531232,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 531355,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 531355,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 531821,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 531872,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 531908,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 532227,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 532399,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 532503,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 532566,
       "nps_score_label": "detractor",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 533496,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 533505,
@@ -6808,12 +7015,12 @@
     {
       "entity_id": 533752,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 533805,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 533864,
@@ -6823,142 +7030,142 @@
     {
       "entity_id": 534035,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 534123,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 534210,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 534236,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 534660,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 534901,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 535089,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 535623,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 536561,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 536679,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 536730,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 536911,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 536922,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 537186,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 537467,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 537921,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 538222,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 538407,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 538800,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 538976,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 539017,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 539044,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 539056,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 539424,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 539913,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 539957,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 540010,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 540023,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 540166,
@@ -6968,32 +7175,32 @@
     {
       "entity_id": 540195,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 540292,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 540549,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 540799,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 540995,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 541184,
       "nps_score_label": "passive",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 541292,
@@ -7008,17 +7215,17 @@
     {
       "entity_id": 542267,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 5
     },
     {
       "entity_id": 542902,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 9
     },
     {
       "entity_id": 543555,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 544237,
@@ -7033,37 +7240,37 @@
     {
       "entity_id": 544297,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 544723,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 544758,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 544882,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 544937,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 545543,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 545694,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 545923,
@@ -7073,37 +7280,37 @@
     {
       "entity_id": 546781,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 547216,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 547371,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 547965,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 3
     },
     {
       "entity_id": 548355,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 548425,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 549573,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 549593,
@@ -7113,17 +7320,17 @@
     {
       "entity_id": 549775,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 550476,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 550856,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 551139,
@@ -7133,47 +7340,47 @@
     {
       "entity_id": 551182,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 551490,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 551657,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 551660,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 552584,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 553119,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 553122,
       "nps_score_label": "promoter",
-      "topic_id": 1
+      "topic_id": 10
     },
     {
       "entity_id": 553438,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 553444,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 553826,
@@ -7183,7 +7390,7 @@
     {
       "entity_id": 553997,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 554086,
@@ -7193,62 +7400,62 @@
     {
       "entity_id": 554656,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 4
     },
     {
       "entity_id": 555493,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 555524,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 556015,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 1
     },
     {
       "entity_id": 556221,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     },
     {
       "entity_id": 556241,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 7
     },
     {
       "entity_id": 556298,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 556401,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": 8
     },
     {
       "entity_id": 556404,
       "nps_score_label": "detractor",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 557703,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 6
     },
     {
       "entity_id": 559069,
       "nps_score_label": "passive",
-      "topic_id": 0
+      "topic_id": -1
     },
     {
       "entity_id": 559828,
       "nps_score_label": "promoter",
-      "topic_id": 0
+      "topic_id": 2
     }
   ]
 }
