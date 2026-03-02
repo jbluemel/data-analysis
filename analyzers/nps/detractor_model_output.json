@@ -1,0 +1,269 @@
+{
+  "model_type": "detractor",
+  "target": "is_detractor (1) vs everyone else (0)",
+  "total_rows": 4738,
+  "detractor_count": 663,
+  "detractor_rate": 0.1399,
+  "f1_score": 0.3115,
+  "confusion_matrix": {
+    "tn": 3524,
+    "fp": 551,
+    "fn": 439,
+    "tp": 224
+  },
+  "feature_importance": [
+    {
+      "feature": "days_since_last_bid",
+      "mean_abs_shap": 0.2267383635044098,
+      "correlation": 0.3904,
+      "median_value": -12.0,
+      "high_value_shap": 0.0397,
+      "low_value_shap": -0.3392,
+      "feature_type": "recency"
+    },
+    {
+      "feature": "days_since_last_buy",
+      "mean_abs_shap": 0.17896437644958496,
+      "correlation": 0.1192,
+      "median_value": 57.0,
+      "high_value_shap": -0.0463,
+      "low_value_shap": -0.2909,
+      "feature_type": "recency"
+    },
+    {
+      "feature": "avg_highest_bid",
+      "mean_abs_shap": 0.1578538864850998,
+      "correlation": 0.3871,
+      "median_value": 2025.47,
+      "high_value_shap": 0.0381,
+      "low_value_shap": -0.1306,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "topic_fees",
+      "mean_abs_shap": 0.12606173753738403,
+      "complained_count": 58,
+      "complained_shap": 3.6674,
+      "not_mentioned_shap": -0.0822,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "account_tenure_days",
+      "mean_abs_shap": 0.12145407497882843,
+      "correlation": -0.0851,
+      "median_value": 999.72,
+      "high_value_shap": -0.0622,
+      "low_value_shap": -0.0398,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "lifetime_bids",
+      "mean_abs_shap": 0.11071233451366425,
+      "correlation": 0.0089,
+      "median_value": 17.0,
+      "high_value_shap": -0.0625,
+      "low_value_shap": -0.0842,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "bought_hammer_total",
+      "mean_abs_shap": 0.09394332021474838,
+      "correlation": -0.2194,
+      "median_value": 21.0,
+      "high_value_shap": -0.0913,
+      "low_value_shap": 0.0582,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "items_bid_on",
+      "mean_abs_shap": 0.08647305518388748,
+      "correlation": 0.2784,
+      "median_value": 3.0,
+      "high_value_shap": 0.1096,
+      "low_value_shap": 0.0093,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "days_since_last_sell",
+      "mean_abs_shap": 0.07627800852060318,
+      "correlation": 0.489,
+      "median_value": 305.0,
+      "high_value_shap": 0.2987,
+      "low_value_shap": -0.1897,
+      "feature_type": "recency"
+    },
+    {
+      "feature": "topic_item_accuracy",
+      "mean_abs_shap": 0.06081105396151543,
+      "complained_count": 32,
+      "complained_shap": 3.5506,
+      "not_mentioned_shap": -0.0371,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "topic_auction_mechanics",
+      "mean_abs_shap": 0.058862097561359406,
+      "complained_count": 24,
+      "complained_shap": 4.1015,
+      "not_mentioned_shap": -0.0383,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "serious_bid_pct",
+      "mean_abs_shap": 0.057702645659446716,
+      "correlation": 0.615,
+      "median_value": 37.9,
+      "high_value_shap": 0.0161,
+      "low_value_shap": -0.0729,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "topic_account",
+      "mean_abs_shap": 0.056476250290870667,
+      "complained_count": 27,
+      "complained_shap": 3.4861,
+      "not_mentioned_shap": -0.0368,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "serious_bids",
+      "mean_abs_shap": 0.03812774643301964,
+      "correlation": 0.1826,
+      "median_value": 1.0,
+      "high_value_shap": -0.005,
+      "low_value_shap": -0.0144,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "bought_item_count",
+      "mean_abs_shap": 0.03532760217785835,
+      "correlation": -0.6488,
+      "median_value": 1.0,
+      "high_value_shap": -0.051,
+      "low_value_shap": 0.0009,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "sold_hammer_total",
+      "mean_abs_shap": 0.032459307461977005,
+      "correlation": 0.1615,
+      "median_value": 0.0,
+      "high_value_shap": -0.1525,
+      "low_value_shap": -0.0028,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "topic_seller_honesty",
+      "mean_abs_shap": 0.031869251281023026,
+      "complained_count": 21,
+      "complained_shap": 2.4609,
+      "not_mentioned_shap": -0.0211,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "account_type",
+      "mean_abs_shap": 0.02579033374786377,
+      "correlation": 0.2115,
+      "median_value": 2.0,
+      "high_value_shap": 0,
+      "low_value_shap": -0.0079,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "topic_item_condition",
+      "mean_abs_shap": 0.02355506271123886,
+      "complained_count": 22,
+      "complained_shap": 1.8818,
+      "not_mentioned_shap": -0.0149,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "avg_bid_value_tier",
+      "mean_abs_shap": 0.023474443703889847,
+      "correlation": -0.7128,
+      "median_value": 3.0,
+      "high_value_shap": -0.0366,
+      "low_value_shap": 0.0149,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "sold_item_count",
+      "mean_abs_shap": 0.021571053192019463,
+      "correlation": 0.0761,
+      "median_value": 0.0,
+      "high_value_shap": 0.0217,
+      "low_value_shap": -0.0086,
+      "feature_type": "behavioral"
+    },
+    {
+      "feature": "topic_payment",
+      "mean_abs_shap": 0.018010828644037247,
+      "complained_count": 9,
+      "complained_shap": 2.8356,
+      "not_mentioned_shap": -0.0126,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "bidding_intent_tier",
+      "mean_abs_shap": 0.014041856862604618,
+      "correlation": 0.3355,
+      "median_value": 3.0,
+      "high_value_shap": 0.0105,
+      "low_value_shap": -0.0078,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "topic_title_paperwork",
+      "mean_abs_shap": 0.012539914809167385,
+      "complained_count": 6,
+      "complained_shap": 2.603,
+      "not_mentioned_shap": -0.0093,
+      "feature_type": "topic"
+    },
+    {
+      "feature": "bidding_status",
+      "mean_abs_shap": 0.012230467982590199,
+      "correlation": 0.3797,
+      "median_value": 0.0,
+      "high_value_shap": 0.0155,
+      "low_value_shap": -0.0074,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "engagement_level",
+      "mean_abs_shap": 0.010373737663030624,
+      "correlation": 0.4977,
+      "median_value": 2.0,
+      "high_value_shap": 0.0052,
+      "low_value_shap": -0.0083,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "bidding_intensity_tier",
+      "mean_abs_shap": 0.008062591776251793,
+      "correlation": 0.0964,
+      "median_value": 3.0,
+      "high_value_shap": -0.0027,
+      "low_value_shap": -0.0047,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "customer_lifecycle_stage",
+      "mean_abs_shap": 0.007505461107939482,
+      "correlation": 0.1292,
+      "median_value": 2.0,
+      "high_value_shap": -0.0,
+      "low_value_shap": -0.0029,
+      "feature_type": "categorical"
+    },
+    {
+      "feature": "transaction_role",
+      "mean_abs_shap": 0.0016306228935718536,
+      "correlation": -0.377,
+      "median_value": 1.0,
+      "high_value_shap": -0.0015,
+      "low_value_shap": 0.0006,
+      "feature_type": "categorical"
+    }
+  ]
+}
