@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Wave — NPS Analysis Report</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pw-purple: #5B2D8E;
+  --pw-purple-light: #7B4FAE;
+  --pw-purple-dark: #3E1A6B;
+  --surface-0: #F3F4F6;
+  --surface-1: #FFFFFF;
+  --surface-2: #F9FAFB;
+  --border: #E5E7EB;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --green: #059669;
+  --green-bg: #ECFDF5;
+  --red: #DC2626;
+  --red-bg: #FEF2F2;
+  --amber: #D97706;
+  --amber-bg: #FFFBEB;
+  --blue: #2563EB;
+  --blue-bg: #EFF6FF;
+  --chart-1: #7C3AED; --chart-2: #4F46E5; --chart-3: #2563EB;
+  --chart-4: #0891B2; --chart-5: #059669; --chart-6: #E879F9;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--surface-0); color:var(--text-primary); }
+
+/* HEADER */
+.header {
+  background: var(--pw-purple);
+  padding: 24px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.header-left { display:flex; align-items:center; gap:16px; }
+.logo {
+  width:40px; height:40px; background:rgba(255,255,255,0.15); border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:11px; color:#fff; letter-spacing:0.5px; line-height:1.1; text-align:center;
+}
+.header h1 { font-size:20px; font-weight:600; color:#fff; }
+.header-sub { font-size:13px; color:rgba(255,255,255,0.65); }
+.header-right { font-size:12px; color:rgba(255,255,255,0.5); font-family:'JetBrains Mono',monospace; }
+
+/* NAV */
+.nav {
+  background: var(--surface-1); border-bottom:1px solid var(--border);
+  padding: 0 40px; display:flex; gap:4px; overflow-x:auto;
+}
+.nav-btn {
+  padding:12px 20px; font-size:13px; font-weight:500; color:var(--text-secondary);
+  background:none; border:none; cursor:pointer; border-bottom:2px solid transparent;
+  white-space:nowrap; transition: all 0.15s;
+}
+.nav-btn:hover { color:var(--text-primary); }
+.nav-btn.active { color:var(--pw-purple); border-bottom-color:var(--pw-purple); font-weight:600; }
+
+/* CONTENT */
+.content { max-width:1200px; margin:0 auto; padding:32px 40px; }
+.section { display:none; }
+.section.active { display:block; }
+.section-title { font-size:22px; font-weight:700; margin-bottom:4px; }
+.section-subtitle { font-size:14px; color:var(--text-secondary); margin-bottom:24px; }
+
+/* KPI ROW */
+.kpi-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:16px; margin-bottom:28px; }
+.kpi {
+  background:var(--surface-1); border:1px solid var(--border); border-radius:10px;
+  padding:20px; text-align:center;
+}
+.kpi-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted); margin-bottom:6px; }
+.kpi-value { font-size:28px; font-weight:700; font-family:'JetBrains Mono',monospace; }
+.kpi-sub { font-size:12px; color:var(--text-secondary); margin-top:4px; }
+
+/* CARDS */
+.card {
+  background:var(--surface-1); border:1px solid var(--border); border-radius:10px;
+  padding:24px; margin-bottom:20px;
+}
+.card-title { font-size:15px; font-weight:600; margin-bottom:4px; }
+.card-subtitle { font-size:12px; color:var(--text-secondary); margin-bottom:16px; }
+
+/* CHARTS GRID */
+.chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px; }
+.chart-grid .card { margin-bottom:0; }
+@media (max-width:900px) { .chart-grid { grid-template-columns:1fr; } }
+
+/* TABLES */
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th { text-align:left; padding:10px 12px; font-weight:600; font-size:11px; text-transform:uppercase;
+     letter-spacing:0.5px; color:var(--text-muted); border-bottom:2px solid var(--border); }
+td { padding:10px 12px; border-bottom:1px solid var(--border); }
+tr:hover { background:var(--surface-2); }
+.mono { font-family:'JetBrains Mono',monospace; font-size:12px; }
+.text-right { text-align:right; }
+
+/* BADGES */
+.badge {
+  display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:600;
+}
+.badge-red { background:var(--red-bg); color:var(--red); }
+.badge-green { background:var(--green-bg); color:var(--green); }
+.badge-amber { background:var(--amber-bg); color:var(--amber); }
+.badge-blue { background:var(--blue-bg); color:var(--blue); }
+
+/* STAT TEST */
+.stat-badge {
+  display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600;
+  margin-left:8px;
+}
+.stat-sig { background:var(--green-bg); color:var(--green); }
+.stat-ns { background:var(--surface-2); color:var(--text-muted); }
+
+/* Collapsible dimension cards */
+.dim-card { border:1px solid var(--border); border-radius:12px; margin-bottom:12px; overflow:hidden; background:var(--surface-1); }
+.dim-header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; cursor:pointer; transition:background 0.15s; }
+.dim-header:hover { background:var(--surface-2); }
+.dim-header-left { flex:1; }
+.dim-title { font-weight:600; font-size:15px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.dim-narrative { font-size:13px; color:var(--text-secondary); margin-top:6px; line-height:1.5; }
+.dim-toggle { font-size:20px; font-weight:700; color:var(--text-muted); padding-left:16px; user-select:none; min-width:24px; text-align:center; }
+.dim-body { display:none; padding:0 20px 16px; border-top:1px solid var(--border); }
+.dim-card.open .dim-body { display:block; padding-top:12px; }
+
+/* RECOMMENDATION CARDS */
+.rec-card {
+  background:var(--surface-1); border:1px solid var(--border); border-radius:10px;
+  padding:20px 24px; margin-bottom:16px; border-left:4px solid var(--pw-purple);
+}
+.rec-card.critical { border-left-color:var(--red); }
+.rec-card.high { border-left-color:var(--amber); }
+.rec-card.medium { border-left-color:var(--blue); }
+.rec-header { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.rec-category { font-size:15px; font-weight:600; }
+.rec-finding { font-size:13px; color:var(--text-secondary); margin-bottom:10px; }
+.rec-action { font-size:13px; padding:12px; background:var(--surface-2); border-radius:6px; margin-bottom:8px; }
+.rec-action strong { color:var(--pw-purple); }
+.rec-impact { font-size:12px; color:var(--text-muted); font-style:italic; }
+
+/* COMMENT */
+.comment-text { font-size:13px; color:var(--text-secondary); font-style:italic; max-width:500px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.comment-text:hover { white-space:normal; overflow:visible; }
+
+/* LOADING */
+.loading { text-align:center; padding:80px; color:var(--text-muted); font-size:14px; }
+
+/* METHODOLOGY */
+.method-item { margin-bottom:12px; }
+.method-label { font-size:12px; font-weight:600; color:var(--pw-purple); text-transform:uppercase; letter-spacing:0.5px; }
+.method-text { font-size:13px; color:var(--text-secondary); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo"><span style="font-size:9px;text-transform:uppercase;">Purple<br>Wave</span></div>
+    <div>
+      <h1>NPS Analysis Report</h1>
+      <div class="header-sub">Net Promoter Score · Descriptive → Diagnostic → Predictive → Prescriptive</div>
+    </div>
+  </div>
+  <div class="header-right" id="genTimestamp">Loading...</div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="nav-btn active" data-section="executive">Executive Summary</button>
+  <button class="nav-btn" data-section="descriptive">Layer 1: Descriptive</button>
+  <button class="nav-btn" data-section="diagnostic">Layer 2: Diagnostic</button>
+  <button class="nav-btn" data-section="predictive">Layer 3: Predictive</button>
+  <button class="nav-btn" data-section="prescriptive">Layer 4: Prescriptive</button>
+  <button class="nav-btn" data-section="drilldown">Customer Drill-Down</button>
+  <button class="nav-btn" data-section="methodology">Methodology</button>
+</div>
+
+<!-- SECTIONS -->
+<div class="content">
+  <div id="loadingMsg" class="loading">Loading analysis data...</div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="section active" id="sec-executive"></div>
+
+  <!-- DESCRIPTIVE -->
+  <div class="section" id="sec-descriptive"></div>
+
+  <!-- DIAGNOSTIC -->
+  <div class="section" id="sec-diagnostic"></div>
+
+  <!-- PREDICTIVE -->
+  <div class="section" id="sec-predictive"></div>
+
+  <!-- PRESCRIPTIVE -->
+  <div class="section" id="sec-prescriptive"></div>
+
+  <!-- DRILL-DOWN -->
+  <div class="section" id="sec-drilldown"></div>
+
+  <!-- METHODOLOGY -->
+  <div class="section" id="sec-methodology"></div>
+</div>
+
+<script>
+// ============================================================
+// DATA - injected by build_dashboard_data.py
+// ============================================================
+const DATA = /*__NPS_DATA__*/{"metadata": {"generated_at": "2026-03-01T18:38:54.409739", "table": "nps_enriched", "pipeline_version": "1.0.0"}, "descriptive": {"by_fiscal_year": [{"fiscal_year": 2025, "responses": 3287, "unique_accounts": 3125, "avg_score": 8.6, "promoters": 2291, "passives": 557, "detractors": 439, "promoter_pct": 69.7, "detractor_pct": 13.4, "nps": 56.3, "comment_pct": 48.3}, {"fiscal_year": 2026, "responses": 1451, "unique_accounts": 1421, "avg_score": 8.5, "promoters": 992, "passives": 235, "detractors": 224, "promoter_pct": 68.4, "detractor_pct": 15.4, "nps": 52.9, "comment_pct": 44.2}], "nps_goal": 65, "report_fy": 2026, "headline": {"nps": 52.9, "goal": 65, "goal_gap": -12.1, "responses": 1451, "unique_accounts": 1421, "promoter_pct": 68.4, "passive_pct": 16.2, "detractor_pct": 15.4, "avg_score": 8.5, "comment_pct": 44.2, "nps_change": -3.4, "detractor_change": 2.0}, "score_distribution": [{"score": 0, "count": 21}, {"score": 1, "count": 39}, {"score": 2, "count": 42}, {"score": 3, "count": 13}, {"score": 4, "count": 16}, {"score": 5, "count": 56}, {"score": 6, "count": 37}, {"score": 7, "count": 72}, {"score": 8, "count": 163}, {"score": 9, "count": 144}, {"score": 10, "count": 848}], "quarterly_trend": [{"period": "FY2025 Q1", "fiscal_year": 2025, "responses": 1327, "nps": 55.6, "detractor_pct": 13.8, "promoter_pct": 69.4}, {"period": "FY2025 Q2", "fiscal_year": 2025, "responses": 620, "nps": 56.9, "detractor_pct": 12.4, "promoter_pct": 69.4}, {"period": "FY2025 Q3", "fiscal_year": 2025, "responses": 674, "nps": 56.7, "detractor_pct": 12.9, "promoter_pct": 69.6}, {"period": "FY2025 Q4", "fiscal_year": 2025, "responses": 666, "nps": 56.9, "detractor_pct": 13.8, "promoter_pct": 70.7}, {"period": "FY2026 Q1", "fiscal_year": 2026, "responses": 681, "nps": 58.0, "detractor_pct": 12.6, "promoter_pct": 70.6}, {"period": "FY2026 Q2", "fiscal_year": 2026, "responses": 664, "nps": 47.6, "detractor_pct": 18.7, "promoter_pct": 66.3}, {"period": "FY2026 Q3", "fiscal_year": 2026, "responses": 106, "nps": 53.8, "detractor_pct": 13.2, "promoter_pct": 67.0}], "by_source": [{"source": "iterable", "count": 424, "avg_score": 7.4, "detractor_pct": 29.5}, {"source": "posthog", "count": 1027, "avg_score": 8.9, "detractor_pct": 9.6}], "comment_categories": [{"label": "promoter", "total_responses": 992, "with_comments": 469, "comment_rate": 47.3, "avg_score": 9.9, "avg_total_dollars": 22478.0, "summary": "Promoters consistently praise Purple Wave's exceptional customer service, specifically highlighting staff members who \"go above and beyond\" and make transactions \"easy and stress-free.\" The platform's user-friendly design, simple navigation, and seamless payment process are repeatedly mentioned as standout features. Long-term customers emphasize their trust in Purple Wave built through years of successful transactions, accurate item descriptions, and reliable service."}, {"label": "passive", "total_responses": 235, "with_comments": 89, "comment_rate": 37.9, "avg_score": 7.7, "avg_total_dollars": 19099.0, "summary": "Passive customers are primarily frustrated with Purple Wave's 10% buyer's premium, which they consider excessive especially for high-value items, and website usability issues including poor navigation, limited search filters, and outdated design. While many acknowledge finding good deals and appreciate the auction format, communication problems with sellers and lack of detailed item information also create friction in their experience."}, {"label": "detractor", "total_responses": 224, "with_comments": 84, "comment_rate": 37.5, "avg_score": 3.3, "avg_total_dollars": 125632.0, "summary": "Detractors are primarily frustrated with Purple Wave's 10% buyer's premium, which they consider excessive especially on high-value items, and consistently cite slow payment processing and title work that can delay transactions by weeks or months. Many also report significant problems with item descriptions and inspections being inaccurate, leading to purchases that don't match what was advertised, combined with poor website functionality and customer service issues."}]}, "diagnostic": {"report_fy": 2026, "model_quality": {"cv_accuracy": 0.7417, "cv_accuracy_std": 0.0216, "cv_f1": 0.1967, "cv_f1_std": 0.0366, "baseline_accuracy": 0.8601, "n_samples": 4738, "n_detractors": 663}, "shap_importance": [{"feature": "Avg Highest Bid", "raw_feature": "avg_highest_bid", "mean_abs_shap": 0.2921}, {"feature": "Account Tenure Days", "raw_feature": "account_tenure_days", "mean_abs_shap": 0.2732}, {"feature": "Bid Recency", "raw_feature": "bid_recency", "mean_abs_shap": 0.2261}, {"feature": "Lifetime Bids", "raw_feature": "lifetime_bids", "mean_abs_shap": 0.2046}, {"feature": "Bought Hammer Total", "raw_feature": "bought_hammer_total", "mean_abs_shap": 0.1802}, {"feature": "Region Name", "raw_feature": "region_name", "mean_abs_shap": 0.1498}, {"feature": "Items Bid On", "raw_feature": "items_bid_on", "mean_abs_shap": 0.1326}, {"feature": "Serious Bids", "raw_feature": "serious_bids", "mean_abs_shap": 0.0951}, {"feature": "Win Rate Pct", "raw_feature": "win_rate_pct", "mean_abs_shap": 0.088}, {"feature": "Total Transaction Count", "raw_feature": "total_transaction_count", "mean_abs_shap": 0.0707}, {"feature": "Account Tenure Tier", "raw_feature": "account_tenure_tier", "mean_abs_shap": 0.0627}, {"feature": "Sold Hammer Total", "raw_feature": "sold_hammer_total", "mean_abs_shap": 0.0567}, {"feature": "Win Rate Tier", "raw_feature": "win_rate_tier", "mean_abs_shap": 0.0471}, {"feature": "Bought Item Count", "raw_feature": "bought_item_count", "mean_abs_shap": 0.0444}, {"feature": "Bidding Intensity Tier", "raw_feature": "bidding_intensity_tier", "mean_abs_shap": 0.0405}, {"feature": "Sold Item Count", "raw_feature": "sold_item_count", "mean_abs_shap": 0.0341}, {"feature": "Wins", "raw_feature": "wins", "mean_abs_shap": 0.0255}, {"feature": "Customer Lifecycle Stage", "raw_feature": "customer_lifecycle_stage", "mean_abs_shap": 0.0253}, {"feature": "Avg Bid Value Tier", "raw_feature": "avg_bid_value_tier", "mean_abs_shap": 0.0242}, {"feature": "Engagement Level", "raw_feature": "engagement_level", "mean_abs_shap": 0.0187}, {"feature": "Transaction Role", "raw_feature": "transaction_role", "mean_abs_shap": 0.0139}], "shap_details": [{"feature": "Avg Highest Bid", "raw_feature": "avg_highest_bid", "mean_abs_shap": 0.2921, "is_categorical": false, "value_impacts": [{"value": "Low (\u2264$1k)", "count": 2104, "avg_shap": -0.2624, "direction": "away from detractor"}, {"value": "Medium-Low ($1k\u2013$4k)", "count": 878, "avg_shap": -0.2685, "direction": "away from detractor"}, {"value": "Medium-High ($4k\u2013$8k)", "count": 879, "avg_shap": 0.0118, "direction": "toward detractor"}, {"value": "High ($8k+)", "count": 877, "avg_shap": 0.0242, "direction": "toward detractor"}]}, {"feature": "Account Tenure Days", "raw_feature": "account_tenure_days", "mean_abs_shap": 0.2732, "is_categorical": false, "value_impacts": [{"value": "Low (\u22643mo)", "count": 1226, "avg_shap": -0.2274, "direction": "away from detractor"}, {"value": "Medium-Low (3mo\u20132.8yr)", "count": 1171, "avg_shap": -0.0862, "direction": "away from detractor"}, {"value": "Medium-High (2.8yr\u20137.3yr)", "count": 1170, "avg_shap": -0.1352, "direction": "away from detractor"}, {"value": "High (7.3yr+)", "count": 1171, "avg_shap": -0.1011, "direction": "away from detractor"}]}, {"feature": "Bid Recency", "raw_feature": "bid_recency", "mean_abs_shap": 0.2261, "is_categorical": true, "value_impacts": [{"value": "Bid Last Year", "count": 244, "avg_shap": 0.3274, "direction": "toward detractor"}, {"value": "Never Bid", "count": 1226, "avg_shap": 0.2525, "direction": "toward detractor"}, {"value": "Bid Over Year Ago", "count": 646, "avg_shap": 0.1763, "direction": "toward detractor"}, {"value": "Bid Last 90 Days", "count": 97, "avg_shap": -0.0581, "direction": "away from detractor"}, {"value": "Bid Last 30 Days", "count": 2525, "avg_shap": -0.2153, "direction": "away from detractor"}]}, {"feature": "Lifetime Bids", "raw_feature": "lifetime_bids", "mean_abs_shap": 0.2046, "is_categorical": false, "value_impacts": [{"value": "Low (\u2264$12)", "count": 2108, "avg_shap": -0.1358, "direction": "away from detractor"}, {"value": "Medium-Low ($12\u2013$35)", "count": 886, "avg_shap": -0.1272, "direction": "away from detractor"}, {"value": "Medium-High ($35\u2013$112)", "count": 872, "avg_shap": -0.071, "direction": "away from detractor"}, {"value": "High ($112+)", "count": 872, "avg_shap": -0.3378, "direction": "away from detractor"}]}, {"feature": "Bought Hammer Total", "raw_feature": "bought_hammer_total", "mean_abs_shap": 0.1802, "is_categorical": false, "value_impacts": [{"value": "Low (\u2264$4k)", "count": 2956, "avg_shap": 0.0645, "direction": "toward detractor"}, {"value": "Medium-Low ($4k\u2013$11k)", "count": 594, "avg_shap": -0.1467, "direction": "away from detractor"}, {"value": "Medium-High ($11k\u2013$34k)", "count": 594, "avg_shap": -0.1954, "direction": "away from detractor"}, {"value": "High ($34k+)", "count": 594, "avg_shap": -0.228, "direction": "away from detractor"}]}], "segments": [{"dimension": "Region", "group_column": "region_name", "segments": [{"segment": "Upper Midwest", "count": 717, "avg_score": 8.3, "detractor_pct": 17.4, "promoter_pct": 63.5, "nps": 46.0, "avg_bought_hammer": 16827.0, "avg_sold_hammer": 22040.0}, {"segment": "Great Lakes", "count": 125, "avg_score": 8.2, "detractor_pct": 17.6, "promoter_pct": 66.4, "nps": 48.8, "avg_bought_hammer": 14284.0, "avg_sold_hammer": 3441.0}, {"segment": "Pacific Coast", "count": 57, "avg_score": 8.6, "detractor_pct": 15.8, "promoter_pct": 73.7, "nps": 57.9, "avg_bought_hammer": 28596.0, "avg_sold_hammer": 3247.0}, {"segment": "Southern Plains", "count": 328, "avg_score": 8.7, "detractor_pct": 12.2, "promoter_pct": 75.0, "nps": 62.8, "avg_bought_hammer": 18774.0, "avg_sold_hammer": 48121.0}, {"segment": "South Atlantic", "count": 85, "avg_score": 8.7, "detractor_pct": 11.8, "promoter_pct": 76.5, "nps": 64.7, "avg_bought_hammer": 4453.0, "avg_sold_hammer": 3306.0}, {"segment": "North Atlantic", "count": 35, "avg_score": 9.0, "detractor_pct": 8.6, "promoter_pct": 77.1, "nps": 68.6, "avg_bought_hammer": 4795.0, "avg_sold_hammer": 0.0}, {"segment": "Gulf Coast", "count": 1, "avg_score": 10.0, "detractor_pct": 0.0, "promoter_pct": 100.0, "nps": 100.0, "avg_bought_hammer": 0.0, "avg_sold_hammer": 0.0}], "statistical_test": {"chi2": 48.53, "p_value": 3e-06, "dof": 12, "significant": true}}, {"dimension": "Bid Recency", "group_column": "bid_recency", "segments": [{"segment": "Bid Last Year", "count": 95, "avg_score": 7.9, "detractor_pct": 25.3, "promoter_pct": 64.2, "nps": 38.9, "avg_bought_hammer": 23450.0, "avg_sold_hammer": 48333.0}, {"segment": "Bid Over Year Ago", "count": 203, "avg_score": 8.1, "detractor_pct": 18.7, "promoter_pct": 63.1, "nps": 44.3, "avg_bought_hammer": 8624.0, "avg_sold_hammer": 7125.0}, {"segment": "Never Bid", "count": 452, "avg_score": 8.4, "detractor_pct": 16.4, "promoter_pct": 66.8, "nps": 50.4, "avg_bought_hammer": 81.0, "avg_sold_hammer": 23844.0}, {"segment": "Bid Last 30 Days", "count": 649, "avg_score": 8.7, "detractor_pct": 12.6, "promoter_pct": 71.5, "nps": 58.9, "avg_bought_hammer": 26649.0, "avg_sold_hammer": 23374.0}, {"segment": "Bid Last 90 Days", "count": 52, "avg_score": 8.6, "detractor_pct": 11.5, "promoter_pct": 71.2, "nps": 59.6, "avg_bought_hammer": 21839.0, "avg_sold_hammer": 9563.0}], "statistical_test": {"chi2": 32.54, "p_value": 7.4e-05, "dof": 8, "significant": true}}, {"dimension": "Customer Lifecycle", "group_column": "customer_lifecycle_stage", "segments": [{"segment": "Power User", "count": 38, "avg_score": 7.7, "detractor_pct": 26.3, "promoter_pct": 60.5, "nps": 34.2, "avg_bought_hammer": 178519.0, "avg_sold_hammer": 705396.0}, {"segment": "Active", "count": 90, "avg_score": 7.9, "detractor_pct": 24.4, "promoter_pct": 62.2, "nps": 37.8, "avg_bought_hammer": 73815.0, "avg_sold_hammer": 37957.0}, {"segment": "Repeat", "count": 300, "avg_score": 8.3, "detractor_pct": 17.3, "promoter_pct": 67.7, "nps": 50.3, "avg_bought_hammer": 22380.0, "avg_sold_hammer": 7363.0}, {"segment": "Never Transacted", "count": 776, "avg_score": 8.6, "detractor_pct": 14.7, "promoter_pct": 68.7, "nps": 54.0, "avg_bought_hammer": 0.0, "avg_sold_hammer": 0.0}, {"segment": "First Time", "count": 247, "avg_score": 8.8, "detractor_pct": 10.5, "promoter_pct": 71.7, "nps": 61.1, "avg_bought_hammer": 9331.0, "avg_sold_hammer": 212.0}], "statistical_test": {"chi2": 22.57, "p_value": 0.003964, "dof": 8, "significant": true}}, {"dimension": "Engagement Level", "group_column": "engagement_level", "segments": [{"segment": "Very High", "count": 41, "avg_score": 7.5, "detractor_pct": 29.3, "promoter_pct": 58.5, "nps": 29.3, "avg_bought_hammer": 205862.0, "avg_sold_hammer": 653782.0}, {"segment": "High", "count": 106, "avg_score": 8.0, "detractor_pct": 22.6, "promoter_pct": 63.2, "nps": 40.6, "avg_bought_hammer": 67897.0, "avg_sold_hammer": 42875.0}, {"segment": "Medium", "count": 279, "avg_score": 8.3, "detractor_pct": 17.2, "promoter_pct": 68.8, "nps": 51.6, "avg_bought_hammer": 21213.0, "avg_sold_hammer": 3922.0}, {"segment": "None", "count": 776, "avg_score": 8.6, "detractor_pct": 14.7, "promoter_pct": 68.7, "nps": 54.0, "avg_bought_hammer": 0.0, "avg_sold_hammer": 0.0}, {"segment": "Low", "count": 249, "avg_score": 8.7, "detractor_pct": 10.4, "promoter_pct": 70.7, "nps": 60.2, "avg_bought_hammer": 3574.0, "avg_sold_hammer": 154.0}], "statistical_test": {"chi2": 22.42, "p_value": 0.004198, "dof": 8, "significant": true}}, {"dimension": "Account Tenure", "group_column": "account_tenure_tier", "segments": [{"segment": "Established (1-3 Years)", "count": 189, "avg_score": 8.0, "detractor_pct": 21.7, "promoter_pct": 63.0, "nps": 41.3, "avg_bought_hammer": 6814.0, "avg_sold_hammer": 2853.0}, {"segment": "Veteran (5+ Years)", "count": 496, "avg_score": 8.3, "detractor_pct": 17.3, "promoter_pct": 64.9, "nps": 47.6, "avg_bought_hammer": 32245.0, "avg_sold_hammer": 60505.0}, {"segment": "Mature (3-5 Years)", "count": 142, "avg_score": 8.4, "detractor_pct": 16.9, "promoter_pct": 65.5, "nps": 48.6, "avg_bought_hammer": 19186.0, "avg_sold_hammer": 5537.0}, {"segment": "Early (3-12 Months)", "count": 204, "avg_score": 8.6, "detractor_pct": 16.7, "promoter_pct": 75.0, "nps": 58.3, "avg_bought_hammer": 5689.0, "avg_sold_hammer": 2847.0}, {"segment": "New (< 90 Days)", "count": 420, "avg_score": 8.9, "detractor_pct": 9.3, "promoter_pct": 72.6, "nps": 63.3, "avg_bought_hammer": 3047.0, "avg_sold_hammer": 1348.0}], "statistical_test": {"chi2": 20.52, "p_value": 0.008532, "dof": 8, "significant": true}}, {"dimension": "Transaction Role", "group_column": "transaction_role", "segments": [{"segment": "Seller Only", "count": 47, "avg_score": 7.1, "detractor_pct": 29.8, "promoter_pct": 53.2, "nps": 23.4, "avg_bought_hammer": 0.0, "avg_sold_hammer": 235932.0}, {"segment": "Buyer And Seller", "count": 100, "avg_score": 7.9, "detractor_pct": 25.0, "promoter_pct": 64.0, "nps": 39.0, "avg_bought_hammer": 89997.0, "avg_sold_hammer": 213938.0}, {"segment": "Never Transacted", "count": 776, "avg_score": 8.6, "detractor_pct": 14.7, "promoter_pct": 68.7, "nps": 54.0, "avg_bought_hammer": 0.0, "avg_sold_hammer": 0.0}, {"segment": "Buyer Only", "count": 528, "avg_score": 8.6, "detractor_pct": 13.4, "promoter_pct": 70.1, "nps": 56.6, "avg_bought_hammer": 25466.0, "avg_sold_hammer": 0.0}], "statistical_test": {"chi2": 15.69, "p_value": 0.015543, "dof": 6, "significant": true}}, {"dimension": "Bidding Intensity", "group_column": "bidding_intensity_tier", "segments": [{"segment": "Heavy (200-999 Bids)", "count": 104, "avg_score": 8.3, "detractor_pct": 17.3, "promoter_pct": 62.5, "nps": 45.2, "avg_bought_hammer": 70240.0, "avg_sold_hammer": 158302.0}, {"segment": "Power Bidder (1000+)", "count": 25, "avg_score": 8.0, "detractor_pct": 20.0, "promoter_pct": 68.0, "nps": 48.0, "avg_bought_hammer": 217512.0, "avg_sold_hammer": 51263.0}, {"segment": "No Bids", "count": 452, "avg_score": 8.4, "detractor_pct": 16.4, "promoter_pct": 66.8, "nps": 50.4, "avg_bought_hammer": 81.0, "avg_sold_hammer": 23844.0}, {"segment": "Moderate (10-49 Bids)", "count": 399, "avg_score": 8.6, "detractor_pct": 14.0, "promoter_pct": 68.2, "nps": 54.1, "avg_bought_hammer": 8850.0, "avg_sold_hammer": 3867.0}, {"segment": "Casual (< 10 Bids)", "count": 236, "avg_score": 8.5, "detractor_pct": 14.4, "promoter_pct": 69.9, "nps": 55.5, "avg_bought_hammer": 2960.0, "avg_sold_hammer": 1579.0}, {"segment": "Active (50-199 Bids)", "count": 235, "avg_score": 8.5, "detractor_pct": 15.7, "promoter_pct": 72.8, "nps": 57.0, "avg_bought_hammer": 23136.0, "avg_sold_hammer": 8700.0}], "statistical_test": {"chi2": 21.6, "p_value": 0.017267, "dof": 10, "significant": true}}, {"dimension": "Win Rate Tier", "group_column": "win_rate_tier", "segments": [{"segment": "Good (25-50%)", "count": 138, "avg_score": 8.3, "detractor_pct": 18.8, "promoter_pct": 61.6, "nps": 42.8, "avg_bought_hammer": 34711.0, "avg_sold_hammer": 36600.0}, {"segment": "No Bids", "count": 452, "avg_score": 8.4, "detractor_pct": 16.4, "promoter_pct": 66.8, "nps": 50.4, "avg_bought_hammer": 81.0, "avg_sold_hammer": 23844.0}, {"segment": "Moderate (10-25%)", "count": 159, "avg_score": 8.3, "detractor_pct": 15.7, "promoter_pct": 67.9, "nps": 52.2, "avg_bought_hammer": 54795.0, "avg_sold_hammer": 83046.0}, {"segment": "Never Won", "count": 411, "avg_score": 8.5, "detractor_pct": 15.1, "promoter_pct": 68.1, "nps": 53.0, "avg_bought_hammer": 547.0, "avg_sold_hammer": 1399.0}, {"segment": "Low (< 10%)", "count": 129, "avg_score": 8.7, "detractor_pct": 14.0, "promoter_pct": 73.6, "nps": 59.7, "avg_bought_hammer": 34715.0, "avg_sold_hammer": 11254.0}, {"segment": "High (50%+)", "count": 162, "avg_score": 8.7, "detractor_pct": 11.7, "promoter_pct": 75.3, "nps": 63.6, "avg_bought_hammer": 25949.0, "avg_sold_hammer": 8785.0}], "statistical_test": {"chi2": 16.47, "p_value": 0.086998, "dof": 10, "significant": false}}, {"dimension": "Avg Bid Value Tier", "group_column": "avg_bid_value_tier", "segments": [{"segment": "Premium ($50K+)", "count": 12, "avg_score": 7.4, "detractor_pct": 33.3, "promoter_pct": 58.3, "nps": 25.0, "avg_bought_hammer": 131198.0, "avg_sold_hammer": 130738.0}, {"segment": "Large ($15K-$50K)", "count": 122, "avg_score": 7.7, "detractor_pct": 25.4, "promoter_pct": 58.2, "nps": 32.8, "avg_bought_hammer": 56760.0, "avg_sold_hammer": 10765.0}, {"segment": "No Bids", "count": 452, "avg_score": 8.4, "detractor_pct": 16.4, "promoter_pct": 66.8, "nps": 50.4, "avg_bought_hammer": 81.0, "avg_sold_hammer": 23844.0}, {"segment": "Medium ($5K-$15K)", "count": 274, "avg_score": 8.6, "detractor_pct": 14.6, "promoter_pct": 69.3, "nps": 54.7, "avg_bought_hammer": 29782.0, "avg_sold_hammer": 17752.0}, {"segment": "Small ($1K-$5K)", "count": 400, "avg_score": 8.6, "detractor_pct": 13.8, "promoter_pct": 72.0, "nps": 58.2, "avg_bought_hammer": 12553.0, "avg_sold_hammer": 34074.0}, {"segment": "Micro (< $1K)", "count": 191, "avg_score": 8.8, "detractor_pct": 10.5, "promoter_pct": 70.2, "nps": 59.7, "avg_bought_hammer": 3815.0, "avg_sold_hammer": 1724.0}], "statistical_test": {"chi2": 12.97, "p_value": 0.225142, "dof": 10, "significant": false}}], "year_over_year": [{"dimension": "engagement_level", "segment": "High", "fiscal_year": 2025, "count": 347, "detractor_pct": 17.3, "nps": 47.0}, {"dimension": "engagement_level", "segment": "Low", "fiscal_year": 2025, "count": 585, "detractor_pct": 11.8, "nps": 57.9}, {"dimension": "engagement_level", "segment": "Medium", "fiscal_year": 2025, "count": 809, "detractor_pct": 13.1, "nps": 58.6}, {"dimension": "engagement_level", "segment": "None", "fiscal_year": 2025, "count": 1438, "detractor_pct": 12.9, "nps": 57.0}, {"dimension": "engagement_level", "segment": "Very High", "fiscal_year": 2025, "count": 108, "detractor_pct": 16.7, "nps": 51.9}, {"dimension": "engagement_level", "segment": "High", "fiscal_year": 2026, "count": 106, "detractor_pct": 22.6, "nps": 40.6}, {"dimension": "engagement_level", "segment": "Low", "fiscal_year": 2026, "count": 249, "detractor_pct": 10.4, "nps": 60.2}, {"dimension": "engagement_level", "segment": "Medium", "fiscal_year": 2026, "count": 279, "detractor_pct": 17.2, "nps": 51.6}, {"dimension": "engagement_level", "segment": "None", "fiscal_year": 2026, "count": 776, "detractor_pct": 14.7, "nps": 54.0}, {"dimension": "engagement_level", "segment": "Very High", "fiscal_year": 2026, "count": 41, "detractor_pct": 29.3, "nps": 29.3}, {"dimension": "transaction_role", "segment": "Buyer And Seller", "fiscal_year": 2025, "count": 290, "detractor_pct": 17.9, "nps": 45.2}, {"dimension": "transaction_role", "segment": "Buyer Only", "fiscal_year": 2025, "count": 1458, "detractor_pct": 13.0, "nps": 57.3}, {"dimension": "transaction_role", "segment": "Never Transacted", "fiscal_year": 2025, "count": 1438, "detractor_pct": 12.9, "nps": 57.0}, {"dimension": "transaction_role", "segment": "Seller Only", "fiscal_year": 2025, "count": 101, "detractor_pct": 11.9, "nps": 65.3}, {"dimension": "transaction_role", "segment": "Buyer And Seller", "fiscal_year": 2026, "count": 100, "detractor_pct": 25.0, "nps": 39.0}, {"dimension": "transaction_role", "segment": "Buyer Only", "fiscal_year": 2026, "count": 528, "detractor_pct": 13.4, "nps": 56.6}, {"dimension": "transaction_role", "segment": "Never Transacted", "fiscal_year": 2026, "count": 776, "detractor_pct": 14.7, "nps": 54.0}, {"dimension": "transaction_role", "segment": "Seller Only", "fiscal_year": 2026, "count": 47, "detractor_pct": 29.8, "nps": 23.4}, {"dimension": "account_tenure_tier", "segment": "Early (3-12 Months)", "fiscal_year": 2025, "count": 302, "detractor_pct": 12.6, "nps": 58.6}, {"dimension": "account_tenure_tier", "segment": "Established (1-3 Years)", "fiscal_year": 2025, "count": 501, "detractor_pct": 11.6, "nps": 59.7}, {"dimension": "account_tenure_tier", "segment": "Mature (3-5 Years)", "fiscal_year": 2025, "count": 478, "detractor_pct": 13.0, "nps": 59.4}, {"dimension": "account_tenure_tier", "segment": "New (< 90 Days)", "fiscal_year": 2025, "count": 828, "detractor_pct": 13.2, "nps": 58.3}, {"dimension": "account_tenure_tier", "segment": "Veteran (5+ Years)", "fiscal_year": 2025, "count": 1178, "detractor_pct": 14.6, "nps": 51.7}, {"dimension": "account_tenure_tier", "segment": "Early (3-12 Months)", "fiscal_year": 2026, "count": 204, "detractor_pct": 16.7, "nps": 58.3}, {"dimension": "account_tenure_tier", "segment": "Established (1-3 Years)", "fiscal_year": 2026, "count": 189, "detractor_pct": 21.7, "nps": 41.3}, {"dimension": "account_tenure_tier", "segment": "Mature (3-5 Years)", "fiscal_year": 2026, "count": 142, "detractor_pct": 16.9, "nps": 48.6}, {"dimension": "account_tenure_tier", "segment": "New (< 90 Days)", "fiscal_year": 2026, "count": 420, "detractor_pct": 9.3, "nps": 63.3}, {"dimension": "account_tenure_tier", "segment": "Veteran (5+ Years)", "fiscal_year": 2026, "count": 496, "detractor_pct": 17.3, "nps": 47.6}], "engagement_paradox": [{"engagement_level": "Very High", "count": 41, "detractor_pct": 29.3, "avg_total_dollars": 859644.0}, {"engagement_level": "High", "count": 106, "detractor_pct": 22.6, "avg_total_dollars": 110772.0}, {"engagement_level": "Medium", "count": 279, "detractor_pct": 17.2, "avg_total_dollars": 25136.0}, {"engagement_level": "None", "count": 776, "detractor_pct": 14.7, "avg_total_dollars": 0.0}, {"engagement_level": "Low", "count": 249, "detractor_pct": 10.4, "avg_total_dollars": 3728.0}], "bidding_comparison": [{"nps_label": "detractor", "count": 224, "avg_items_bid_on": 28.71, "median_items_bid_on": 2.0, "avg_lifetime_bids": 131.53, "median_lifetime_bids": 11.0, "avg_wins": 2.54, "median_wins": 0.0, "avg_win_rate_pct": 12.32, "median_win_rate_pct": 0.0, "avg_avg_highest_bid": 8138.23, "median_avg_highest_bid": 2220.07, "avg_serious_bids": 6.81, "median_serious_bids": 1.0}, {"nps_label": "passive", "count": 235, "avg_items_bid_on": 23.95, "median_items_bid_on": 2.0, "avg_lifetime_bids": 98.17, "median_lifetime_bids": 11.0, "avg_wins": 1.95, "median_wins": 0.0, "avg_win_rate_pct": 12.12, "median_win_rate_pct": 0.0, "avg_avg_highest_bid": 4991.8, "median_avg_highest_bid": 1200.0, "avg_serious_bids": 5.4, "median_serious_bids": 1.0}, {"nps_label": "promoter", "count": 992, "avg_items_bid_on": 21.2, "median_items_bid_on": 2.0, "avg_lifetime_bids": 96.01, "median_lifetime_bids": 12.0, "avg_wins": 1.76, "median_wins": 0.0, "avg_win_rate_pct": 13.95, "median_win_rate_pct": 0.0, "avg_avg_highest_bid": 4764.69, "median_avg_highest_bid": 1566.52, "avg_serious_bids": 4.52, "median_serious_bids": 1.0}], "narratives": {"overall_synthesis": "Our analysis reveals a critical engagement paradox: customers who invest the most money and time in our platform are paradoxically the most likely to become detractors. High-value bidders and long-tenured customers show significantly higher detractor rates, suggesting that increased investment creates elevated expectations that we're currently failing to meet. This pattern explains why we're falling short of our 65 NPS goal and indicates an urgent need to focus on the experience of our most valuable customer segments.", "feature_narratives": {"Avg Highest Bid": "Customers placing higher-value bids ($8k+) are more likely to become detractors, indicating that our high-stakes auction experience may not be meeting the elevated expectations that come with significant financial investments.", "Account Tenure Days": "Surprisingly, newer customers (under 3 months) are less likely to be detractors than established users, suggesting that customer satisfaction deteriorates over time as users encounter ongoing platform limitations or unmet expectations.", "Bid Recency": "Customers who haven't bid recently or have stopped bidding entirely show much higher detractor rates, indicating that bidding inactivity is a strong predictor of dissatisfaction and potential churn.", "Lifetime Bids": "Customers with higher lifetime bid activity are actually less likely to be detractors, suggesting that sustained engagement through frequent bidding correlates with better satisfaction outcomes.", "Bought Hammer Total": "Customers with lower total purchase amounts are more likely to become detractors, indicating that unsuccessful or limited buying experiences may drive dissatisfaction more than high purchase volumes."}}}, "predictive": {"cv_accuracy": 0.5538, "cv_accuracy_std": 0.0191, "cv_f1": 0.2376, "feature_importance": [{"feature": "lifetime_bids", "coefficient": -0.2849, "odds_ratio": 0.7521, "direction": "decreases_risk", "abs_importance": 0.2849}, {"feature": "bid_recency", "coefficient": 0.2542, "odds_ratio": 1.2894, "direction": "increases_risk", "abs_importance": 0.2542}, {"feature": "items_bid_on", "coefficient": 0.2425, "odds_ratio": 1.2744, "direction": "increases_risk", "abs_importance": 0.2425}, {"feature": "wins", "coefficient": 0.2019, "odds_ratio": 1.2237, "direction": "increases_risk", "abs_importance": 0.2019}, {"feature": "win_rate_pct", "coefficient": -0.1388, "odds_ratio": 0.8704, "direction": "decreases_risk", "abs_importance": 0.1388}, {"feature": "avg_highest_bid", "coefficient": 0.1304, "odds_ratio": 1.1392, "direction": "increases_risk", "abs_importance": 0.1304}, {"feature": "sold_hammer_total", "coefficient": 0.1224, "odds_ratio": 1.1302, "direction": "increases_risk", "abs_importance": 0.1224}, {"feature": "account_tenure_days", "coefficient": 0.1144, "odds_ratio": 1.1212, "direction": "increases_risk", "abs_importance": 0.1144}, {"feature": "bought_item_count", "coefficient": -0.0943, "odds_ratio": 0.91, "direction": "decreases_risk", "abs_importance": 0.0943}, {"feature": "bidding_intensity_tier", "coefficient": -0.094, "odds_ratio": 0.9103, "direction": "decreases_risk", "abs_importance": 0.094}, {"feature": "win_rate_tier", "coefficient": -0.0847, "odds_ratio": 0.9188, "direction": "decreases_risk", "abs_importance": 0.0847}, {"feature": "total_transaction_count", "coefficient": -0.069, "odds_ratio": 0.9333, "direction": "decreases_risk", "abs_importance": 0.069}, {"feature": "account_tenure_tier", "coefficient": -0.0675, "odds_ratio": 0.9348, "direction": "decreases_risk", "abs_importance": 0.0675}, {"feature": "avg_bid_value_tier", "coefficient": -0.0495, "odds_ratio": 0.9517, "direction": "decreases_risk", "abs_importance": 0.0495}, {"feature": "sold_item_count", "coefficient": -0.0482, "odds_ratio": 0.9529, "direction": "decreases_risk", "abs_importance": 0.0482}, {"feature": "serious_bids", "coefficient": 0.0396, "odds_ratio": 1.0404, "direction": "increases_risk", "abs_importance": 0.0396}, {"feature": "transaction_role", "coefficient": -0.0246, "odds_ratio": 0.9757, "direction": "decreases_risk", "abs_importance": 0.0246}, {"feature": "engagement_level", "coefficient": -0.0228, "odds_ratio": 0.9774, "direction": "decreases_risk", "abs_importance": 0.0228}, {"feature": "bought_hammer_total", "coefficient": -0.0073, "odds_ratio": 0.9928, "direction": "decreases_risk", "abs_importance": 0.0073}, {"feature": "customer_lifecycle_stage", "coefficient": 0.0014, "odds_ratio": 1.0014, "direction": "increases_risk", "abs_importance": 0.0014}], "confusion_matrix": {"true_negative": 2283, "false_positive": 1792, "false_negative": 317, "true_positive": 346}, "classification_report": {"accuracy": 0.5549, "detractor_precision": 0.1618, "detractor_recall": 0.5219, "detractor_f1": 0.2471}, "baseline_accuracy": 0.8601, "model_vs_baseline": -0.3062, "model_interpretation": {"profile_predictive": false, "explanation": "NPS detraction appears EVENT-DRIVEN rather than PROFILE-DRIVEN. The model barely outperforms baseline, meaning customer demographics and transaction history alone cannot reliably predict who will be a detractor. Specific experiences or service events likely trigger dissatisfaction."}}, "prescriptive": {"recommendations": [{"priority": "medium", "category": "Bidding Experience", "finding": "Detractors average 12.32% win rate vs 13.95% for promoters. Losing more auctions correlates with lower satisfaction.", "action": "Consider 'second chance' offers, bid coaching/alerts, or personalized item recommendations to improve win rates for frequent losers.", "expected_impact": "Improving bidder success rate addresses a root cause of dissatisfaction."}, {"priority": "high", "category": "Measurement Approach", "finding": "The logistic regression model shows NPS detraction is event-driven, not profile-driven. Customer demographics and history alone cannot predict who will be a detractor.", "action": "Shift from profile-based risk scoring to event-based monitoring. Track service touchpoints (title delays, condition disputes, fee surprises) and flag accounts experiencing negative events for proactive outreach.", "expected_impact": "Event-based intervention catches dissatisfaction at the moment it happens, before it becomes an NPS detractor response."}]}, "drilldown": {"top_detractors": [{"entity_id": 236866, "company_name": "L&R Auto Brokers, LLC", "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2025-09-06T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 18, "sold_item_count": 833, "bought_hammer_total": 49952, "sold_hammer_total": 10422135, "items_bid_on": 78, "lifetime_bids": 536, "wins": 18, "win_rate_pct": 23.1, "avg_highest_bid": 4492.34}, {"entity_id": 209899, "company_name": "MFA Transportation", "nps_score": 1, "nps_comment": null, "nps_submitted_date": "2025-11-25T00:00:00.000", "fy": 2026, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 0, "sold_item_count": 506, "bought_hammer_total": 0, "sold_hammer_total": 3246045, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 280181, "company_name": "Two Rivers Pipeline", "nps_score": 3, "nps_comment": null, "nps_submitted_date": "2026-01-02T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Midland TX", "bought_item_count": 16, "sold_item_count": 189, "bought_hammer_total": 165525, "sold_hammer_total": 2598605, "items_bid_on": 52, "lifetime_bids": 402, "wins": 16, "win_rate_pct": 30.8, "avg_highest_bid": 6668.75}, {"entity_id": 196825, "company_name": "St. Louis Composting", "nps_score": 6, "nps_comment": null, "nps_submitted_date": "2025-09-06T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "East St. Louis MO", "bought_item_count": 5, "sold_item_count": 57, "bought_hammer_total": 405500, "sold_hammer_total": 1568850, "items_bid_on": 18, "lifetime_bids": 257, "wins": 5, "win_rate_pct": 27.8, "avg_highest_bid": 72416.67}, {"entity_id": 41580, "company_name": "Blue Moon Hauling", "nps_score": 5, "nps_comment": "Just been a cluster since the thing started", "nps_submitted_date": "2024-12-17T16:49:39.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 53, "sold_item_count": 120, "bought_hammer_total": 354482, "sold_hammer_total": 1238302, "items_bid_on": 85, "lifetime_bids": 558, "wins": 33, "win_rate_pct": 38.8, "avg_highest_bid": 5270.0}, {"entity_id": 29911, "company_name": "Brooks Directional Drilling, LLC", "nps_score": 1, "nps_comment": "To difficult to s4ll with", "nps_submitted_date": "2025-06-16T17:39:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "South Central KS", "bought_item_count": 310, "sold_item_count": 26, "bought_hammer_total": 1159542, "sold_hammer_total": 187062, "items_bid_on": 1338, "lifetime_bids": 5120, "wins": 124, "win_rate_pct": 9.3, "avg_highest_bid": 2562.23}, {"entity_id": 53201, "company_name": "A C D C INVESTMENTS LLC", "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2025-11-06T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 127, "sold_item_count": 59, "bought_hammer_total": 1123480, "sold_hammer_total": 121150, "items_bid_on": 336, "lifetime_bids": 2179, "wins": 78, "win_rate_pct": 23.2, "avg_highest_bid": 19112.5}, {"entity_id": 49221, "company_name": "HB Construction, Inc.", "nps_score": 3, "nps_comment": null, "nps_submitted_date": "2025-08-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 48, "sold_item_count": 17, "bought_hammer_total": 716855, "sold_hammer_total": 498625, "items_bid_on": 188, "lifetime_bids": 1514, "wins": 13, "win_rate_pct": 6.9, "avg_highest_bid": 9923.62}, {"entity_id": 249678, "company_name": "Cobalt Cattle Company", "nps_score": 1, "nps_comment": null, "nps_submitted_date": "2025-09-06T00:00:00.000", "fy": 2026, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Panhandle", "bought_item_count": 0, "sold_item_count": 262, "bought_hammer_total": 0, "sold_hammer_total": 974387, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 204343, "company_name": null, "nps_score": 6, "nps_comment": "I have been pleased with most purchases until the last one that we purchased a 2007 Peterbilt from Collinsville OK.  The auction yard left it out of the because I could not get there  by closing time, which was nice.  However, the truck batteries were completely dead, so dead that 2 sets of jumper cables would not start it, it still had enough air pressure that I was able to have my wife pull me with my pickup to get it started.  Then the clutch was so still that I had to put my foot under the pedal to pull it up to engage it.  I don' mind those things but am very troubled by the fact that it was not disclosed and am disappointed in Purple Wave for that.  Always in past experiences, Purple wave has be very accurate with inspections and reporting flaws.  I know that the batteries did not just die that dead in one day and the clutch did not get that stiff in one day.  I was able to get it home but my wife had to pull me to start it 3 times.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "East St. Louis MO", "bought_item_count": 0, "sold_item_count": 75, "bought_hammer_total": 0, "sold_hammer_total": 965337, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 92982, "company_name": "Saline County, KS", "nps_score": 5, "nps_comment": "you folks used to list everything we had to sell, now you are being selective and not listing everything. As a government agency , this is not helpful when trying to dispose of property.", "nps_submitted_date": "2024-10-29T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "North Central KS", "bought_item_count": 9, "sold_item_count": 351, "bought_hammer_total": 81800, "sold_hammer_total": 727920, "items_bid_on": 6, "lifetime_bids": 65, "wins": 2, "win_rate_pct": 33.3, "avg_highest_bid": 10229.17}, {"entity_id": 172337, "company_name": "Dunn Trucking", "nps_score": 1, "nps_comment": "Banned from buying and never giving a reason.  And no one would ever call me back and give a reason", "nps_submitted_date": "2024-09-29T22:41:03.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 53, "sold_item_count": 77, "bought_hammer_total": 191472, "sold_hammer_total": 558565, "items_bid_on": 826, "lifetime_bids": 3837, "wins": 45, "win_rate_pct": 5.4, "avg_highest_bid": 4065.79}, {"entity_id": 181465, "company_name": "Shane Soroka Equipment Co.", "nps_score": 2, "nps_comment": "Buyers fee is too high", "nps_submitted_date": "2025-09-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Pacific Coast", "territory_name": "Southwest ID (Boise)", "bought_item_count": 13, "sold_item_count": 0, "bought_hammer_total": 580505, "sold_hammer_total": 0, "items_bid_on": 143, "lifetime_bids": 604, "wins": 12, "win_rate_pct": 8.4, "avg_highest_bid": 54080.8}, {"entity_id": 181465, "company_name": "Shane Soroka Equipment Co.", "nps_score": 3, "nps_comment": "your buyers fee is to expensive I always factor it in when I bid.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Pacific Coast", "territory_name": "Southwest ID (Boise)", "bought_item_count": 13, "sold_item_count": 0, "bought_hammer_total": 580505, "sold_hammer_total": 0, "items_bid_on": 143, "lifetime_bids": 604, "wins": 12, "win_rate_pct": 8.4, "avg_highest_bid": 54080.8}, {"entity_id": 292814, "company_name": "Isbell Construction LTD", "nps_score": 5, "nps_comment": null, "nps_submitted_date": "2025-09-07T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "Austin TX", "bought_item_count": 10, "sold_item_count": 0, "bought_hammer_total": 565500, "sold_hammer_total": 0, "items_bid_on": 44, "lifetime_bids": 641, "wins": 10, "win_rate_pct": 22.7, "avg_highest_bid": 43875.0}, {"entity_id": 186426, "company_name": "Preferred Auto Sales, Inc.", "nps_score": 2, "nps_comment": null, "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 69, "sold_item_count": 0, "bought_hammer_total": 464550, "sold_hammer_total": 0, "items_bid_on": 324, "lifetime_bids": 2414, "wins": 69, "win_rate_pct": 21.3, "avg_highest_bid": 5701.7}, {"entity_id": 164210, "company_name": "J & S Dozer Svc", "nps_score": 2, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Tulsa OK", "bought_item_count": 4, "sold_item_count": 33, "bought_hammer_total": 46450, "sold_hammer_total": 386150, "items_bid_on": 12, "lifetime_bids": 82, "wins": 4, "win_rate_pct": 33.3, "avg_highest_bid": 7539.17}, {"entity_id": 197486, "company_name": "Haun's Hauling", "nps_score": 0, "nps_comment": "I am still wondering why my account has been haulted? I did nothing to have this happen. Not sure why the account was fined for something I didn\u00e2\u20ac\u2122t do. So please let me know what I need to do to resolve this. I understand that the items I listed were listed correctly and were titled in my name. I couldn\u00e2\u20ac\u2122t bid on them as the account wouldn\u00e2\u20ac\u2122t let me.", "nps_submitted_date": "2025-09-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Great Lakes", "territory_name": "West Central IL (Peoria)", "bought_item_count": 25, "sold_item_count": 7, "bought_hammer_total": 346002, "sold_hammer_total": 82800, "items_bid_on": 126, "lifetime_bids": 707, "wins": 25, "win_rate_pct": 19.8, "avg_highest_bid": 12067.36}, {"entity_id": 97458, "company_name": "Timberline Landscaping LLC", "nps_score": 4, "nps_comment": null, "nps_submitted_date": "2025-08-13T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southeast CO", "bought_item_count": 9, "sold_item_count": 84, "bought_hammer_total": 25650, "sold_hammer_total": 392027, "items_bid_on": 12, "lifetime_bids": 74, "wins": 7, "win_rate_pct": 58.3, "avg_highest_bid": 3822.5}, {"entity_id": 155865, "company_name": "Essary Plumbing Inc", "nps_score": 2, "nps_comment": "Have a cap on your 10% buyers fee.", "nps_submitted_date": "2025-09-24T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 67, "sold_item_count": 30, "bought_hammer_total": 328405, "sold_hammer_total": 88932, "items_bid_on": 696, "lifetime_bids": 3372, "wins": 61, "win_rate_pct": 8.8, "avg_highest_bid": 3882.55}, {"entity_id": 69892, "company_name": null, "nps_score": 4, "nps_comment": "The 10% buyer\u2019s premium with no cap makes buying big thicket item cost prohibitive.  You need to put a $1,000 cap on the buyers fee!!!", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 33, "sold_item_count": 0, "bought_hammer_total": 346462, "sold_hammer_total": 0, "items_bid_on": 170, "lifetime_bids": 931, "wins": 23, "win_rate_pct": 13.5, "avg_highest_bid": 15335.31}, {"entity_id": 269392, "company_name": null, "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2025-03-04T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 10, "sold_item_count": 13, "bought_hammer_total": 133125, "sold_hammer_total": 186100, "items_bid_on": 42, "lifetime_bids": 136, "wins": 10, "win_rate_pct": 23.8, "avg_highest_bid": 8154.4}, {"entity_id": 42404, "company_name": "Tasco LLC", "nps_score": 1, "nps_comment": "I have been buying and selling with you for years then I try to bid and I'm cut off", "nps_submitted_date": "2024-10-01T13:39:30.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 18, "sold_item_count": 67, "bought_hammer_total": 49325, "sold_hammer_total": 267510, "items_bid_on": 48, "lifetime_bids": 142, "wins": 3, "win_rate_pct": 6.3, "avg_highest_bid": 5560.1}, {"entity_id": 365356, "company_name": "Apache Seed & Supply, LLC", "nps_score": 6, "nps_comment": null, "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "established (1-3 years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 1, "sold_item_count": 38, "bought_hammer_total": 17500, "sold_hammer_total": 297285, "items_bid_on": 33, "lifetime_bids": 331, "wins": 1, "win_rate_pct": 3.0, "avg_highest_bid": 2221.97}, {"entity_id": 72237, "company_name": "Commercial Truck Body and Paint", "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 6, "sold_item_count": 11, "bought_hammer_total": 93450, "sold_hammer_total": 217200, "items_bid_on": 24, "lifetime_bids": 155, "wins": 6, "win_rate_pct": 25.0, "avg_highest_bid": 19037.5}, {"entity_id": 288472, "company_name": "Double M transport LLC", "nps_score": 0, "nps_comment": "They do not put the correct descriptions, you guys help the seller more than the buyer.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "Southwest KS", "bought_item_count": 18, "sold_item_count": 0, "bought_hammer_total": 277350, "sold_hammer_total": 0, "items_bid_on": 170, "lifetime_bids": 711, "wins": 18, "win_rate_pct": 10.6, "avg_highest_bid": 9869.41}, {"entity_id": 359392, "company_name": "Taymags Equips & Truck Sales", "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2025-01-21T13:59:02.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "established (1-3 years)", "region_name": "South Atlantic", "territory_name": "Northwest GA (Marietta)", "bought_item_count": 23, "sold_item_count": 0, "bought_hammer_total": 276300, "sold_hammer_total": 0, "items_bid_on": 50, "lifetime_bids": 907, "wins": 23, "win_rate_pct": 46.0, "avg_highest_bid": 10222.0}, {"entity_id": 288623, "company_name": "Lomax Trucking Service Inc.", "nps_score": 6, "nps_comment": "Need to do a better job at vetting buyers. Still waiting over a month for a buyer to pay.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "Northern MO", "bought_item_count": 0, "sold_item_count": 15, "bought_hammer_total": 0, "sold_hammer_total": 276100, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 125681, "company_name": "K and S McNickle", "nps_score": 5, "nps_comment": "If they ask, I'll suggest.", "nps_submitted_date": "2025-03-11T03:52:10.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central KS", "bought_item_count": 99, "sold_item_count": 0, "bought_hammer_total": 263607, "sold_hammer_total": 0, "items_bid_on": 6583, "lifetime_bids": 29979, "wins": 58, "win_rate_pct": 0.9, "avg_highest_bid": 2228.8}, {"entity_id": 81627, "company_name": "JNL Auto", "nps_score": 2, "nps_comment": "Getting paid for items sold takes way too long and often they dont settle on time . The last time I was shorted 8k ! and that was 40 days after it was sold", "nps_submitted_date": "2025-09-09T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "WJ Ranch TX", "bought_item_count": 13, "sold_item_count": 7, "bought_hammer_total": 115400, "sold_hammer_total": 146800, "items_bid_on": 30, "lifetime_bids": 146, "wins": 10, "win_rate_pct": 33.3, "avg_highest_bid": 9060.0}, {"entity_id": 308143, "company_name": "Osage County, MO", "nps_score": 2, "nps_comment": null, "nps_submitted_date": "2025-01-03T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "West St. Louis MO", "bought_item_count": 0, "sold_item_count": 57, "bought_hammer_total": 0, "sold_hammer_total": 257525, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 236698, "company_name": "Commercial Tire", "nps_score": 1, "nps_comment": null, "nps_submitted_date": "2025-12-09T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Great Lakes", "territory_name": "Chicago IL", "bought_item_count": 11, "sold_item_count": 0, "bought_hammer_total": 249000, "sold_hammer_total": 0, "items_bid_on": 22, "lifetime_bids": 145, "wins": 11, "win_rate_pct": 50.0, "avg_highest_bid": 20543.18}, {"entity_id": 80139, "company_name": "George Goracke Trucking", "nps_score": 6, "nps_comment": null, "nps_submitted_date": "2025-03-30T16:17:08.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "North Central KS", "bought_item_count": 22, "sold_item_count": 10, "bought_hammer_total": 177550, "sold_hammer_total": 57712, "items_bid_on": 37, "lifetime_bids": 211, "wins": 15, "win_rate_pct": 40.5, "avg_highest_bid": 8614.05}, {"entity_id": 175405, "company_name": "Miller Construction Co, Inc.", "nps_score": 0, "nps_comment": "You complexly failed me when I used you to sell my equipment in that you did not even come close to what you told me the range of my equip would sell for. But I consider you a good place to get equipment below market value.", "nps_submitted_date": "2025-04-28T17:09:29.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Marshall TX (prev Tyler)", "bought_item_count": 10, "sold_item_count": 8, "bought_hammer_total": 122450, "sold_hammer_total": 107700, "items_bid_on": 21, "lifetime_bids": 188, "wins": 10, "win_rate_pct": 47.6, "avg_highest_bid": 8770.24}, {"entity_id": 10081, "company_name": "Voegeli Welding", "nps_score": 0, "nps_comment": "I I don\u2019t think you\u2019re very honest company. I passed experience with you was not good. I know you\u2019ve plugged the bid on several occasions run me up because I put my max bid in and that\u2019s exactly what I bought it for.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 85, "sold_item_count": 5, "bought_hammer_total": 199650, "sold_hammer_total": 27275, "items_bid_on": 126, "lifetime_bids": 502, "wins": 48, "win_rate_pct": 38.1, "avg_highest_bid": 3749.68}, {"entity_id": 295610, "company_name": "Hendricks Motorsports LLC", "nps_score": 2, "nps_comment": "It takes to long to receive titles when you pay properly it shouldn\u00e2\u20ac\u2122t take over thirty days to receive title", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "Tulsa OK", "bought_item_count": 24, "sold_item_count": 0, "bought_hammer_total": 220500, "sold_hammer_total": 0, "items_bid_on": 66, "lifetime_bids": 285, "wins": 24, "win_rate_pct": 36.4, "avg_highest_bid": 9198.48}, {"entity_id": 50190, "company_name": "S&W Power Systems, Inc.", "nps_score": 2, "nps_comment": "75% of the items I have purchased were 100% misrepresented and were junk !  If I had the time and energy I\u2019d sue PW and all of their con artist consignors !", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC East", "bought_item_count": 38, "sold_item_count": 0, "bought_hammer_total": 216380, "sold_hammer_total": 0, "items_bid_on": 256, "lifetime_bids": 1858, "wins": 38, "win_rate_pct": 14.8, "avg_highest_bid": 3821.64}, {"entity_id": 258925, "company_name": "Bennie Wenzel", "nps_score": 6, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 122, "sold_item_count": 0, "bought_hammer_total": 215740, "sold_hammer_total": 0, "items_bid_on": 1121, "lifetime_bids": 5425, "wins": 122, "win_rate_pct": 10.9, "avg_highest_bid": 957.38}, {"entity_id": 258925, "company_name": "Bennie Wenzel", "nps_score": 5, "nps_comment": null, "nps_submitted_date": "2025-03-13T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 122, "sold_item_count": 0, "bought_hammer_total": 215740, "sold_hammer_total": 0, "items_bid_on": 1121, "lifetime_bids": 5425, "wins": 122, "win_rate_pct": 10.9, "avg_highest_bid": 957.38}, {"entity_id": 149462, "company_name": null, "nps_score": 5, "nps_comment": "There is no cap on your buyer's premium", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest MN", "bought_item_count": 34, "sold_item_count": 0, "bought_hammer_total": 203400, "sold_hammer_total": 0, "items_bid_on": 102, "lifetime_bids": 404, "wins": 35, "win_rate_pct": 34.3, "avg_highest_bid": 6467.99}, {"entity_id": 484854, "company_name": "Smith River Construction, LLC", "nps_score": 5, "nps_comment": null, "nps_submitted_date": "2026-01-07T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "established (1-3 years)", "region_name": "Pacific Coast", "territory_name": "Northwest MT (Helena)", "bought_item_count": 5, "sold_item_count": 0, "bought_hammer_total": 202050, "sold_hammer_total": 0, "items_bid_on": 11, "lifetime_bids": 92, "wins": 5, "win_rate_pct": 45.5, "avg_highest_bid": 45550.0}, {"entity_id": 115595, "company_name": null, "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2025-03-06T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 12, "sold_item_count": 19, "bought_hammer_total": 41300, "sold_hammer_total": 151450, "items_bid_on": 30, "lifetime_bids": 214, "wins": 6, "win_rate_pct": 20.0, "avg_highest_bid": 8989.0}, {"entity_id": 63729, "company_name": "Grabeal & Grabeal", "nps_score": 4, "nps_comment": "I don\u2019t like the buyers premium", "nps_submitted_date": "2025-10-29T01:19:20.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Southwest OK (Lawton)", "bought_item_count": 10, "sold_item_count": 2, "bought_hammer_total": 162250, "sold_hammer_total": 24500, "items_bid_on": 12, "lifetime_bids": 110, "wins": 2, "win_rate_pct": 16.7, "avg_highest_bid": 38016.67}, {"entity_id": 103934, "company_name": "Dale Holt", "nps_score": 6, "nps_comment": null, "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "North Central KS", "bought_item_count": 4, "sold_item_count": 7, "bought_hammer_total": 79050, "sold_hammer_total": 106600, "items_bid_on": 4, "lifetime_bids": 36, "wins": 2, "win_rate_pct": 50.0, "avg_highest_bid": 28500.0}, {"entity_id": 117166, "company_name": "Murphy Ranch Enterprises", "nps_score": 6, "nps_comment": "When you started charging buyers fees as opposed to sellers fees things started to go downhill. Also your description and pictures of the lot are not what they used to be. One other thing and it is not just Purple Wave, \"Condition unknown.\" Sometimes that may apply but the majority of the time it means something is being covered up. Since the above changes I do not do nearly as much business with Purple Wave as I once did . Mike WIlborn", "nps_submitted_date": "2025-01-05T13:21:26.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Southwest OK (Lawton)", "bought_item_count": 61, "sold_item_count": 25, "bought_hammer_total": 156570, "sold_hammer_total": 25945, "items_bid_on": 119, "lifetime_bids": 495, "wins": 41, "win_rate_pct": 34.5, "avg_highest_bid": 3549.2}, {"entity_id": 122956, "company_name": "Rexwinkle Concrete", "nps_score": 1, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Western SD", "bought_item_count": 7, "sold_item_count": 16, "bought_hammer_total": 50060, "sold_hammer_total": 113000, "items_bid_on": 69, "lifetime_bids": 234, "wins": 6, "win_rate_pct": 8.7, "avg_highest_bid": 5205.94}, {"entity_id": 56832, "company_name": "Dave Jackson Farms LLC", "nps_score": 6, "nps_comment": "The cost to list of $100 for each item is excessive\nif one is listing several items.  A sliding scale downward should be considered when multiple\nitems are listed.  Less expensive items could be a \nlower cost to list with fewer pictures.", "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 91, "sold_item_count": 19, "bought_hammer_total": 98592, "sold_hammer_total": 61860, "items_bid_on": 915, "lifetime_bids": 3579, "wins": 73, "win_rate_pct": 8.0, "avg_highest_bid": 2481.77}, {"entity_id": 169497, "company_name": "Tim Skinner Trucking", "nps_score": 0, "nps_comment": null, "nps_submitted_date": "2024-09-05T00:29:44.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest IA", "bought_item_count": 31, "sold_item_count": 0, "bought_hammer_total": 157862, "sold_hammer_total": 0, "items_bid_on": 879, "lifetime_bids": 3934, "wins": 24, "win_rate_pct": 2.7, "avg_highest_bid": 2191.76}, {"entity_id": 115233, "company_name": "Geldner Underground Inc", "nps_score": 5, "nps_comment": null, "nps_submitted_date": "2026-01-27T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest MN", "bought_item_count": 4, "sold_item_count": 26, "bought_hammer_total": 38950, "sold_hammer_total": 113905, "items_bid_on": 111, "lifetime_bids": 395, "wins": 3, "win_rate_pct": 2.7, "avg_highest_bid": 11534.32}, {"entity_id": 328109, "company_name": "Concrete Craft", "nps_score": 1, "nps_comment": "You sold me a sheriff's pickup that had the transmission going out and I even talked to the sheriff and he said it was a good truck and I had to put a new transmission in it", "nps_submitted_date": "2025-06-27T13:08:15.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "mature (3-5 years)", "region_name": "South Atlantic", "territory_name": "Huntsville AL", "bought_item_count": 7, "sold_item_count": 0, "bought_hammer_total": 146600, "sold_hammer_total": 0, "items_bid_on": 83, "lifetime_bids": 442, "wins": 7, "win_rate_pct": 8.4, "avg_highest_bid": 9066.02}], "top_promoters": [{"entity_id": 26829, "company_name": "Kansas Department of Wildlife and Parks KDWP", "nps_score": 10, "nps_comment": "Everyone at Purple wave goes above and beyond with Customer Service!", "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "South Central KS", "bought_item_count": 0, "sold_item_count": 1329, "bought_hammer_total": 0, "sold_hammer_total": 3593482, "items_bid_on": 2, "lifetime_bids": 4, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 3400.0}, {"entity_id": 59129, "company_name": "Missouri Department of Transportation- St Louis District", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-01-21T18:30:14.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "East St. Louis MO", "bought_item_count": 0, "sold_item_count": 558, "bought_hammer_total": 0, "sold_hammer_total": 3546375, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 209899, "company_name": "MFA Transportation", "nps_score": 9, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 0, "sold_item_count": 506, "bought_hammer_total": 0, "sold_hammer_total": 3246045, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 96738, "company_name": "Missouri Department of Transportation - Kansas City", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-12-10T16:22:56.000", "fy": 2026, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 0, "sold_item_count": 1006, "bought_hammer_total": 0, "sold_hammer_total": 3192577, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 23545, "company_name": "Kansas Highway Patrol Fleet", "nps_score": 10, "nps_comment": "Great people, professional, helpful, and kind.", "nps_submitted_date": "2025-07-25T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 0, "sold_item_count": 711, "bought_hammer_total": 0, "sold_hammer_total": 2912750, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 23545, "company_name": "Kansas Highway Patrol Fleet", "nps_score": 10, "nps_comment": "Very friendly staff and responsive.  Thank You!", "nps_submitted_date": "2025-01-23T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 0, "sold_item_count": 711, "bought_hammer_total": 0, "sold_hammer_total": 2912750, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 85370, "company_name": "Richards Construction Company, Inc.", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 43, "sold_item_count": 304, "bought_hammer_total": 480850, "sold_hammer_total": 2426612, "items_bid_on": 658, "lifetime_bids": 2422, "wins": 20, "win_rate_pct": 3.0, "avg_highest_bid": 4977.85}, {"entity_id": 218037, "company_name": "Big Creek Construction Ltd", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-05-09T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Austin TX", "bought_item_count": 34, "sold_item_count": 0, "bought_hammer_total": 2796345, "sold_hammer_total": 0, "items_bid_on": 94, "lifetime_bids": 541, "wins": 34, "win_rate_pct": 36.2, "avg_highest_bid": 62457.93}, {"entity_id": 18502, "company_name": "Premier Alfalfa Inc.", "nps_score": 10, "nps_comment": "Big exposure", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest KS", "bought_item_count": 5, "sold_item_count": 150, "bought_hammer_total": 32050, "sold_hammer_total": 2388120, "items_bid_on": 2, "lifetime_bids": 6, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 5850.0}, {"entity_id": 148814, "company_name": "Superior Excavating LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-08-09T09:34:58.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central KS", "bought_item_count": 17, "sold_item_count": 71, "bought_hammer_total": 117150, "sold_hammer_total": 2160550, "items_bid_on": 37, "lifetime_bids": 272, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 19212.7}, {"entity_id": 261687, "company_name": "Flint Equipment LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-04T22:15:30.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "Tulsa OK", "bought_item_count": 266, "sold_item_count": 190, "bought_hammer_total": 1050862, "sold_hammer_total": 1208075, "items_bid_on": 11420, "lifetime_bids": 90042, "wins": 267, "win_rate_pct": 2.3, "avg_highest_bid": 2359.34}, {"entity_id": 171790, "company_name": "Usedequipment.com,LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Tyler TX (prev Corsicana)", "bought_item_count": 58, "sold_item_count": 0, "bought_hammer_total": 2244810, "sold_hammer_total": 0, "items_bid_on": 93, "lifetime_bids": 848, "wins": 57, "win_rate_pct": 61.3, "avg_highest_bid": 32994.73}, {"entity_id": 55934, "company_name": "Des Moines Public schools", "nps_score": 10, "nps_comment": "They are a pleasure to work with and  get the job done.", "nps_submitted_date": "2024-10-22T19:14:26.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest IA", "bought_item_count": 0, "sold_item_count": 2870, "bought_hammer_total": 0, "sold_hammer_total": 2021421, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 80679, "company_name": "Altamirano Trucking", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest KS", "bought_item_count": 121, "sold_item_count": 97, "bought_hammer_total": 496950, "sold_hammer_total": 1061490, "items_bid_on": 1396, "lifetime_bids": 6773, "wins": 66, "win_rate_pct": 4.7, "avg_highest_bid": 6462.23}, {"entity_id": 104449, "company_name": "RECS INCORPORATED", "nps_score": 10, "nps_comment": "i put a10", "nps_submitted_date": "2025-01-27T13:30:51.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "WJ Ranch TX", "bought_item_count": 21, "sold_item_count": 177, "bought_hammer_total": 107940, "sold_hammer_total": 1222092, "items_bid_on": 247, "lifetime_bids": 1294, "wins": 16, "win_rate_pct": 6.5, "avg_highest_bid": 12249.03}, {"entity_id": 379586, "company_name": "Chiefs Auto Group", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-11-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "College Station TX", "bought_item_count": 88, "sold_item_count": 79, "bought_hammer_total": 884285, "sold_hammer_total": 279925, "items_bid_on": 746, "lifetime_bids": 7056, "wins": 88, "win_rate_pct": 11.8, "avg_highest_bid": 6670.83}, {"entity_id": 174112, "company_name": "Pin Siam Co.,Ltd", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-10-17T12:36:56.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": null, "territory_name": null, "bought_item_count": 23, "sold_item_count": 0, "bought_hammer_total": 1117800, "sold_hammer_total": 0, "items_bid_on": 43, "lifetime_bids": 445, "wins": 18, "win_rate_pct": 41.9, "avg_highest_bid": 45570.93}, {"entity_id": 61795, "company_name": "W & W INC.", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southeast KS", "bought_item_count": 28, "sold_item_count": 48, "bought_hammer_total": 195810, "sold_hammer_total": 916060, "items_bid_on": 68, "lifetime_bids": 474, "wins": 15, "win_rate_pct": 22.1, "avg_highest_bid": 8059.63}, {"entity_id": 222298, "company_name": "Juan Haro", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Las Cruces NM", "bought_item_count": 98, "sold_item_count": 0, "bought_hammer_total": 1057737, "sold_hammer_total": 0, "items_bid_on": 2211, "lifetime_bids": 12647, "wins": 98, "win_rate_pct": 4.4, "avg_highest_bid": 13457.04}, {"entity_id": 214325, "company_name": "Rogers Backhoe Service LLC", "nps_score": 10, "nps_comment": "Great service", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 44, "sold_item_count": 38, "bought_hammer_total": 619350, "sold_hammer_total": 424825, "items_bid_on": 657, "lifetime_bids": 4178, "wins": 43, "win_rate_pct": 6.5, "avg_highest_bid": 8865.41}, {"entity_id": 140925, "company_name": "Iowa Trenchless", "nps_score": 9, "nps_comment": null, "nps_submitted_date": "2025-09-07T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southwest IA", "bought_item_count": 38, "sold_item_count": 39, "bought_hammer_total": 858500, "sold_hammer_total": 144120, "items_bid_on": 196, "lifetime_bids": 1590, "wins": 30, "win_rate_pct": 15.3, "avg_highest_bid": 18152.65}, {"entity_id": 176232, "company_name": "Ace Pipe Cleaning, Inc.", "nps_score": 9, "nps_comment": null, "nps_submitted_date": "2025-07-01T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 5, "sold_item_count": 116, "bought_hammer_total": 95275, "sold_hammer_total": 894630, "items_bid_on": 26, "lifetime_bids": 195, "wins": 5, "win_rate_pct": 19.2, "avg_highest_bid": 9117.31}, {"entity_id": 90572, "company_name": "John Belger Construction Co.", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-10-17T13:22:53.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 13, "sold_item_count": 112, "bought_hammer_total": 212022, "sold_hammer_total": 674677, "items_bid_on": 8, "lifetime_bids": 53, "wins": 2, "win_rate_pct": 25.0, "avg_highest_bid": 30062.5}, {"entity_id": 284103, "company_name": null, "nps_score": 9, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "OKC West", "bought_item_count": 7, "sold_item_count": 72, "bought_hammer_total": 125800, "sold_hammer_total": 712685, "items_bid_on": 121, "lifetime_bids": 508, "wins": 7, "win_rate_pct": 5.8, "avg_highest_bid": 4699.32}, {"entity_id": 443909, "company_name": "Builders Concrete Services, LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "early (3-12 months)", "region_name": "Great Lakes", "territory_name": "Chicago IL", "bought_item_count": 0, "sold_item_count": 173, "bought_hammer_total": 0, "sold_hammer_total": 822632, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 132546, "company_name": "Smithfield Foods a/k/a Premium Standard/Murphy Brown Farms", "nps_score": 10, "nps_comment": "Service Reps are always willing to go above and beyond to get our equipment listed and sold", "nps_submitted_date": "2025-09-09T00:00:00.000", "fy": 2026, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northern MO", "bought_item_count": 0, "sold_item_count": 187, "bought_hammer_total": 0, "sold_hammer_total": 777315, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 109313, "company_name": "R.B. Electric", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northwest KS", "bought_item_count": 62, "sold_item_count": 57, "bought_hammer_total": 197145, "sold_hammer_total": 566182, "items_bid_on": 49, "lifetime_bids": 392, "wins": 26, "win_rate_pct": 53.1, "avg_highest_bid": 4004.29}, {"entity_id": 367990, "company_name": "Delaware County Dist. #3", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-08-13T18:55:58.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "established (1-3 years)", "region_name": "Upper Midwest", "territory_name": "Southeast KS", "bought_item_count": 18, "sold_item_count": 49, "bought_hammer_total": 318800, "sold_hammer_total": 436805, "items_bid_on": 32, "lifetime_bids": 264, "wins": 18, "win_rate_pct": 56.3, "avg_highest_bid": 21946.88}, {"entity_id": 13371, "company_name": "Sudheimer Motor Company", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-12-24T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 82, "sold_item_count": 304, "bought_hammer_total": 65792, "sold_hammer_total": 618088, "items_bid_on": 93, "lifetime_bids": 273, "wins": 10, "win_rate_pct": 10.8, "avg_highest_bid": 1844.19}, {"entity_id": 138871, "company_name": "L.L. Pelling Company, Inc.", "nps_score": 10, "nps_comment": "easy transactions", "nps_submitted_date": "2024-12-03T16:17:55.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Eastern IA", "bought_item_count": 3, "sold_item_count": 93, "bought_hammer_total": 19550, "sold_hammer_total": 660217, "items_bid_on": 2, "lifetime_bids": 6, "wins": 2, "win_rate_pct": 100.0, "avg_highest_bid": 2025.0}, {"entity_id": 59166, "company_name": "Allen Tesreau Enterprises", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-12-30T23:03:02.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Southeast MO", "bought_item_count": 3, "sold_item_count": 65, "bought_hammer_total": 30300, "sold_hammer_total": 617810, "items_bid_on": 9, "lifetime_bids": 24, "wins": 1, "win_rate_pct": 11.1, "avg_highest_bid": 15655.56}, {"entity_id": 292814, "company_name": "Isbell Construction LTD", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-05T21:29:42.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Southern Plains", "territory_name": "Austin TX", "bought_item_count": 10, "sold_item_count": 0, "bought_hammer_total": 565500, "sold_hammer_total": 0, "items_bid_on": 44, "lifetime_bids": 641, "wins": 10, "win_rate_pct": 22.7, "avg_highest_bid": 43875.0}, {"entity_id": 229185, "company_name": "Cotton Electric Cooperative, Inc.", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "Southwest OK (Lawton)", "bought_item_count": 2, "sold_item_count": 55, "bought_hammer_total": 1570, "sold_hammer_total": 528825, "items_bid_on": 6, "lifetime_bids": 29, "wins": 2, "win_rate_pct": 33.3, "avg_highest_bid": 724.17}, {"entity_id": 179119, "company_name": "Ditch Witch of North Dakota", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-12-21T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Western ND", "bought_item_count": 11, "sold_item_count": 0, "bought_hammer_total": 510600, "sold_hammer_total": 0, "items_bid_on": 15, "lifetime_bids": 133, "wins": 9, "win_rate_pct": 60.0, "avg_highest_bid": 40340.0}, {"entity_id": 45845, "company_name": "Palmer Truck & Trailer Repair", "nps_score": 10, "nps_comment": "Past service good", "nps_submitted_date": "2024-10-03T20:37:12.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "North Central KS", "bought_item_count": 58, "sold_item_count": 142, "bought_hammer_total": 123297, "sold_hammer_total": 374615, "items_bid_on": 36, "lifetime_bids": 212, "wins": 19, "win_rate_pct": 52.8, "avg_highest_bid": 3719.17}, {"entity_id": 251933, "company_name": "Pursell Holdings LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-06-28T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 20, "sold_item_count": 95, "bought_hammer_total": 243465, "sold_hammer_total": 245290, "items_bid_on": 45, "lifetime_bids": 262, "wins": 20, "win_rate_pct": 44.4, "avg_highest_bid": 10549.44}, {"entity_id": 251933, "company_name": "Pursell Holdings LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-03-14T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 20, "sold_item_count": 95, "bought_hammer_total": 243465, "sold_hammer_total": 245290, "items_bid_on": 45, "lifetime_bids": 262, "wins": 20, "win_rate_pct": 44.4, "avg_highest_bid": 10549.44}, {"entity_id": 251933, "company_name": "Pursell Holdings LLC", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-06-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West Central MO", "bought_item_count": 20, "sold_item_count": 95, "bought_hammer_total": 243465, "sold_hammer_total": 245290, "items_bid_on": 45, "lifetime_bids": 262, "wins": 20, "win_rate_pct": 44.4, "avg_highest_bid": 10549.44}, {"entity_id": 152933, "company_name": "Total Trucking, Inc.", "nps_score": 9, "nps_comment": "everything is great with the sale, either buying or Saling.  The fees are what is the reason I didn't give a 10.  great auction sight.  love that I can list something, and the buyer has to pick it up.", "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Southern Plains", "territory_name": "OKC East", "bought_item_count": 8, "sold_item_count": 10, "bought_hammer_total": 158900, "sold_hammer_total": 329000, "items_bid_on": 60, "lifetime_bids": 405, "wins": 8, "win_rate_pct": 13.3, "avg_highest_bid": 22486.67}, {"entity_id": 476222, "company_name": null, "nps_score": 9, "nps_comment": null, "nps_submitted_date": "2024-10-17T06:01:47.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "new (< 90 days)", "region_name": null, "territory_name": null, "bought_item_count": 21, "sold_item_count": 0, "bought_hammer_total": 481600, "sold_hammer_total": 0, "items_bid_on": 49, "lifetime_bids": 325, "wins": 21, "win_rate_pct": 42.9, "avg_highest_bid": 22391.84}, {"entity_id": 78700, "company_name": "Buffalo Hollow Farms, Inc.", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-15T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 14, "sold_item_count": 20, "bought_hammer_total": 387027, "sold_hammer_total": 89200, "items_bid_on": 21, "lifetime_bids": 110, "wins": 6, "win_rate_pct": 28.6, "avg_highest_bid": 18095.71}, {"entity_id": 78700, "company_name": "Buffalo Hollow Farms, Inc.", "nps_score": 10, "nps_comment": "We have had real good experiences with selling and buying since before 2010.", "nps_submitted_date": "2025-03-17T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Northeast KS", "bought_item_count": 14, "sold_item_count": 20, "bought_hammer_total": 387027, "sold_hammer_total": 89200, "items_bid_on": 21, "lifetime_bids": 110, "wins": 6, "win_rate_pct": 28.6, "avg_highest_bid": 18095.71}, {"entity_id": 305350, "company_name": "Cole County, MO", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-11-19T17:31:36.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "mature (3-5 years)", "region_name": "Upper Midwest", "territory_name": "Central MO", "bought_item_count": 1, "sold_item_count": 62, "bought_hammer_total": 2600, "sold_hammer_total": 470740, "items_bid_on": 1, "lifetime_bids": 6, "wins": 1, "win_rate_pct": 100.0, "avg_highest_bid": 2600.0}, {"entity_id": 509448, "company_name": "Ground Game Industrial Solutions", "nps_score": 10, "nps_comment": "Great experience. Very helpful with the product. Very knowledgeable.", "nps_submitted_date": "2025-06-17T19:14:25.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "account_tenure_tier": "new (< 90 days)", "region_name": "Southern Plains", "territory_name": "WJ Ranch TX", "bought_item_count": 49, "sold_item_count": 0, "bought_hammer_total": 472750, "sold_hammer_total": 0, "items_bid_on": 126, "lifetime_bids": 723, "wins": 49, "win_rate_pct": 38.9, "avg_highest_bid": 8321.63}, {"entity_id": 351382, "company_name": "Wicks Construction Inc", "nps_score": 10, "nps_comment": "You\u2019ve done a great job with Wicks\u2019s construction in Decorah Iowa", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "account_tenure_tier": "established (1-3 years)", "region_name": "Upper Midwest", "territory_name": "Eastern IA", "bought_item_count": 0, "sold_item_count": 61, "bought_hammer_total": 0, "sold_hammer_total": 462685, "items_bid_on": 3, "lifetime_bids": 24, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 1146.67}, {"entity_id": 179250, "company_name": "City of Troy, MO", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West St. Louis MO", "bought_item_count": 1, "sold_item_count": 88, "bought_hammer_total": 2000, "sold_hammer_total": 448062, "items_bid_on": 2, "lifetime_bids": 15, "wins": 1, "win_rate_pct": 50.0, "avg_highest_bid": 8750.0}, {"entity_id": 179250, "company_name": "City of Troy, MO", "nps_score": 10, "nps_comment": null, "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "West St. Louis MO", "bought_item_count": 1, "sold_item_count": 88, "bought_hammer_total": 2000, "sold_hammer_total": 448062, "items_bid_on": 2, "lifetime_bids": 15, "wins": 1, "win_rate_pct": 50.0, "avg_highest_bid": 8750.0}, {"entity_id": 132257, "company_name": "Kugler Company", "nps_score": 10, "nps_comment": "Great results on every Item i have sold, business and personal, Just great results", "nps_submitted_date": "2025-03-04T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Western NE", "bought_item_count": 8, "sold_item_count": 56, "bought_hammer_total": 82900, "sold_hammer_total": 363700, "items_bid_on": 10, "lifetime_bids": 87, "wins": 5, "win_rate_pct": 50.0, "avg_highest_bid": 9077.5}, {"entity_id": 128141, "company_name": "Sharp Construction, LLC", "nps_score": 10, "nps_comment": "I have had great experince with purple wave Selling my equipment.", "nps_submitted_date": "2025-01-30T16:50:53.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "high", "account_tenure_tier": "veteran (5+ years)", "region_name": "Upper Midwest", "territory_name": "Central KS", "bought_item_count": 0, "sold_item_count": 28, "bought_hammer_total": 0, "sold_hammer_total": 445470, "items_bid_on": 0, "lifetime_bids": 0, "wins": 0, "win_rate_pct": 0.0, "avg_highest_bid": 0.0}, {"entity_id": 352605, "company_name": "All Iowa Pools Inc", "nps_score": 10, "nps_comment": "Great web site easy to use. Love the way it brings you back to the last item you were looking at.", "nps_submitted_date": "2024-12-07T04:24:24.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "account_tenure_tier": "established (1-3 years)", "region_name": "Upper Midwest", "territory_name": "Southwest IA", "bought_item_count": 10, "sold_item_count": 67, "bought_hammer_total": 41525, "sold_hammer_total": 402140, "items_bid_on": 165, "lifetime_bids": 665, "wins": 10, "win_rate_pct": 6.1, "avg_highest_bid": 2404.82}], "commented_detractors": [{"entity_id": 41580, "company_name": "Blue Moon Hauling", "nps_score": 5, "nps_comment": "Just been a cluster since the thing started", "nps_submitted_date": "2024-12-17T16:49:39.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 354482, "sold_hammer_total": 1238302}, {"entity_id": 29911, "company_name": "Brooks Directional Drilling, LLC", "nps_score": 1, "nps_comment": "To difficult to s4ll with", "nps_submitted_date": "2025-06-16T17:39:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 1159542, "sold_hammer_total": 187062}, {"entity_id": 204343, "company_name": null, "nps_score": 6, "nps_comment": "I have been pleased with most purchases until the last one that we purchased a 2007 Peterbilt from Collinsville OK.  The auction yard left it out of the because I could not get there  by closing time, which was nice.  However, the truck batteries were completely dead, so dead that 2 sets of jumper cables would not start it, it still had enough air pressure that I was able to have my wife pull me with my pickup to get it started.  Then the clutch was so still that I had to put my foot under the pedal to pull it up to engage it.  I don' mind those things but am very troubled by the fact that it was not disclosed and am disappointed in Purple Wave for that.  Always in past experiences, Purple wave has be very accurate with inspections and reporting flaws.  I know that the batteries did not just die that dead in one day and the clutch did not get that stiff in one day.  I was able to get it home but my wife had to pull me to start it 3 times.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 0, "sold_hammer_total": 965337}, {"entity_id": 92982, "company_name": "Saline County, KS", "nps_score": 5, "nps_comment": "you folks used to list everything we had to sell, now you are being selective and not listing everything. As a government agency , this is not helpful when trying to dispose of property.", "nps_submitted_date": "2024-10-29T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 81800, "sold_hammer_total": 727920}, {"entity_id": 172337, "company_name": "Dunn Trucking", "nps_score": 1, "nps_comment": "Banned from buying and never giving a reason.  And no one would ever call me back and give a reason", "nps_submitted_date": "2024-09-29T22:41:03.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 191472, "sold_hammer_total": 558565}, {"entity_id": 181465, "company_name": "Shane Soroka Equipment Co.", "nps_score": 3, "nps_comment": "your buyers fee is to expensive I always factor it in when I bid.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "region_name": "Pacific Coast", "bought_hammer_total": 580505, "sold_hammer_total": 0}, {"entity_id": 181465, "company_name": "Shane Soroka Equipment Co.", "nps_score": 2, "nps_comment": "Buyers fee is too high", "nps_submitted_date": "2025-09-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "very_high", "region_name": "Pacific Coast", "bought_hammer_total": 580505, "sold_hammer_total": 0}, {"entity_id": 197486, "company_name": "Haun's Hauling", "nps_score": 0, "nps_comment": "I am still wondering why my account has been haulted? I did nothing to have this happen. Not sure why the account was fined for something I didn\u00e2\u20ac\u2122t do. So please let me know what I need to do to resolve this. I understand that the items I listed were listed correctly and were titled in my name. I couldn\u00e2\u20ac\u2122t bid on them as the account wouldn\u00e2\u20ac\u2122t let me.", "nps_submitted_date": "2025-09-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Great Lakes", "bought_hammer_total": 346002, "sold_hammer_total": 82800}, {"entity_id": 155865, "company_name": "Essary Plumbing Inc", "nps_score": 2, "nps_comment": "Have a cap on your 10% buyers fee.", "nps_submitted_date": "2025-09-24T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 328405, "sold_hammer_total": 88932}, {"entity_id": 69892, "company_name": null, "nps_score": 4, "nps_comment": "The 10% buyer\u2019s premium with no cap makes buying big thicket item cost prohibitive.  You need to put a $1,000 cap on the buyers fee!!!", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 346462, "sold_hammer_total": 0}, {"entity_id": 42404, "company_name": "Tasco LLC", "nps_score": 1, "nps_comment": "I have been buying and selling with you for years then I try to bid and I'm cut off", "nps_submitted_date": "2024-10-01T13:39:30.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 49325, "sold_hammer_total": 267510}, {"entity_id": 288472, "company_name": "Double M transport LLC", "nps_score": 0, "nps_comment": "They do not put the correct descriptions, you guys help the seller more than the buyer.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 277350, "sold_hammer_total": 0}, {"entity_id": 288623, "company_name": "Lomax Trucking Service Inc.", "nps_score": 6, "nps_comment": "Need to do a better job at vetting buyers. Still waiting over a month for a buyer to pay.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 0, "sold_hammer_total": 276100}, {"entity_id": 125681, "company_name": "K and S McNickle", "nps_score": 5, "nps_comment": "If they ask, I'll suggest.", "nps_submitted_date": "2025-03-11T03:52:10.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 263607, "sold_hammer_total": 0}, {"entity_id": 81627, "company_name": "JNL Auto", "nps_score": 2, "nps_comment": "Getting paid for items sold takes way too long and often they dont settle on time . The last time I was shorted 8k ! and that was 40 days after it was sold", "nps_submitted_date": "2025-09-09T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 115400, "sold_hammer_total": 146800}, {"entity_id": 175405, "company_name": "Miller Construction Co, Inc.", "nps_score": 0, "nps_comment": "You complexly failed me when I used you to sell my equipment in that you did not even come close to what you told me the range of my equip would sell for. But I consider you a good place to get equipment below market value.", "nps_submitted_date": "2025-04-28T17:09:29.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 122450, "sold_hammer_total": 107700}, {"entity_id": 10081, "company_name": "Voegeli Welding", "nps_score": 0, "nps_comment": "I I don\u2019t think you\u2019re very honest company. I passed experience with you was not good. I know you\u2019ve plugged the bid on several occasions run me up because I put my max bid in and that\u2019s exactly what I bought it for.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 199650, "sold_hammer_total": 27275}, {"entity_id": 295610, "company_name": "Hendricks Motorsports LLC", "nps_score": 2, "nps_comment": "It takes to long to receive titles when you pay properly it shouldn\u00e2\u20ac\u2122t take over thirty days to receive title", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 220500, "sold_hammer_total": 0}, {"entity_id": 50190, "company_name": "S&W Power Systems, Inc.", "nps_score": 2, "nps_comment": "75% of the items I have purchased were 100% misrepresented and were junk !  If I had the time and energy I\u2019d sue PW and all of their con artist consignors !", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 216380, "sold_hammer_total": 0}, {"entity_id": 149462, "company_name": null, "nps_score": 5, "nps_comment": "There is no cap on your buyer's premium", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 203400, "sold_hammer_total": 0}, {"entity_id": 63729, "company_name": "Grabeal & Grabeal", "nps_score": 4, "nps_comment": "I don\u2019t like the buyers premium", "nps_submitted_date": "2025-10-29T01:19:20.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 162250, "sold_hammer_total": 24500}, {"entity_id": 117166, "company_name": "Murphy Ranch Enterprises", "nps_score": 6, "nps_comment": "When you started charging buyers fees as opposed to sellers fees things started to go downhill. Also your description and pictures of the lot are not what they used to be. One other thing and it is not just Purple Wave, \"Condition unknown.\" Sometimes that may apply but the majority of the time it means something is being covered up. Since the above changes I do not do nearly as much business with Purple Wave as I once did . Mike WIlborn", "nps_submitted_date": "2025-01-05T13:21:26.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Southern Plains", "bought_hammer_total": 156570, "sold_hammer_total": 25945}, {"entity_id": 56832, "company_name": "Dave Jackson Farms LLC", "nps_score": 6, "nps_comment": "The cost to list of $100 for each item is excessive\nif one is listing several items.  A sliding scale downward should be considered when multiple\nitems are listed.  Less expensive items could be a \nlower cost to list with fewer pictures.", "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 98592, "sold_hammer_total": 61860}, {"entity_id": 328109, "company_name": "Concrete Craft", "nps_score": 1, "nps_comment": "You sold me a sheriff's pickup that had the transmission going out and I even talked to the sheriff and he said it was a good truck and I had to put a new transmission in it", "nps_submitted_date": "2025-06-27T13:08:15.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "South Atlantic", "bought_hammer_total": 146600, "sold_hammer_total": 0}, {"entity_id": 52712, "company_name": "Nick Hatcher Farms", "nps_score": 0, "nps_comment": "Surveys like this", "nps_submitted_date": "2025-02-21T04:51:57.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 134000, "sold_hammer_total": 0}, {"entity_id": 58015, "company_name": "Renegade Resources Corp..", "nps_score": 3, "nps_comment": "Personalized service has become a thing of the past since Copart took over.", "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "very_high", "region_name": "Pacific Coast", "bought_hammer_total": 124390, "sold_hammer_total": 0}, {"entity_id": 58015, "company_name": "Renegade Resources Corp..", "nps_score": 6, "nps_comment": "I have previously commented on both of these items.  First, once I pay for an item, all pickup or storage arrangements are between me and the seller, with no further involvement from Purple Wave.  Second, the Purple Wave people that look at/photograph the items need more training.  They frequently show that they don't know what they are looking at.", "nps_submitted_date": "2025-09-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "very_high", "region_name": "Pacific Coast", "bought_hammer_total": 124390, "sold_hammer_total": 0}, {"entity_id": 224804, "company_name": null, "nps_score": 5, "nps_comment": "Sellers are not being honest, lat 2 excavators I've purchased have had major problems.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 109450, "sold_hammer_total": 0}, {"entity_id": 408173, "company_name": "Calvin Mays Oilfield Services,Inc", "nps_score": 1, "nps_comment": "Equipment sold too cheap !!", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 106000, "sold_hammer_total": 0}, {"entity_id": 385358, "company_name": null, "nps_score": 0, "nps_comment": "Could've just as well gave it away. Never using you again.", "nps_submitted_date": "2025-12-17T20:51:34.000", "fy": 2026, "transaction_role": "seller_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 0, "sold_hammer_total": 105050}, {"entity_id": 125286, "company_name": null, "nps_score": 4, "nps_comment": "I hate surveys", "nps_submitted_date": "2025-02-21T14:10:08.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 51195, "sold_hammer_total": 49755}, {"entity_id": 88186, "company_name": "Bellis Family Farms", "nps_score": 6, "nps_comment": "Compared to your competitors, faster turnaround between the sale and receiving proceeds would be nice.\nSold a livestock trailer at Wheelers at Paris, MO.  They did title work and I had my check in the mail the following week.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 34917, "sold_hammer_total": 61425}, {"entity_id": 444730, "company_name": null, "nps_score": 3, "nps_comment": "Professionally done!  Lots of pictures and well advertised.  Thanks!", "nps_submitted_date": "2025-07-06T00:00:00.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "medium", "region_name": "Great Lakes", "bought_hammer_total": 0, "sold_hammer_total": 93650}, {"entity_id": 55663, "company_name": "Branson KOA", "nps_score": 5, "nps_comment": "I have purchased several items from Purple wave in the past. Most of the items have been as expected. I have had a couple items like the Mini Excavator that was questionable for defects. In this purchase it was vidioed with it running on a forward motion not in reverse. I believe the problem was known but not disclosed.", "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 87535, "sold_hammer_total": 0}, {"entity_id": 164420, "company_name": null, "nps_score": 6, "nps_comment": "Buyers premiums", "nps_submitted_date": "2025-09-06T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 78900, "sold_hammer_total": 0}, {"entity_id": 170803, "company_name": "Atteberry Construction", "nps_score": 0, "nps_comment": "too much bullshit to use", "nps_submitted_date": "2025-02-04T19:27:51.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 29000, "sold_hammer_total": 47600}, {"entity_id": 61944, "company_name": "Mark Guernsey", "nps_score": 5, "nps_comment": "Inconsistent on buyer's fees very picky on what they sell", "nps_submitted_date": "2025-07-04T17:06:03.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 11037, "sold_hammer_total": 64290}, {"entity_id": 218943, "company_name": "Wes Meltesen", "nps_score": 2, "nps_comment": "to be blunt all of your videos absolutely suck. What is the seller trying to hide?? auction time will often do two or three or four videos?\nDon\u2019t bother responding with more excuses !", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 67050, "sold_hammer_total": 8210}, {"entity_id": 288390, "company_name": "Westcliffe Outdoor", "nps_score": 5, "nps_comment": "We like the organization, the equipment is often within a big day's drive. It does seem like a lot of items are in worse condition than presented.", "nps_submitted_date": "2025-03-04T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 72170, "sold_hammer_total": 0}, {"entity_id": 288390, "company_name": "Westcliffe Outdoor", "nps_score": 1, "nps_comment": "Lack of seller accountability/ major discrepancies from item descriptions. If purple wave fails in basic item inspection, they don't stand behind it.", "nps_submitted_date": "2025-09-08T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 72170, "sold_hammer_total": 0}, {"entity_id": 496075, "company_name": null, "nps_score": 0, "nps_comment": "Sales tax division is horrible, tried to collect tax from me on a farm piece of equipment when they didn\u2019t even know the tax laws of that state  I called the tax commission of that state to verify the tax law and had to fight purple wave over it", "nps_submitted_date": "2025-09-01T02:36:46.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 72000, "sold_hammer_total": 0}, {"entity_id": 167834, "company_name": null, "nps_score": 0, "nps_comment": "Would no take my arkansas tax exemption on my purchase", "nps_submitted_date": "2025-05-27T01:04:33.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 65900, "sold_hammer_total": 0}, {"entity_id": 50882, "company_name": null, "nps_score": 2, "nps_comment": "To much commision taken out", "nps_submitted_date": "2025-09-05T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 61640, "sold_hammer_total": 2050}, {"entity_id": 3360, "company_name": "Go Fetch Auto LLC", "nps_score": 6, "nps_comment": "You don\u00e2\u20ac\u2122t allow to sell with reserve", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 62997, "sold_hammer_total": 0}, {"entity_id": 156450, "company_name": "dons auto repair", "nps_score": 0, "nps_comment": "last purchase 2020 ford f150 listed as needing camshaft timing components i was planning to fix that i found it needs a transmission also will cost 5000.00 dollars it was a bad purchase", "nps_submitted_date": "2025-03-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 61720, "sold_hammer_total": 0}, {"entity_id": 130361, "company_name": "Bruce Libal", "nps_score": 0, "nps_comment": "Person who sold the tractor said it was in perfect condition and I am still fixing things that were broke.  The last is a kingpin that was no replaced when it when out and the bearings used did NOT match the tractor.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 61500, "sold_hammer_total": 0}, {"entity_id": 42889, "company_name": null, "nps_score": 5, "nps_comment": "an average score for an average experience. A little disappointed that i had to reup bank contacts at last minute for 30K potential purchase, when i purchased for that amount less than a year ago....and have had an account w/you guyz for years.", "nps_submitted_date": "2025-03-04T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 46500, "sold_hammer_total": 13845}, {"entity_id": 63709, "company_name": null, "nps_score": 2, "nps_comment": "You charge 10 percent with no maximum buyers premium where as I would rather buy equipment that I don\u00e2\u20ac\u2122t have to give purple wave $20000 on top of buying a $200000 piece of equipment. I spend most of my auction money on the other sites that typically limit the premium to $1000 max", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 15675, "sold_hammer_total": 44287}, {"entity_id": 381861, "company_name": "AA Drain Medic Inc.", "nps_score": 0, "nps_comment": "really you guys dont stand up for the buyer", "nps_submitted_date": "2024-09-25T00:48:57.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 55725, "sold_hammer_total": 0}, {"entity_id": 15575, "company_name": "Dougs Gun Shop", "nps_score": 6, "nps_comment": "It depends on buying or selling.  As a seller it\u2019s a great platform that reaches a huge number of buyers so I would highly recommend it.  On the other hand as a buyer I\u2019m very careful due to the 10% buyer premium gets pretty ridiculous on big ticket items.  I feel as the price goes up into the thousands that premium should decrease or even have a cap.  That being said I\u2019m less enthusiastic about recommending it for purchasing.  Thank you.", "nps_submitted_date": "2025-09-11T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 2850, "sold_hammer_total": 51760}, {"entity_id": 134533, "company_name": null, "nps_score": 1, "nps_comment": "The fees are way more then big iron or auctiontime. The equipment ain't represented that great the few times I bought it and I've called the guys also. Seems like big iron and auction time have better descriptions and pictures and not just someone who wants to screw you by selling you a complete piece of crap", "nps_submitted_date": "2024-12-04T15:02:47.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 54060, "sold_hammer_total": 0}, {"entity_id": 121007, "company_name": null, "nps_score": 3, "nps_comment": "the  10% buyers fee on bigger items", "nps_submitted_date": "2025-11-12T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 52595, "sold_hammer_total": 0}, {"entity_id": 281346, "company_name": null, "nps_score": 5, "nps_comment": "On one piece of equipment I won the bid on, the problems that it had were not listed.  Other equipment of the same type listed things like gauges or starter not working.", "nps_submitted_date": "2024-11-14T20:44:42.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 51950, "sold_hammer_total": 0}, {"entity_id": 148214, "company_name": null, "nps_score": 4, "nps_comment": "Recently contacted Purplewave to sell some items and was told that they only sell government and large farm operations. The very next email I got was a link for antique cars. Not happy with the SW Kansas representative.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 51325, "sold_hammer_total": 0}, {"entity_id": 162072, "company_name": "Promised Land Ag, L.P.", "nps_score": 4, "nps_comment": "Your website isn\u2019t the easiest to use. There should be NO buyers premium.", "nps_submitted_date": "2025-09-07T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 50500, "sold_hammer_total": 0}, {"entity_id": 76136, "company_name": "Bruins Dairy Cattle LLC", "nps_score": 1, "nps_comment": "The description of the selling items barely scratches the surface. PW leaves so much to be unknown that's it's embarrassing that you don't know basic info, and you're charging this much commission to both buyer and seller? You should be embarrassed!", "nps_submitted_date": "2025-01-02T01:52:22.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 49445, "sold_hammer_total": 0}, {"entity_id": 24450, "company_name": null, "nps_score": 3, "nps_comment": "Feel I wasn't heard when I purchased a Bus and it was a piece of junk (not road worthy).  Many, many defects was not llisted.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "very_high", "region_name": "Upper Midwest", "bought_hammer_total": 43910, "sold_hammer_total": 3725}, {"entity_id": 312613, "company_name": null, "nps_score": 0, "nps_comment": "The more people I tell, the more people I could have to bid against. So, no I tell no one.\u011f\u0178\u02dc\ufffd", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 46910, "sold_hammer_total": 0}, {"entity_id": 357814, "company_name": "David Porter", "nps_score": 0, "nps_comment": "Inconsistent listing \u201cpolicies \u201c.", "nps_submitted_date": "2024-09-25T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 8550, "sold_hammer_total": 38175}, {"entity_id": 85345, "company_name": "Sherwood Farms", "nps_score": 0, "nps_comment": "You refuse my farm tax exempt number", "nps_submitted_date": "2025-03-13T02:49:05.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 21905, "sold_hammer_total": 24685}, {"entity_id": 186386, "company_name": "Mammoth Materials Inc", "nps_score": 0, "nps_comment": "You can delete my account. I will not be back", "nps_submitted_date": "2024-12-27T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 4900, "sold_hammer_total": 38100}, {"entity_id": 385128, "company_name": null, "nps_score": 0, "nps_comment": "Don\u2019t make people stand behind what the sale", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 42325, "sold_hammer_total": 0}, {"entity_id": 132350, "company_name": null, "nps_score": 0, "nps_comment": "terrible service after the sale", "nps_submitted_date": "2025-06-09T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 41645, "sold_hammer_total": 0}, {"entity_id": 349535, "company_name": null, "nps_score": 0, "nps_comment": "Don't care", "nps_submitted_date": "2025-12-19T14:31:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 39000, "sold_hammer_total": 0}, {"entity_id": 133300, "company_name": "Lundquist Dirt", "nps_score": 3, "nps_comment": "Buyers premium is expensive", "nps_submitted_date": "2024-10-09T12:26:37.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 37600, "sold_hammer_total": 0}, {"entity_id": 118257, "company_name": "R Hester Contractors, INC", "nps_score": 2, "nps_comment": "Y\u2019all screwed me a roller I bought that had issues that were not disclosed.", "nps_submitted_date": "2024-09-18T23:42:40.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 37500, "sold_hammer_total": 0}, {"entity_id": 126124, "company_name": null, "nps_score": 0, "nps_comment": "Your salespeople are liars. They will sell other people's equipment that doesn't work but you won't sell mine.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 36200, "sold_hammer_total": 0}, {"entity_id": 392146, "company_name": "Jensen and son trucking", "nps_score": 6, "nps_comment": "Sometimes there is a deal", "nps_submitted_date": "2025-11-28T20:23:11.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Great Lakes", "bought_hammer_total": 35625, "sold_hammer_total": 0}, {"entity_id": 389328, "company_name": "ABCD Transportation Co.", "nps_score": 6, "nps_comment": "six", "nps_submitted_date": "2024-11-29T11:19:10.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 35500, "sold_hammer_total": 0}, {"entity_id": 86405, "company_name": "J&C Concrete Construction", "nps_score": 6, "nps_comment": "Buyers premium is bad", "nps_submitted_date": "2024-08-22T14:59:32.000", "fy": 2025, "transaction_role": "seller_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 0, "sold_hammer_total": 34460}, {"entity_id": 86180, "company_name": "Huff Steel Buildings", "nps_score": 5, "nps_comment": "discriptions are wrong , office help is not processing the invoices , had to call three times to get last invoice . even the seller was upset with you guys because you have his phone number WRONG", "nps_submitted_date": "2025-09-09T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 34460, "sold_hammer_total": 0}, {"entity_id": 191980, "company_name": "Soukup Farm Inc.", "nps_score": 1, "nps_comment": "10% buyers premium stops me from bidding all the time. Prices seem to be ran up artificially.", "nps_submitted_date": "2024-11-23T02:19:07.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 33955, "sold_hammer_total": 0}, {"entity_id": 79267, "company_name": null, "nps_score": 0, "nps_comment": "You sold me a dump truck supposedly checked out by your rep, and it was no where near as described.", "nps_submitted_date": "2025-08-29T21:56:42.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 32485, "sold_hammer_total": 0}, {"entity_id": 73213, "company_name": "Sims Trucking LLC", "nps_score": 6, "nps_comment": "10% is too high of buyers fee!", "nps_submitted_date": "2024-12-15T18:35:36.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 23825, "sold_hammer_total": 7800}, {"entity_id": 222669, "company_name": "Lovelady Electric", "nps_score": 4, "nps_comment": "10% is to much commission. You need to find more items in Oklahoma and Arkansas.", "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 31600, "sold_hammer_total": 0}, {"entity_id": 89118, "company_name": "Dralle Plumbing & Heating", "nps_score": 3, "nps_comment": "10 percent buyers fee", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 29650, "sold_hammer_total": 0}, {"entity_id": 265708, "company_name": "Hurd Logging", "nps_score": 4, "nps_comment": "Fees", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 28000, "sold_hammer_total": 0}, {"entity_id": 256217, "company_name": "Hydro-Vision Technology LLC", "nps_score": 4, "nps_comment": "Because Purple Wave usually has the things that we need for the type work that we do. And it gives us a chance to get the products that we need at an affordable and competitive price.", "nps_submitted_date": "2025-09-05T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Great Lakes", "bought_hammer_total": 13150, "sold_hammer_total": 11800}, {"entity_id": 166810, "company_name": "LAEL HOLLIDAY", "nps_score": 3, "nps_comment": "Bad experience", "nps_submitted_date": "2025-12-22T13:18:41.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": null, "bought_hammer_total": 22000, "sold_hammer_total": 0}, {"entity_id": 259691, "company_name": null, "nps_score": 6, "nps_comment": "when you advertise that the advertised items sell to the highest bidder with no reserves then dont pull the item in the last 10 minutes of the auction time and no sale it just because it is not bringing what you promised the seller that it will sell for", "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 21925, "sold_hammer_total": 0}, {"entity_id": 259691, "company_name": null, "nps_score": 6, "nps_comment": "When you advertise that everything sells to the highest bidder with no reserves, then why does then item bidding stop when I am the highest bidder with 2 minutes to go and I am not able to win the item?????????????????????????????", "nps_submitted_date": "2025-09-06T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 21925, "sold_hammer_total": 0}, {"entity_id": 71476, "company_name": "Freund Farms", "nps_score": 6, "nps_comment": "I'm not a big fan of buyer's premium. I used to always shop Big Iron but their buyer's premium turned me away.", "nps_submitted_date": "2025-03-05T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": null, "bought_hammer_total": 20837, "sold_hammer_total": 0}, {"entity_id": 286148, "company_name": "Timber Ridge Farm", "nps_score": 5, "nps_comment": "Title work is way to slow . Consider letting seller and buyer do title transfer. (others do) I picked up a vehicle Dec 22 and checked on where the title is on Jan 19 and it still wasn't mailed. SOMETHING needs to improve!!!!", "nps_submitted_date": "2026-01-20T00:00:00.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 20460, "sold_hammer_total": 0}, {"entity_id": 556298, "company_name": null, "nps_score": 5, "nps_comment": "There needs to be a punishment if the seller lies about the item for sale", "nps_submitted_date": "2026-01-30T13:30:26.000", "fy": 2026, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 19900, "sold_hammer_total": 0}, {"entity_id": 515036, "company_name": null, "nps_score": 0, "nps_comment": "No friends in search of equipment", "nps_submitted_date": "2025-07-13T12:11:49.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 19625, "sold_hammer_total": 0}, {"entity_id": 67949, "company_name": "C-Bar Trucking", "nps_score": 5, "nps_comment": "Don't know", "nps_submitted_date": "2025-05-02T00:07:26.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 19080, "sold_hammer_total": 0}, {"entity_id": 482196, "company_name": null, "nps_score": 0, "nps_comment": "Buyers premium is nothing but greed and BS.", "nps_submitted_date": "2024-11-30T12:31:08.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 19000, "sold_hammer_total": 0}, {"entity_id": 424839, "company_name": "Roger Houchin", "nps_score": 3, "nps_comment": "The 10% buyers fee, the listing fee , & on and on.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 18475, "sold_hammer_total": 0}, {"entity_id": 144513, "company_name": "Industrial Parts Connection", "nps_score": 4, "nps_comment": "I like purple wave but after buying a item at low a price the seller wouldnt actually give me the item. I feel purple wave should have done more. At that point I lost faith in buying and actually receiving. How could I not feel that way?", "nps_submitted_date": "2025-03-11T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "high", "region_name": "Upper Midwest", "bought_hammer_total": 18475, "sold_hammer_total": 0}, {"entity_id": 393337, "company_name": "Lewis Properties", "nps_score": 6, "nps_comment": "Others are charging much less than your 18%.", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 18000, "sold_hammer_total": 0}, {"entity_id": 477970, "company_name": null, "nps_score": 0, "nps_comment": "website search sucks. copy big iron", "nps_submitted_date": "2025-01-28T02:48:33.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 17200, "sold_hammer_total": 0}, {"entity_id": 135944, "company_name": null, "nps_score": 5, "nps_comment": "Ive only bought one thing and it was very bad shape   But its still a sight unseen auction site so it has a place", "nps_submitted_date": "2024-12-25T04:30:11.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 16500, "sold_hammer_total": 0}, {"entity_id": 57876, "company_name": "Eberly Turf", "nps_score": 5, "nps_comment": "They would be bidding for the same items as I am.", "nps_submitted_date": "2025-04-29T08:50:37.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Great Lakes", "bought_hammer_total": 16400, "sold_hammer_total": 0}, {"entity_id": 22541, "company_name": null, "nps_score": 2, "nps_comment": "Took a chance on a bike three hours away. Didn\u00e2\u20ac\u2122t inspect it in person but called and was told it\u00e2\u20ac\u2122s rideable.  Took a trailer and drove down  good thing bike is junk and will cost as much as the auction price to make road worthy.   Was told by you guys that you suggest a in person inspection but basically to bad sorry for your luck", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 15892, "sold_hammer_total": 0}, {"entity_id": 117838, "company_name": "All Clear Sewer & Septic Tank", "nps_score": 4, "nps_comment": "No buy feed back", "nps_submitted_date": "2025-09-13T00:00:00.000", "fy": 2026, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 12000, "sold_hammer_total": 3400}, {"entity_id": 22721, "company_name": null, "nps_score": 0, "nps_comment": "n/a", "nps_submitted_date": "2025-01-07T16:22:55.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Upper Midwest", "bought_hammer_total": 15390, "sold_hammer_total": 0}, {"entity_id": 371536, "company_name": "Blue Ribbon Beef", "nps_score": 6, "nps_comment": "6", "nps_submitted_date": "2024-11-26T00:13:16.000", "fy": 2025, "transaction_role": "buyer_only", "engagement_level": "medium", "region_name": "Pacific Coast", "bought_hammer_total": 14500, "sold_hammer_total": 0}, {"entity_id": 178924, "company_name": "5 Star Farms", "nps_score": 6, "nps_comment": "Bad experience a few years ago", "nps_submitted_date": "2025-04-05T21:17:23.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Southern Plains", "bought_hammer_total": 3825, "sold_hammer_total": 9570}, {"entity_id": 160392, "company_name": "Ifixit", "nps_score": 5, "nps_comment": "I think you should tell your seller s to be honest with their buyers!!!   I got a 2005 Ram  the add showed the ram going down the road!!! I called & talked to the seller he said it had no problems!! But I drove 2&1/2 hours to pick it up it only had first gear  big problem for me !!!", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "high", "region_name": "Southern Plains", "bought_hammer_total": 12935, "sold_hammer_total": 360}, {"entity_id": 105601, "company_name": "Ufkes Farms", "nps_score": 5, "nps_comment": "I told my rep the skid loader had a bigger rebuilt motor with new injectors and injector pumps, but none of that was in the listing. He could have seen it was the bigger motor if he would have looked at model number like I told him. I feel I took a beating on my skid loader partly because of this, partly because it had some hydraulic issues. Don't know if I will use your service again to sell something", "nps_submitted_date": "2024-09-10T00:00:00.000", "fy": 2025, "transaction_role": "buyer_and_seller", "engagement_level": "medium", "region_name": "Great Lakes", "bought_hammer_total": 6175, "sold_hammer_total": 7000}]}}/*__END_DATA__*/;
+
+function loadData() {
+  if (!DATA) {
+    document.getElementById('loadingMsg').innerHTML =
+      '<strong>No data embedded.</strong><br><br>' +
+      'Run the build script first:<br><code style="background:#eee;padding:4px 8px;border-radius:4px;">python -m analyzers.nps.run_analysis --dashboard</code>';
+    return;
+  }
+  document.getElementById('loadingMsg').style.display = 'none';
+  document.getElementById('genTimestamp').textContent =
+    'Generated: ' + new Date(DATA.metadata.generated_at).toLocaleDateString('en-US', {month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+  renderAll();
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function fmt(n) { return n == null ? '—' : '$' + Math.round(n).toLocaleString(); }
+function fmtPct(n) { return n == null ? '—' : n.toFixed(1) + '%'; }
+function fmtNum(n) { return n == null ? '—' : Math.round(n).toLocaleString(); }
+function fmtDec(n, d=1) { return n == null ? '—' : n.toFixed(d); }
+function scoreBadge(label) {
+  if (label === 'detractor') return '<span class="badge badge-red">Detractor</span>';
+  if (label === 'promoter') return '<span class="badge badge-green">Promoter</span>';
+  return '<span class="badge badge-amber">Passive</span>';
+}
+function priorityBadge(p) {
+  const cls = p === 'critical' ? 'badge-red' : p === 'high' ? 'badge-amber' : 'badge-blue';
+  return `<span class="badge ${cls}">${p.toUpperCase()}</span>`;
+}
+function changeArrow(val) {
+  if (val > 0) return `<span style="color:var(--green)">▲ +${val}</span>`;
+  if (val < 0) return `<span style="color:var(--red)">▼ ${val}</span>`;
+  return `<span style="color:var(--text-muted)">— 0</span>`;
+}
+
+const CHART_COLORS = ['#7C3AED','#4F46E5','#2563EB','#0891B2','#059669','#E879F9','#DB2777','#EA580C'];
+
+// ============================================================
+// SECTION RENDERERS
+// ============================================================
+
+function renderExecutive() {
+  const d = DATA.descriptive;
+  const h = d.headline;
+  const pred = DATA.predictive;
+  const recs = DATA.prescriptive.recommendations;
+  const prior = d.by_fiscal_year.find(f => f.fiscal_year === d.report_fy - 1);
+  const current = d.by_fiscal_year.find(f => f.fiscal_year === d.report_fy);
+
+  let html = `
+    <h2 class="section-title">Executive Summary — FY${d.report_fy}</h2>
+    <p class="section-subtitle">NPS performance against the company goal of ${d.nps_goal}, with findings across all four analytical layers.</p>
+
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:24px;">
+      <div style="text-align:center;min-width:180px;padding:24px 32px;background:${h.nps >= d.nps_goal ? 'var(--green-bg)' : 'var(--red-bg)'};border-radius:16px;border:2px solid ${h.nps >= d.nps_goal ? 'var(--green)' : 'var(--red)'};">
+        <div style="font-size:48px;font-weight:800;color:${h.nps >= d.nps_goal ? 'var(--green)' : 'var(--red)'};">${h.nps}</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-top:4px;">FY${d.report_fy} NPS</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">${h.goal_gap >= 0 ? '✓ Above' : Math.abs(h.goal_gap) + 'pts below'} goal of ${d.nps_goal}</div>
+      </div>
+      <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div style="text-align:center;padding:16px;background:var(--green-bg);border-radius:12px;">
+          <div style="font-size:28px;font-weight:700;color:var(--green);">${fmtNum(current.promoters)}</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Promoters · ${fmtPct(h.promoter_pct)}</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:var(--amber-bg);border-radius:12px;">
+          <div style="font-size:28px;font-weight:700;color:var(--amber);">${fmtNum(current.passives)}</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Passives · ${fmtPct(h.passive_pct)}</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:var(--red-bg);border-radius:12px;">
+          <div style="font-size:28px;font-weight:700;color:var(--red);">${fmtNum(current.detractors)}</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Detractors · ${fmtPct(h.detractor_pct)}</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+      <div class="kpi">
+        <div class="kpi-label">FY${d.report_fy} Responses</div>
+        <div class="kpi-value">${fmtNum(h.responses)}</div>
+        <div class="kpi-sub">${fmtNum(h.unique_accounts)} unique accounts · ${h.nps_change != null ? changeArrow(h.nps_change) + ' vs FY' + (d.report_fy - 1) : ''}</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Predictive Model</div>
+        <div class="kpi-value" style="color:${pred.model_vs_baseline > 0.05 ? 'var(--green)' : 'var(--amber)'}">
+          ${pred.model_interpretation.profile_predictive ? 'Profile-driven' : 'Event-driven'}
+        </div>
+        <div class="kpi-sub">Model ${pred.model_vs_baseline > 0 ? '+' : ''}${(pred.model_vs_baseline * 100).toFixed(1)}% vs baseline</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Key Findings</div>
+      <div class="card-subtitle">The story the data tells across all four layers</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div>
+          <div style="font-weight:600;margin-bottom:6px;color:var(--pw-purple);">📊 Descriptive</div>
+          <p style="font-size:13px;color:var(--text-secondary);">
+            FY${d.report_fy} NPS is ${h.nps}, ${Math.abs(h.goal_gap)} points ${h.goal_gap >= 0 ? 'above' : 'below'} the ${d.nps_goal} goal.
+            ${h.nps_change != null ? 'NPS ' + (h.nps_change < 0 ? 'declined ' + Math.abs(h.nps_change) + ' points' : 'improved ' + h.nps_change + ' points') + ' vs FY' + (d.report_fy - 1) + '.' : ''}
+            Detractor rate is ${fmtPct(h.detractor_pct)} across ${fmtNum(h.responses)} responses.
+          </p>
+        </div>
+        <div>
+          <div style="font-weight:600;margin-bottom:6px;color:var(--pw-purple);">🔍 Diagnostic</div>
+          <p style="font-size:13px;color:var(--text-secondary);">
+            The "engagement paradox": most valuable customers (very high engagement) have the highest detractor rates.
+            Sellers are disproportionately unhappy compared to buyers.
+          </p>
+        </div>
+        <div>
+          <div style="font-weight:600;margin-bottom:6px;color:var(--pw-purple);">🤖 Predictive</div>
+          <p style="font-size:13px;color:var(--text-secondary);">
+            ${pred.model_interpretation.explanation}
+          </p>
+        </div>
+        <div>
+          <div style="font-weight:600;margin-bottom:6px;color:var(--pw-purple);">💡 Prescriptive — ${recs.length} Recommendations</div>
+          <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:18px;">
+            ${recs.map(r => '<li style="margin-bottom:4px;"><span style="font-weight:600;color:' + (r.priority === 'critical' ? 'var(--red)' : r.priority === 'high' ? 'var(--amber)' : 'var(--text-primary)') + ';">[' + r.priority.toUpperCase() + ']</span> ' + r.category + '</li>').join('')}
+          </ul>
+        </div>
+      </div>
+    </div>`;
+
+  document.getElementById('sec-executive').innerHTML = html;
+}
+
+
+function renderDescriptive() {
+  const d = DATA.descriptive;
+  const h = d.headline;
+  let html = `
+    <h2 class="section-title">Layer 1: Descriptive — FY${d.report_fy}</h2>
+    <p class="section-subtitle">What happened? NPS performance, score distribution, and what customers are saying.</p>`;
+
+  // FY26 headline KPIs
+  html += `<div class="kpi-row">
+    <div class="kpi">
+      <div class="kpi-label">FY${d.report_fy} NPS</div>
+      <div class="kpi-value" style="color:${h.nps >= d.nps_goal ? 'var(--green)' : 'var(--red)'};">${h.nps}</div>
+      <div class="kpi-sub">${h.goal_gap >= 0 ? '✓ Above' : Math.abs(h.goal_gap) + 'pts below'} goal of ${d.nps_goal}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Promoters</div>
+      <div class="kpi-value" style="color:var(--green)">${fmtPct(h.promoter_pct)}</div>
+      <div class="kpi-sub">Score 9–10</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Passives</div>
+      <div class="kpi-value" style="color:var(--amber)">${fmtPct(h.passive_pct)}</div>
+      <div class="kpi-sub">Score 7–8</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Detractors</div>
+      <div class="kpi-value" style="color:var(--red)">${fmtPct(h.detractor_pct)}</div>
+      <div class="kpi-sub">Score 0–6</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Comment Rate</div>
+      <div class="kpi-value">${fmtPct(h.comment_pct)}</div>
+      <div class="kpi-sub">Respondents who left comments</div>
+    </div>
+  </div>`;
+
+  // FY comparison table
+  html += `<div class="card">
+    <div class="card-title">Fiscal Year Comparison</div>
+    <div class="card-subtitle">FY${d.report_fy} vs prior year baseline</div>
+    <table><thead><tr>
+      <th>FY</th><th class="text-right">Responses</th><th class="text-right">Accounts</th>
+      <th class="text-right">NPS</th><th class="text-right">Goal (${d.nps_goal})</th>
+      <th class="text-right">Promoter %</th>
+      <th class="text-right">Detractor %</th><th class="text-right">Comment %</th>
+    </tr></thead><tbody>`;
+  d.by_fiscal_year.forEach(fy => {
+    const isCurrent = fy.fiscal_year === d.report_fy;
+    const rowStyle = isCurrent ? ' style="background:var(--surface-2);font-weight:600;"' : '';
+    const gap = fy.nps - d.nps_goal;
+    html += `<tr${rowStyle}>
+      <td><strong>FY${fy.fiscal_year}</strong>${isCurrent ? ' ←' : ''}</td>
+      <td class="text-right mono">${fmtNum(fy.responses)}</td>
+      <td class="text-right mono">${fmtNum(fy.unique_accounts)}</td>
+      <td class="text-right mono" style="font-weight:700;color:${fy.nps >= d.nps_goal ? 'var(--green)' : 'var(--red)'}">${fy.nps}</td>
+      <td class="text-right mono" style="color:${gap >= 0 ? 'var(--green)' : 'var(--red)'}">${gap >= 0 ? '+' : ''}${gap.toFixed(1)}</td>
+      <td class="text-right mono">${fmtPct(fy.promoter_pct)}</td>
+      <td class="text-right mono" style="color:var(--red)">${fmtPct(fy.detractor_pct)}</td>
+      <td class="text-right mono">${fmtPct(fy.comment_pct)}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div>';
+
+  // Charts
+  html += `<div class="chart-grid">
+    <div class="card">
+      <div class="card-title">Score Distribution — FY${d.report_fy}</div>
+      <div class="card-subtitle">Response count by NPS score (0–10)</div>
+      <canvas id="chartScoreDist" height="250"></canvas>
+    </div>
+    <div class="card">
+      <div class="card-title">Quarterly NPS Trend</div>
+      <div class="card-subtitle">NPS by quarter with goal line at ${d.nps_goal}</div>
+      <canvas id="chartQuarterly" height="250"></canvas>
+    </div>
+  </div>`;
+
+  // Comment Summary Cards
+  if (d.comment_categories && d.comment_categories.length > 0) {
+    html += `<div class="card">
+      <div class="card-title">What Customers Are Saying — FY${d.report_fy}</div>
+      <div class="card-subtitle">LLM-generated summary of comments by NPS category</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px;">`;
+
+    const catColors = { promoter: 'var(--green)', passive: 'var(--amber)', detractor: 'var(--red)' };
+    const catBgs = { promoter: 'var(--green-bg)', passive: 'var(--amber-bg)', detractor: 'var(--red-bg)' };
+    const catLabels = { promoter: 'Promoters (9–10)', passive: 'Passives (7–8)', detractor: 'Detractors (0–6)' };
+
+    d.comment_categories.forEach(cat => {
+      html += `
+        <div style="border:1px solid var(--border);border-radius:12px;padding:20px;background:${catBgs[cat.label]};">
+          <div style="font-weight:700;font-size:14px;color:${catColors[cat.label]};margin-bottom:8px;">
+            ${catLabels[cat.label] || cat.label}
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:var(--text-secondary);margin-bottom:12px;">
+            <div><strong>${fmtNum(cat.total_responses)}</strong> responses</div>
+            <div><strong>${fmtNum(cat.with_comments)}</strong> comments (${fmtPct(cat.comment_rate)})</div>
+            <div>Avg score: <strong>${cat.avg_score}</strong></div>
+            <div>Avg value: <strong>$${fmtNum(cat.avg_total_dollars)}</strong></div>
+          </div>
+          <div style="font-size:13px;color:var(--text-primary);line-height:1.5;border-top:1px solid var(--border);padding-top:12px;">
+            ${cat.summary}
+          </div>
+        </div>`;
+    });
+
+    html += '</div></div>';
+  }
+
+  document.getElementById('sec-descriptive').innerHTML = html;
+
+  // Score Distribution Chart
+  const distLabels = d.score_distribution.map(s => s.score);
+  const distData = d.score_distribution.map(s => s.count);
+  const distColors = distLabels.map(s => s <= 6 ? '#DC2626' : s <= 8 ? '#D97706' : '#059669');
+  new Chart(document.getElementById('chartScoreDist'), {
+    type: 'bar',
+    data: { labels: distLabels, datasets: [{ data: distData, backgroundColor: distColors, borderRadius: 4 }] },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { x: { title: { display:true, text:'NPS Score' }}, y: { title: { display:true, text:'Count' }} }
+    }
+  });
+
+  // Quarterly Trend Chart with goal line
+  const qtLabels = d.quarterly_trend.map(q => q.period);
+  const qtNPS = d.quarterly_trend.map(q => q.nps);
+  const qtDet = d.quarterly_trend.map(q => q.detractor_pct);
+  const qtGoal = d.quarterly_trend.map(() => d.nps_goal);
+  new Chart(document.getElementById('chartQuarterly'), {
+    type: 'line',
+    data: {
+      labels: qtLabels,
+      datasets: [
+        { label: 'NPS', data: qtNPS, borderColor: '#7C3AED', backgroundColor: 'rgba(124,58,237,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+        { label: 'Goal (' + d.nps_goal + ')', data: qtGoal, borderColor: '#059669', borderDash: [8,4], pointRadius: 0, borderWidth: 2, tension: 0, yAxisID: 'y' },
+        { label: 'Detractor %', data: qtDet, borderColor: '#DC2626', borderDash: [5,5], tension: 0.3, yAxisID: 'y1' }
+      ]
+    },
+    options: {
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        y: { position:'left', title:{display:true,text:'NPS'} },
+        y1: { position:'right', title:{display:true,text:'Detractor %'}, grid:{drawOnChartArea:false} }
+      }
+    }
+  });
+}
+
+
+function toggleDim(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+  const toggle = el.querySelector('.dim-toggle');
+  toggle.textContent = el.classList.contains('open') ? '−' : '+';
+}
+
+function renderDiagnostic() {
+  const d = DATA.diagnostic;
+  const fy = d.report_fy;
+  const narr = d.narratives || {};
+  const mq = d.model_quality || {};
+
+  // Feature narrative fuzzy lookup
+  const featNarr = narr.feature_narratives || {};
+  function getFeatureNarrative(featureName) {
+    if (featNarr[featureName]) return featNarr[featureName];
+    const lower = featureName.toLowerCase();
+    for (const [k, v] of Object.entries(featNarr)) {
+      if (k.toLowerCase() === lower || k.toLowerCase().includes(lower) || lower.includes(k.toLowerCase())) return v;
+    }
+    return '';
+  }
+
+  let html = `
+    <h2 class="section-title">Layer 2: Diagnostic — FY${fy}</h2>
+    <p class="section-subtitle">What drives detractor status? XGBoost + SHAP analysis on ${fmtNum(mq.n_samples)} survey responses.</p>`;
+
+  // Overall synthesis
+  if (narr.overall_synthesis) {
+    html += `<div class="card" style="border-left:4px solid var(--pw-purple);">
+      <div class="card-title">Diagnostic Synthesis</div>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">${narr.overall_synthesis}</p>
+    </div>`;
+  }
+
+  // Model quality KPIs
+  html += `<div class="kpi-row">
+    <div class="kpi">
+      <div class="kpi-label">Model Accuracy</div>
+      <div class="kpi-value" style="color:${mq.cv_accuracy > mq.baseline_accuracy ? 'var(--green)' : 'var(--amber)'}">${(mq.cv_accuracy * 100).toFixed(1)}%</div>
+      <div class="kpi-sub">Baseline: ${(mq.baseline_accuracy * 100).toFixed(1)}%</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">F1 Score</div>
+      <div class="kpi-value" style="color:${mq.cv_f1 > 0.4 ? 'var(--green)' : 'var(--amber)'}">${(mq.cv_f1 * 100).toFixed(1)}%</div>
+      <div class="kpi-sub">Detractor detection</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Detractors</div>
+      <div class="kpi-value" style="color:var(--red)">${fmtNum(mq.n_detractors)}</div>
+      <div class="kpi-sub">${((mq.n_detractors / mq.n_samples) * 100).toFixed(1)}% of responses</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Key Finding</div>
+      <div class="kpi-value" style="font-size:16px;color:var(--text-secondary);">${mq.cv_f1 < 0.3 ? 'Event-Driven' : 'Profile-Driven'}</div>
+      <div class="kpi-sub">${mq.cv_f1 < 0.3 ? 'Detractors driven by experiences, not profiles' : 'Profiles partially predict detractors'}</div>
+    </div>
+  </div>`;
+
+  // SHAP Feature Importance bar chart — top 5 only
+  const shapImp = (d.shap_importance || []).slice(0, 5);
+  if (shapImp.length > 0) {
+    html += `<div class="card">
+      <div class="card-title">Top 5 Drivers of Detractor Status</div>
+      <div class="card-subtitle">Features ranked by impact on whether a customer becomes a detractor. Higher = more influential.</div>
+      <canvas id="chartShapImportance" height="180"></canvas>
+    </div>`;
+  }
+
+  // Top 5 feature insight cards — narrative forward, table hidden
+  const shapDetails = (d.shap_details || []).slice(0, 5);
+  if (shapDetails.length > 0) {
+    shapDetails.forEach((detail, i) => {
+      const impacts = detail.value_impacts || [];
+      if (impacts.length === 0) return;
+      const featNarrText = getFeatureNarrative(detail.feature);
+
+      html += `<div class="dim-card" id="shap-${i}">
+        <div class="dim-header" onclick="toggleDim('shap-${i}')">
+          <div class="dim-header-left">
+            <div class="dim-title">#${i + 1}: ${detail.feature}</div>
+            <div class="dim-narrative">${featNarrText || 'Click to view detail.'}</div>
+          </div>
+          <div class="dim-toggle">+</div>
+        </div>
+        <div class="dim-body">
+          <table><thead><tr>
+            <th>Value</th><th class="text-right">Customers</th><th>Strength</th><th>Direction</th>
+          </tr></thead><tbody>`;
+      const maxImpact = Math.max(...impacts.map(v => Math.abs(v.avg_shap)), 0.001);
+      impacts.forEach(v => {
+        const barPct = Math.round((Math.abs(v.avg_shap) / maxImpact) * 100);
+        const isMinimal = barPct < 15;
+        const color = isMinimal ? 'var(--text-muted)' : (v.avg_shap > 0 ? 'var(--red)' : 'var(--green)');
+        const arrow = isMinimal ? '—' : (v.avg_shap > 0 ? '↑' : '↓');
+        const label = isMinimal ? 'Minimal effect' : v.direction;
+        html += `<tr>
+          <td><strong>${v.value}</strong></td>
+          <td class="text-right mono">${fmtNum(v.count)}</td>
+          <td style="width:120px;"><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="width:${barPct}%;height:100%;background:${color};border-radius:4px;"></div></div></td>
+          <td style="color:${color};font-weight:500;">${arrow} ${label}</td>
+        </tr>`;
+      });
+      html += `</tbody></table>
+        </div>
+      </div>`;
+    });
+  }
+
+  // Methodology note — NPS Source
+  html += `<div class="card" style="border-left:4px solid var(--amber);margin-top:24px;">
+    <div class="card-title">⚠ Methodology Note: Survey Channel Bias</div>
+    <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:8px;">
+      NPS Source was removed from the model because it dominated all other features. PostHog (in-app) surveys show <strong>9.6% detractor rate</strong> (n=1,027) 
+      while Iterable (email) surveys show <strong>29.5% detractor rate</strong> (n=424) — a 3x difference.
+    </p>
+    <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:8px;">
+      This likely reflects <strong>survey timing and self-selection bias</strong>, not a true driver of dissatisfaction. 
+      Email surveys may arrive alongside invoices or settlement statements, catching respondents at a moment of fee awareness.
+    </p>
+    <p style="font-size:13px;color:var(--amber);font-weight:600;">
+      ⟶ Investigate: When does the Iterable NPS email fire relative to invoice/settlement delivery?
+    </p>
+  </div>`;
+
+  // Engagement Paradox chart
+  html += `<div class="card">
+    <div class="card-title">The Engagement Paradox — FY${fy}</div>
+    <div class="card-subtitle">Detractor rate vs customer value — your most valuable customers are the unhappiest</div>
+    <canvas id="chartParadox" height="200"></canvas>
+  </div>`;
+
+  document.getElementById('sec-diagnostic').innerHTML = html;
+
+  // ---- CHARTS ----
+
+  // SHAP Importance horizontal bar chart — top 5
+  if (shapImp.length > 0) {
+    const top5 = shapImp.slice().reverse();
+    new Chart(document.getElementById('chartShapImportance'), {
+      type: 'bar',
+      data: {
+        labels: top5.map(f => f.feature),
+        datasets: [{
+          label: 'Mean |SHAP|',
+          data: top5.map(f => f.mean_abs_shap),
+          backgroundColor: top5.map((f, i) => {
+            const idx = top5.length - 1 - i;
+            return idx < 2 ? '#7C3AED' : idx < 4 ? '#A78BFA' : '#D8B4FE';
+          }),
+          borderRadius: 4,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => 'Impact: ' + ctx.parsed.x.toFixed(4) } }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Mean |SHAP Value|' }, beginAtZero: true },
+          y: { ticks: { font: { weight: '600' } } }
+        }
+      }
+    });
+  }
+
+  // Engagement Paradox chart
+  const para = d.engagement_paradox;
+  const order = ['None','Low','Medium','High','Very High'];
+  para.sort((a,b) => order.indexOf(a.engagement_level) - order.indexOf(b.engagement_level));
+  new Chart(document.getElementById('chartParadox'), {
+    type: 'bar',
+    data: {
+      labels: para.map(p => p.engagement_level),
+      datasets: [
+        { label: 'Detractor %', data: para.map(p => p.detractor_pct), backgroundColor: '#DC2626', borderRadius: 4, yAxisID: 'y' },
+        { label: 'Avg Total $', data: para.map(p => p.avg_total_dollars), backgroundColor: '#7C3AED', borderRadius: 4, yAxisID: 'y1', type: 'bar' }
+      ]
+    },
+    options: {
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        y: { position: 'left', title: { display:true, text:'Detractor %' }, min: 0 },
+        y1: { position: 'right', title: { display:true, text:'Avg Total $' }, grid: { drawOnChartArea:false },
+          ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'k' }
+        }
+      }
+    }
+  });
+}
+
+
+function renderPredictive() {
+  const p = DATA.predictive;
+  let html = `
+    <h2 class="section-title">Layer 3: Predictive</h2>
+    <p class="section-subtitle">Can we predict who will be a detractor? Logistic regression risk model.</p>
+
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Model Accuracy (CV)</div>
+        <div class="kpi-value">${(p.cv_accuracy * 100).toFixed(1)}%</div>
+        <div class="kpi-sub">± ${(p.cv_accuracy_std * 100).toFixed(1)}%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Baseline Accuracy</div>
+        <div class="kpi-value">${(p.baseline_accuracy * 100).toFixed(1)}%</div>
+        <div class="kpi-sub">Always predict non-detractor</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Model F1 Score</div>
+        <div class="kpi-value">${(p.cv_f1 * 100).toFixed(1)}%</div>
+        <div class="kpi-sub">Detractor class</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Interpretation</div>
+        <div class="kpi-value" style="font-size:16px;color:${p.model_interpretation.profile_predictive ? 'var(--green)' : 'var(--amber)'}">
+          ${p.model_interpretation.profile_predictive ? 'Profile-Driven' : 'Event-Driven'}
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Model Interpretation</div>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">${p.model_interpretation.explanation}</p>
+    </div>
+
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Feature Importance (Top 10)</div>
+        <div class="card-subtitle">Logistic regression coefficients — which features influence detractor risk</div>
+        <canvas id="chartFeatures" height="300"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-title">Confusion Matrix</div>
+        <div class="card-subtitle">Full-data predictions (for reference, not validation)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:300px;margin:20px auto;">
+          <div style="background:var(--green-bg);padding:16px;border-radius:8px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);">True Negative</div>
+            <div class="mono" style="font-size:24px;font-weight:700;color:var(--green);">${fmtNum(p.confusion_matrix.true_negative)}</div>
+          </div>
+          <div style="background:var(--red-bg);padding:16px;border-radius:8px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);">False Positive</div>
+            <div class="mono" style="font-size:24px;font-weight:700;color:var(--red);">${fmtNum(p.confusion_matrix.false_positive)}</div>
+          </div>
+          <div style="background:var(--amber-bg);padding:16px;border-radius:8px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);">False Negative</div>
+            <div class="mono" style="font-size:24px;font-weight:700;color:var(--amber);">${fmtNum(p.confusion_matrix.false_negative)}</div>
+          </div>
+          <div style="background:var(--green-bg);padding:16px;border-radius:8px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);">True Positive</div>
+            <div class="mono" style="font-size:24px;font-weight:700;color:var(--green);">${fmtNum(p.confusion_matrix.true_positive)}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">All Features — Odds Ratios</div>
+      <div class="card-subtitle">Odds ratio > 1 = increases detractor risk, < 1 = decreases risk</div>
+      <table><thead><tr>
+        <th>Feature</th><th class="text-right">Coefficient</th><th class="text-right">Odds Ratio</th><th>Direction</th>
+      </tr></thead><tbody>`;
+
+  p.feature_importance.forEach(f => {
+    const color = f.direction === 'increases_risk' ? 'var(--red)' : 'var(--green)';
+    const arrow = f.direction === 'increases_risk' ? '▲ Risk' : '▼ Protective';
+    html += `<tr>
+      <td><strong>${f.feature}</strong></td>
+      <td class="text-right mono">${f.coefficient.toFixed(4)}</td>
+      <td class="text-right mono" style="font-weight:600">${f.odds_ratio.toFixed(4)}</td>
+      <td style="color:${color};font-size:12px;font-weight:600;">${arrow}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div>';
+
+  document.getElementById('sec-predictive').innerHTML = html;
+
+  // Feature importance chart (top 10)
+  const top10 = p.feature_importance.slice(0, 10).reverse();
+  new Chart(document.getElementById('chartFeatures'), {
+    type: 'bar',
+    data: {
+      labels: top10.map(f => f.feature),
+      datasets: [{
+        data: top10.map(f => f.coefficient),
+        backgroundColor: top10.map(f => f.direction === 'increases_risk' ? '#DC2626' : '#059669'),
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: { x: { title: { display:true, text:'Coefficient (positive = increases detractor risk)' } } }
+    }
+  });
+}
+
+
+function renderPrescriptive() {
+  const recs = DATA.prescriptive.recommendations;
+  let html = `
+    <h2 class="section-title">Layer 4: Prescriptive</h2>
+    <p class="section-subtitle">What should we do? Data-driven recommendations ranked by priority.</p>`;
+
+  recs.forEach(r => {
+    html += `
+    <div class="rec-card ${r.priority}">
+      <div class="rec-header">
+        ${priorityBadge(r.priority)}
+        <span class="rec-category">${r.category}</span>
+      </div>
+      <div class="rec-finding">${r.finding}</div>
+      <div class="rec-action"><strong>Recommended Action:</strong> ${r.action}</div>
+      <div class="rec-impact">${r.expected_impact}</div>
+    </div>`;
+  });
+
+  document.getElementById('sec-prescriptive').innerHTML = html;
+}
+
+
+function renderDrilldown() {
+  const dd = DATA.drilldown;
+  let html = `
+    <h2 class="section-title">Customer Drill-Down</h2>
+    <p class="section-subtitle">Individual accounts for action — detractors ranked by dollar value (highest churn risk first).</p>`;
+
+  // Top detractors with comments
+  html += `<div class="card">
+    <div class="card-title">High-Value Detractors with Comments (Top 50)</div>
+    <div class="card-subtitle">These accounts have the most revenue at risk and told you why they're unhappy</div>
+    <div style="overflow-x:auto;">
+    <table><thead><tr>
+      <th>Account</th><th>Company</th><th class="text-right">Score</th><th>Role</th>
+      <th class="text-right">Bought $</th><th class="text-right">Sold $</th>
+      <th class="text-right">Win Rate</th><th>Region</th><th>Comment</th>
+    </tr></thead><tbody>`;
+
+  dd.commented_detractors.slice(0, 50).forEach(c => {
+    const total = (c.bought_hammer_total || 0) + (c.sold_hammer_total || 0);
+    html += `<tr>
+      <td class="mono">${c.entity_id || '—'}</td>
+      <td>${c.company_name || '—'}</td>
+      <td class="text-right"><span class="badge badge-red">${c.nps_score}</span></td>
+      <td>${c.transaction_role || '—'}</td>
+      <td class="text-right mono">${fmt(c.bought_hammer_total)}</td>
+      <td class="text-right mono">${fmt(c.sold_hammer_total)}</td>
+      <td class="text-right mono">${c.win_rate_pct != null ? fmtPct(c.win_rate_pct) : '—'}</td>
+      <td>${c.region_name || '—'}</td>
+      <td class="comment-text" title="${(c.nps_comment||'').replace(/"/g,'&quot;')}">${c.nps_comment || '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div></div>';
+
+  // Top detractors by value (no comment filter)
+  html += `<div class="card">
+    <div class="card-title">Highest-Value Detractors (Top 50)</div>
+    <div class="card-subtitle">All detractors ranked by total transaction value</div>
+    <div style="overflow-x:auto;">
+    <table><thead><tr>
+      <th>Account</th><th>Company</th><th class="text-right">Score</th>
+      <th>Engagement</th><th>Tenure</th>
+      <th class="text-right">Bought $</th><th class="text-right">Sold $</th>
+      <th class="text-right">Total $</th><th>Region</th>
+    </tr></thead><tbody>`;
+
+  dd.top_detractors.forEach(c => {
+    const total = (c.bought_hammer_total || 0) + (c.sold_hammer_total || 0);
+    html += `<tr>
+      <td class="mono">${c.entity_id || '—'}</td>
+      <td>${c.company_name || '—'}</td>
+      <td class="text-right"><span class="badge badge-red">${c.nps_score}</span></td>
+      <td>${c.engagement_level || '—'}</td>
+      <td>${c.account_tenure_tier || '—'}</td>
+      <td class="text-right mono">${fmt(c.bought_hammer_total)}</td>
+      <td class="text-right mono">${fmt(c.sold_hammer_total)}</td>
+      <td class="text-right mono" style="font-weight:600">${fmt(total)}</td>
+      <td>${c.region_name || '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div></div>';
+
+  // Top promoters (success patterns)
+  html += `<div class="card">
+    <div class="card-title">Highest-Value Promoters (Top 25) — Success Patterns</div>
+    <div class="card-subtitle">What do happy high-value customers look like?</div>
+    <div style="overflow-x:auto;">
+    <table><thead><tr>
+      <th>Account</th><th>Company</th><th class="text-right">Score</th>
+      <th>Engagement</th><th>Tenure</th>
+      <th class="text-right">Total $</th><th>Region</th>
+    </tr></thead><tbody>`;
+
+  dd.top_promoters.slice(0, 25).forEach(c => {
+    const total = (c.bought_hammer_total || 0) + (c.sold_hammer_total || 0);
+    html += `<tr>
+      <td class="mono">${c.entity_id || '—'}</td>
+      <td>${c.company_name || '—'}</td>
+      <td class="text-right"><span class="badge badge-green">${c.nps_score}</span></td>
+      <td>${c.engagement_level || '—'}</td>
+      <td>${c.account_tenure_tier || '—'}</td>
+      <td class="text-right mono" style="font-weight:600">${fmt(total)}</td>
+      <td>${c.region_name || '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div></div>';
+
+  document.getElementById('sec-drilldown').innerHTML = html;
+}
+
+
+function renderMethodology() {
+  const p = DATA.predictive;
+  const d = DATA.diagnostic;
+  document.getElementById('sec-methodology').innerHTML = `
+    <h2 class="section-title">Methodology</h2>
+    <p class="section-subtitle">How this analysis was produced — for reproducibility and peer review.</p>
+
+    <div class="card">
+      <div class="card-title">Data Source</div>
+      <div class="method-item"><span class="method-label">Table</span><div class="method-text">${DATA.metadata.table} (PostgreSQL gold table built with dbt)</div></div>
+      <div class="method-item"><span class="method-label">Records</span><div class="method-text">${fmtNum(DATA.descriptive.totals.total_responses)} survey responses, ${fmtNum(DATA.descriptive.totals.total_unique_accounts)} unique accounts</div></div>
+      <div class="method-item"><span class="method-label">Coverage</span><div class="method-text">FY${DATA.descriptive.by_fiscal_year.map(f=>f.fiscal_year).join(' + FY')}</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Analytical Framework</div>
+      <div class="method-item"><span class="method-label">Framework</span><div class="method-text">Gartner Analytics Maturity Model — Descriptive → Diagnostic → Predictive → Prescriptive</div></div>
+      <div class="method-item"><span class="method-label">Statistical Tests</span><div class="method-text">Chi-square test of independence for categorical segment analysis. α = 0.05 significance threshold.</div></div>
+      <div class="method-item"><span class="method-label">Segments Tested</span><div class="method-text">${d.segments.length} dimensions analyzed: ${d.segments.map(s=>s.dimension).join(', ')}</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Predictive Model</div>
+      <div class="method-item"><span class="method-label">Algorithm</span><div class="method-text">Logistic Regression with balanced class weights (scikit-learn)</div></div>
+      <div class="method-item"><span class="method-label">Validation</span><div class="method-text">5-fold Stratified Cross-Validation</div></div>
+      <div class="method-item"><span class="method-label">Features</span><div class="method-text">${p.feature_importance.length} features (categorical encoded + numeric scaled)</div></div>
+      <div class="method-item"><span class="method-label">Target</span><div class="method-text">Binary: detractor (1) vs non-detractor (0)</div></div>
+      <div class="method-item"><span class="method-label">Baseline</span><div class="method-text">${(p.baseline_accuracy*100).toFixed(1)}% (always predict non-detractor)</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reproducibility</div>
+      <div class="method-item"><span class="method-label">Script</span><div class="method-text"><code>python nps_analysis.py</code></div></div>
+      <div class="method-item"><span class="method-label">Generated</span><div class="method-text">${new Date(DATA.metadata.generated_at).toLocaleString()}</div></div>
+      <div class="method-item"><span class="method-label">Version</span><div class="method-text">${DATA.metadata.pipeline_version}</div></div>
+    </div>`;
+}
+
+
+// ============================================================
+// RENDER ALL + NAV
+// ============================================================
+function renderAll() {
+  renderExecutive();
+  renderDescriptive();
+  renderDiagnostic();
+  renderPredictive();
+  renderPrescriptive();
+  renderDrilldown();
+  renderMethodology();
+}
+
+// Nav switching
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('sec-' + this.dataset.section).classList.add('active');
+  });
+});
+
+// Load
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
