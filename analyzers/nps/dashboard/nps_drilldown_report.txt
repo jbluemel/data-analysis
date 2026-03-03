@@ -1,0 +1,68 @@
+NPS DRILL-DOWN ANALYSIS REPORT
+============================================================
+
+
+============================================================
+SEGMENT: Power Bidder Detractors (1000+ bids)
+============================================================
+Description: Most active bidders on the platform who gave low NPS scores. These are high-value users at risk of churning.
+Total Detractors: 24
+Detractors with Comments: 14
+
+COMMENT THEMES:
+**Seller Dishonesty & Misrepresentation (8 comments)**: Buyers report sellers lying about equipment condition, providing false descriptions, and misrepresenting items that turn out to be non-functional or "junk." **High Fees & Commission Structure (3 comments)**: The 10% buyer's fee and $100 listing costs are viewed as excessive, making it difficult to recommend the platform. **Poor Customer Service & Communication (3 comments)**: Issues include unresponsive staff, incorrect contact information, invoice processing delays, and failure to return calls. **Lack of Accountability & Dispute Resolution (4 comments)**: Purple Wave fails to stand behind purchases when items don't match descriptions, doesn't adequately resolve disputes, and shows insufficient seller accountability. **Inadequate Inspection Process (2 comments)**: The platform's inspection process is seen as failing to catch basic problems, leaving buyers with equipment that doesn't work as advertised. Overall, these high-value users feel betrayed by a platform they once trusted, citing systemic issues with transparency, accountability, and value proposition.
+
+
+============================================================
+SEGMENT: Buyer & Seller Detractors
+============================================================
+Description: Users who both buy and sell on Purple Wave and gave low NPS scores. Dual-role users experiencing friction.
+Total Detractors: 77
+Detractors with Comments: 37
+
+COMMENT THEMES:
+**1. High Buyer's Premium/Fees (13 comments):** Users consistently complain about the 10% buyer's premium being too high, especially on expensive items, with many requesting caps or sliding scales for large purchases. **2. Account Restrictions/Bans (6 comments):** Multiple users report being unexpectedly banned, having accounts halted, or being cut off from bidding without clear explanations or adequate customer service response. **3. Poor Selling Experience/Low Returns (8 comments):** Sellers express frustration with equipment selling below expected ranges, long payment delays, missing listing details, and high listing fees for multiple items. **4. Listing Quality/Transparency Issues (7 comments):** Users cite problems with poor video quality, inaccurate descriptions, missing important details, and sellers not being honest about item conditions. **5. Inconsistent Policies/Selectivity (4 comments):** Complaints about inconsistent application of listing policies and Purple Wave being too selective about what items they'll accept for auction. Overall, these dual-role users feel caught between high costs as buyers and disappointing returns as sellers, leading to a loss of trust in the platform's value proposition.
+
+
+============================================================
+SEGMENT: FY2026 Q2 Detractors (Spike Quarter)
+============================================================
+Description: Detractors from the quarter with the highest detractor rate (18.7%). Something changed this quarter.
+Total Detractors: 124
+Detractors with Comments: 36
+
+COMMENT THEMES:
+**Fee Structure Complaints (6 comments)**: Customers are frustrated with the 10% buyer's premium and additional fees, viewing them as uncompetitive compared to other auction sites. **Technical and Operational Issues (6 comments)**: Users report problems with search functionality, payment processing, slow title transfers, lack of mobile app, and bidding difficulties due to technical constraints. **Process and Policy Frustrations (4 comments)**: Detractors are upset about auction time extensions, reopened closed auctions, and lack of seller accountability for misrepresented items. **Dismissive/Hostile Responses (8 comments)**: Many responses are extremely brief or hostile, suggesting high levels of frustration that customers don't want to elaborate on. **New User Experience (4 comments)**: Several detractors indicate they are new users or haven't used the platform recently, suggesting onboarding or re-engagement challenges. The overall takeaway is that this spike quarter saw significant dissatisfaction with core platform economics (fees), technical functionality, and operational processes, particularly among newer users.
+
+
+============================================================
+SEGMENT: Premium Bid Detractors ($50k+ avg bid)
+============================================================
+Description: High-value bidders averaging over $50k per bid who gave low scores. These represent the highest-dollar customers.
+Total Detractors: 10
+Detractors with Comments: 6
+
+COMMENT THEMES:
+**Tax and Legal Compliance Issues** (1 comment): Serious operational failures in tax law application that required customer dispute resolution and external verification. **High Buyer Fees** (2 comments): Premium customers find the fee structure too expensive and actively factor these costs into their bidding strategies. **Poor Platform Usability** (2 comments): Search functionality, filtering systems, and overall navigation are inferior compared to competing auction platforms. **Pricing Concerns** (1 comment): Equipment selling below expected market value from a seller's perspective. The overarching takeaway is that high-value customers are experiencing fundamental operational and platform deficiencies that directly impact their willingness to continue using the service.
+
+
+============================================================
+SEGMENT: Lapsed Bidder Detractors (bid over 1 year ago)
+============================================================
+Description: Users who haven't bid in over a year and gave low scores. Potentially lost customers.
+Total Detractors: 108
+Detractors with Comments: 39
+
+COMMENT THEMES:
+**Buyer's Premium Complaints (8 comments)**: Users consistently cite the 10% buyer's premium as uncompetitive and a primary reason for choosing other platforms. **Trust and Transparency Issues (7 comments)**: Customers express concerns about shill bidding, poor item descriptions, and sellers misrepresenting equipment condition, creating distrust in the platform's integrity. **Poor Customer Experience (6 comments)**: Users report receiving defective items, unfulfilled transactions, account bans without explanation, and inadequate customer service response. **Operational Difficulties (5 comments)**: Complaints about website navigation, auction access barriers, high shipping costs, and geographic limitations in the Midwest. **Negative Past Experiences (4 comments)**: General references to "bad experiences" that have permanently damaged their relationship with the platform. The overarching takeaway is that these lapsed bidders have fundamental trust and value concerns that have driven them to competitors, with financial structure and transparency being the primary barriers to their return.
+
+
+============================================================
+SEGMENT: Veteran Account Detractors (5+ years)
+============================================================
+Description: Long-tenured accounts who gave low scores. These users know the platform well and their feedback reflects deep experience.
+Total Detractors: 258
+Detractors with Comments: 121
+
+COMMENT THEMES:
+**Buyer's Premium Backlash (25-30 comments)**: The 10% buyer's premium with no cap is the most frequently cited complaint, with veterans calling it "too high," "expensive," and "cost prohibitive" especially on large equipment purchases. **Quality and Disclosure Issues (20-25 comments)**: Experienced users report receiving misrepresented equipment, undisclosed defects, and items in much worse condition than described, with some calling purchases "junk" or "pieces of crap." **Operational and Service Problems (15-20 comments)**: Veterans cite account suspensions without explanation, slow payment processing, poor customer service, website navigation difficulties, and inadequate item descriptions. **Fee Structure Complaints (10-15 comments)**: Beyond the buyer's premium, users complain about high listing fees, commission rates, and overall cost structure compared to competitors. **Trust and Bidding Concerns (8-10 comments)**: Some veterans suspect shill bidding, dishonest practices, and artificial price inflation. These long-tenured users' feedback reflects deep frustration with platform changes over time, particularly the shift to buyer-paid fees and perceived decline in service quality since corporate changes.

@@ -1,0 +1,37 @@
+NPS DIAGNOSTIC ANALYSIS (LAYER 2)
+============================================================
+
+**Root Cause Analysis: Purple Wave's detraction is driven by engagement friction, not transaction outcomes.**
+
+**Primary Drivers (Ranked by Impact):**
+
+1. **Operational Crisis in FY26 Q2** - 22.0% detractor rate vs 15.9% baseline (p<0.001)
+   - 6.1 percentage point spike affecting 564 customers
+   - Likely system outage, policy change, or service disruption during this quarter
+   - **Action**: Investigate what changed operationally in FY26 Q2
+
+2. **High-Engagement User Frustration** - Power bidders 9.8pp higher detraction (p=0.015)
+   - Premium bidders ($50k+) show 32.3% detraction vs 15.0% for casual users
+   - These are your most valuable customers experiencing the most friction
+   - **Action**: Focus UX improvements on power user workflows
+
+3. **Dual-Role Complexity** - Buyer+sellers 8.0pp higher detraction (p<0.001)
+   - Problem amplified among veterans (26.6% vs 17.5% for buyer-only)
+   - Suggests selling experience creates more friction than buying
+   - **Action**: Streamline seller onboarding and management tools
+
+4. **Lapsed User Re-engagement Failure** - Strongest predictor in multivariate model
+   - Bid recency increases detraction odds by 26% (OR=1.261)
+   - Lapsed users show 20.5% vs 15.0% detraction for active users (p=0.002)
+   - **Action**: Improve win-back campaigns and dormant user experience
+
+5. **Win Rate Anxiety** - Low win rates drive detraction (OR=0.858)
+   - Users with poor bidding success become detractors
+   - **Action**: Provide bidding guidance, market insights, or success coaching
+
+**Key Non-Findings:**
+- Transaction volume, spend levels, and account tenure have minimal impact
+- Competitive usage (Copart) is irrelevant
+- Recent transaction proximity actually REDUCES detraction (13.1% vs 17.7%)
+
+**Bottom Line**: Detraction stems from platform complexity and engagement friction, not business outcomes. Your most engaged users are your biggest detractors because they encounter more pain points.

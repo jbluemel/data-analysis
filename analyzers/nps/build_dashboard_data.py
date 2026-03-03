@@ -30,7 +30,7 @@ from shared.database import AuctionDatabase
 
 
 # Paths relative to project root (data-analysis/)
-HTML_TEMPLATE = "reports/nps/nps_report.html"
+HTML_TEMPLATE = "analyzers/nps/dashboard/nps_report.html"
 TABLE = "nps_enriched"
 NPS_GOAL = 65
 REPORT_FY = 2026

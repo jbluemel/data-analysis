@@ -1,0 +1,232 @@
+
+
+============================================================QUARTERLY DETRACTOR RATES:
+  FY2025 Q1: 16.6% (183/1104)
+  FY2025 Q2: 15.2% (77/507)
+  FY2025 Q3: 15.6% (87/556)
+  FY2025 Q4: 16.3% (92/563)
+  FY2026 Q1: 15.2% (86/567)
+  FY2026 Q2: 22.0% (124/564)
+  FY2026 Q3: 16.5% (14/85)
+
+FY26 Q2 vs ALL OTHER QUARTERS:
+  FY26 Q2 detractor rate: 22.0% (124/564)
+  Other quarters rate: 15.9% (525/3297)
+  Difference: 6.1% percentage points
+  Z-statistic: 3.558, p-value: 0.0004
+  SIGNIFICANT at p < 0.05
+
+FY26 Q2 vs FY25 Q2 (year-over-year):
+  FY25 Q2 rate: 15.2% (77/507)
+  FY26 Q2 rate: 22.0% (124/564)
+  Difference: 6.8% percentage points
+  Z-statistic: 2.845, p-value: 0.0044
+  SIGNIFICANT at p < 0.05
+
+SEGMENT DETRACTOR RATE COMPARISONS:
+
+--- Power bidders vs casual bidders ---
+  Power bidders (1000+): 24.7% detractor rate (24/97)
+  Casual (1-9 bids): 14.9% detractor rate (89/596)
+  Difference: 9.8% percentage points
+  Z-statistic: 2.425, p-value: 0.0153
+  Cohen's h effect size: 0.248 (medium)
+  SIGNIFICANT at p < 0.05
+
+--- Buyer+seller vs buyer-only ---
+  Buyer and seller: 23.8% detractor rate (77/324)
+  Buyer only: 15.7% detractor rate (260/1654)
+  Difference: 8.0% percentage points
+  Z-statistic: 3.523, p-value: 0.0004
+  Cohen's h effect size: 0.203 (medium)
+  SIGNIFICANT at p < 0.05
+
+--- Veteran (5+ yr) vs new accounts ---
+  Veteran (5+ years): 19.0% detractor rate (258/1361)
+  New/early (< 2 years): 14.8% detractor rate (220/1485)
+  Difference: 4.1% percentage points
+  Z-statistic: 2.953, p-value: 0.0032
+  Cohen's h effect size: 0.111 (small)
+  SIGNIFICANT at p < 0.05
+
+--- Lapsed bidders vs recent bidders ---
+  Lapsed (bid 1+ year ago): 20.5% detractor rate (108/526)
+  Active (bid last 30 days): 15.0% detractor rate (314/2094)
+  Difference: 5.5% percentage points
+  Z-statistic: 3.088, p-value: 0.0020
+  Cohen's h effect size: 0.145 (small)
+  SIGNIFICANT at p < 0.05
+
+--- Copart users vs non-Copart ---
+  Copart user: 18.8% detractor rate (9/48)
+  Non-Copart user: 16.8% detractor rate (654/3898)
+  Difference: 2.0% percentage points
+  Z-statistic: 0.363, p-value: 0.7164
+  Cohen's h effect size: 0.052 (small)
+  NOT SIGNIFICANT at p < 0.05
+
+--- Premium bidders ($50k+) vs micro bidders (< $500) ---
+  Premium ($50k+): 32.3% detractor rate (10/31)
+  Micro (< $500): 15.0% detractor rate (79/528)
+  Difference: 17.3% percentage points
+  Z-statistic: 2.558, p-value: 0.0105
+  Cohen's h effect size: 0.414 (medium)
+  SIGNIFICANT at p < 0.05
+
+CONTINUOUS VARIABLE COMPARISONS (Detractors vs Promoters):
+
+--- Lifetime bids ---
+  Detractors: mean=226.2, median=19.0 (n=663)
+  Promoters:  mean=161.8, median=17.0 (n=3283)
+  Mann-Whitney U p-value: 0.1209
+  Effect size (rank-biserial r): 0.038 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Lifetime bids
+
+--- Total wins ---
+  Detractors: mean=3.6, median=0.0 (n=663)
+  Promoters:  mean=2.5, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.1537
+  Effect size (rank-biserial r): 0.032 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Total wins
+
+--- Win rate % ---
+  Detractors: mean=14.0, median=0.0 (n=663)
+  Promoters:  mean=14.8, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.8635
+  Effect size (rank-biserial r): 0.004 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have LOWER Win rate %
+
+--- Avg highest bid $ ---
+  Detractors: mean=6,276.8, median=2,275.0 (n=663)
+  Promoters:  mean=4,926.1, median=1,969.4 (n=3283)
+  Mann-Whitney U p-value: 0.0706
+  Effect size (rank-biserial r): 0.044 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Avg highest bid $
+
+--- Serious bid % ---
+  Detractors: mean=43.5, median=38.6 (n=491)
+  Promoters:  mean=42.0, median=36.4 (n=2427)
+  Mann-Whitney U p-value: 0.4095
+  Effect size (rank-biserial r): 0.023 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Serious bid %
+
+--- Items bought ---
+  Detractors: mean=5.1, median=1.0 (n=663)
+  Promoters:  mean=3.7, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.0673
+  Effect size (rank-biserial r): 0.042 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Items bought
+
+--- Items sold ---
+  Detractors: mean=5.4, median=0.0 (n=663)
+  Promoters:  mean=4.4, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.0003
+  Effect size (rank-biserial r): 0.050 (small)
+  SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Items sold
+
+--- Total $ bought ---
+  Detractors: mean=27,034.2, median=140.0 (n=663)
+  Promoters:  mean=18,626.3, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.1554
+  Effect size (rank-biserial r): 0.033 (small)
+  NOT SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Total $ bought
+
+--- Total $ sold ---
+  Detractors: mean=42,947.9, median=0.0 (n=663)
+  Promoters:  mean=18,883.1, median=0.0 (n=3283)
+  Mann-Whitney U p-value: 0.0004
+  Effect size (rank-biserial r): 0.049 (small)
+  SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Total $ sold
+
+--- Account tenure (days) ---
+  Detractors: mean=1,833.2, median=1,213.0 (n=663)
+  Promoters:  mean=1,572.6, median=935.0 (n=3283)
+  Mann-Whitney U p-value: 0.0051
+  Effect size (rank-biserial r): 0.069 (small)
+  SIGNIFICANT at p < 0.05
+  Direction: Detractors have HIGHER Account tenure (days)
+
+LOGISTIC REGRESSION - MULTIVARIATE DETRACTOR DRIVERS:
+
+Model accuracy: 83.2%
+Baseline (always predict promoter): 83.2%
+Model lift over baseline: 0.0%
+
+FEATURE IMPORTANCE (by absolute coefficient):
+  Positive coefficient = increases detractor probability
+  Negative coefficient = decreases detractor probability
+
+  bid_recency                    coef=+0.2319  (↑ detractor)
+  win_rate_pct                   coef=-0.1537  (↓ detractor)
+  avg_highest_bid                coef=+0.1370  (↑ detractor)
+  account_tenure_days            coef=+0.1183  (↑ detractor)
+  win_rate_tier                  coef=-0.1174  (↓ detractor)
+  bought_item_count              coef=+0.0776  (↑ detractor)
+  account_tenure_tier            coef=-0.0452  (↓ detractor)
+  bidding_intensity_tier         coef=-0.0445  (↓ detractor)
+  transaction_role               coef=-0.0349  (↓ detractor)
+  engagement_level               coef=-0.0210  (↓ detractor)
+  lifetime_bids                  coef=-0.0060  (↓ detractor)
+  sold_item_count                coef=-0.0022  (↓ detractor)
+
+ODDS RATIOS (top 5 drivers):
+  bid_recency: OR=1.261 (increases odds by 26.1%)
+  win_rate_pct: OR=0.858 (decreases odds by 14.2%)
+  avg_highest_bid: OR=1.147 (increases odds by 14.7%)
+  account_tenure_days: OR=1.126 (increases odds by 12.6%)
+  win_rate_tier: OR=0.889 (decreases odds by 11.1%)
+
+INTERACTION EFFECTS:
+
+--- Power bidder + low win rate (<5%) vs high win rate (>=10%) ---
+  Low win rate: 22.8% detractor rate (n=57)
+  High win rate: 25.0% detractor rate (n=20)
+  Fisher exact p-value: 1.0000
+  NOT SIGNIFICANT at p < 0.05
+
+--- Veteran buyer+seller vs veteran buyer-only ---
+  Veteran buyer+seller: 26.6% detractor rate (n=263)
+  Veteran buyer-only: 17.5% detractor rate (n=759)
+  Fisher exact p-value: 0.0022
+  SIGNIFICANT at p < 0.05
+
+--- Lapsed + high engagement vs lapsed + low engagement ---
+  Lapsed high-engagement: 33.9% detractor rate (n=56)
+  Lapsed low-engagement: 18.2% detractor rate (n=285)
+  Fisher exact p-value: 0.0115
+  SIGNIFICANT at p < 0.05
+
+--- Active buyer+seller vs active buyer-only ---
+  Active buyer+seller: 20.4% detractor rate (n=221)
+  Active buyer-only: 14.7% detractor rate (n=1205)
+  Fisher exact p-value: 0.0430
+  SIGNIFICANT at p < 0.05
+
+TRANSACTION PROXIMITY ANALYSIS:
+
+--- Has transaction before NPS vs no transaction in data ---
+  With transaction: 13.1% detractor rate (n=810)
+  Without transaction: 17.7% detractor rate (n=3158)
+  Z-statistic: -3.137, p-value: 0.0017
+  SIGNIFICANT at p < 0.05
+
+--- Transaction within 30 days vs over 30 days before NPS ---
+  Within 30 days: 11.4% detractor rate (n=449)
+  Over 30 days: 15.2% detractor rate (n=361)
+  Fisher exact p-value: 0.1160
+  NOT SIGNIFICANT at p < 0.05
+
+--- Transaction role among detractors with transactions ---
+  Buyer transactions: 87
+  Seller transactions: 19
+  Buyer txn median price: $5,170
+  Seller txn median price: $6,050
