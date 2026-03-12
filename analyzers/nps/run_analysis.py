@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--drill-down", action="store_true", help="Run drill-down analysis after Layer 1")
     parser.add_argument("--diagnostic", action="store_true", help="Run Layer 2 diagnostic analysis")
     parser.add_argument("--dashboard", action="store_true", help="Export structured JSON into HTML dashboard")
-    parser.add_argument("--dashboard-html", default="reports/nps/nps_report.html", help="Dashboard HTML template path")
+    parser.add_argument("--dashboard-html", default="analyzers/nps/dashboard/nps_report.html", help="Dashboard HTML template path")
     parser.add_argument("--all", action="store_true", help="Run all layers")
     args = parser.parse_args()
 

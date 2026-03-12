@@ -58,7 +58,11 @@ class SummarizeComments(dspy.Signature):
 class DiagnosticNarrative(dspy.Signature):
     """Analyze NPS diagnostic data powered by XGBoost + SHAP analysis.
     Write a 1-2 sentence business-friendly narrative for each SHAP feature explaining what it means for the company.
-    Then write an overall synthesis connecting the patterns.
+    Then write an overall synthesis (3-4 sentences) that MUST include ALL of these points:
+    1. Profiles reveal WHO is most susceptible - high-engagement customers show 2-3x higher detractor rates
+    2. But profiles alone CANNOT predict WHICH individuals will become detractors (the model F1 is very low)
+    3. This suggests a two-factor model: deep investment creates elevated expectations (vulnerability), while specific service events likely trigger the actual detraction
+    4. CRITICAL: Purple Wave does not currently capture structured service event data (title delays, inspection disputes, settlement delays, account issues) - this hypothesis is supported by customer comments but remains unvalidated without event tracking
     Avoid technical jargon like 'SHAP values'. Instead say things like 'our analysis shows' or 'the data indicates'.
     Be specific with numbers. Focus on what the business should do about it."""
 
@@ -414,6 +418,7 @@ class NPSDashboardBuilder:
         feature_display_names = cat_features + num_features
         X = model_df[feature_cols].values
         y = model_df["is_detractor"].values
+        score_labels = model_df["nps_score_label"].values
 
         # Train XGBoost
         n_pos = int(y.sum())
@@ -490,9 +495,13 @@ class NPSDashboardBuilder:
                         continue
                     label_name = le.inverse_transform([int(encoded_val)])[0]
                     avg_shap = float(feature_shap[mask].mean())
+                    bucket_labels = score_labels[mask]
                     detail["value_impacts"].append({
                         "value": clean_label(str(label_name)),
                         "count": int(mask.sum()),
+                        "n_promoter": int((bucket_labels == "promoter").sum()),
+                        "n_passive": int((bucket_labels == "passive").sum()),
+                        "n_detractor": int((bucket_labels == "detractor").sum()),
                         "avg_shap": round(avg_shap, 4),
                         "direction": "toward detractor" if avg_shap > 0 else "away from detractor",
                     })
@@ -546,9 +555,13 @@ class NPSDashboardBuilder:
                     else:
                         range_label = q_label
 
+                    bucket_labels = score_labels[mask]
                     detail["value_impacts"].append({
                         "value": range_label,
                         "count": int(mask.sum()),
+                        "n_promoter": int((bucket_labels == "promoter").sum()),
+                        "n_passive": int((bucket_labels == "passive").sum()),
+                        "n_detractor": int((bucket_labels == "detractor").sum()),
                         "avg_shap": round(avg_shap, 4),
                         "direction": "toward detractor" if avg_shap > 0 else "away from detractor",
                     })
@@ -813,10 +826,13 @@ class NPSDashboardBuilder:
             "explanation": (
                 "Customer profiles CAN predict detractor status — the model significantly outperforms baseline."
                 if result["cv_accuracy"] > baseline_accuracy + 0.05
-                else "NPS detraction appears EVENT-DRIVEN rather than PROFILE-DRIVEN. "
-                     "The model barely outperforms baseline, meaning customer demographics and "
-                     "transaction history alone cannot reliably predict who will be a detractor. "
-                     "Specific experiences or service events likely trigger dissatisfaction."
+                else "Customer profiles reveal WHO is most susceptible — high-engagement, high-value "
+                     "customers show 2-3x higher detractor rates — but profiles alone cannot predict "
+                     "WHICH individuals will become detractors (F1=19.7%). This suggests a two-factor model: "
+                     "elevated expectations from deep investment create vulnerability, while specific "
+                     "service events (title delays, inspection disputes, fee surprises) trigger the actual "
+                     "detraction. NOTE: Purple Wave does not currently capture structured event data to "
+                     "validate this hypothesis — evidence comes from comment analysis only."
             ),
         }
 
